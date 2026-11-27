@@ -1,0 +1,473 @@
+{
+ "study": "Amendment 5 A5.1 equal-information arms A7/A7X",
+ "n_instances": 99,
+ "n_gt_fail": 60,
+ "arms": {
+  "A7": {
+   "tp": 60,
+   "fp": 0,
+   "fn": 0,
+   "tn": 39,
+   "recall": 1.0,
+   "precision": 1.0,
+   "f1": 1.0,
+   "n": 99,
+   "spearman_rho": 0.9959890780022188,
+   "median_q_error": 1.0153362679574096
+  },
+  "A7X": {
+   "tp": 60,
+   "fp": 0,
+   "fn": 0,
+   "tn": 39,
+   "recall": 1.0,
+   "precision": 1.0,
+   "f1": 1.0,
+   "n": 99,
+   "spearman_rho": 0.9992237952502527,
+   "median_q_error": 1.000487496459787
+  }
+ },
+ "per_distribution_family": {
+  "zipf": {
+   "A7": {
+    "tp": 24,
+    "fp": 0,
+    "fn": 0,
+    "tn": 9,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 33,
+    "spearman_rho": 0.996822756412439,
+    "median_q_error": 1.0063291139240507
+   },
+   "A7X": {
+    "tp": 24,
+    "fp": 0,
+    "fn": 0,
+    "tn": 9,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 33,
+    "spearman_rho": 0.9976586706005207,
+    "median_q_error": 1.0000320023041658
+   }
+  },
+  "lognormal": {
+   "A7": {
+    "tp": 18,
+    "fp": 0,
+    "fn": 0,
+    "tn": 15,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 33,
+    "spearman_rho": 0.9816023295450762,
+    "median_q_error": 1.0200845002295666
+   },
+   "A7X": {
+    "tp": 18,
+    "fp": 0,
+    "fn": 0,
+    "tn": 15,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 33,
+    "spearman_rho": 0.9983275353645527,
+    "median_q_error": 1.0010251189658848
+   }
+  },
+  "mixed": {
+   "A7": {
+    "tp": 18,
+    "fp": 0,
+    "fn": 0,
+    "tn": 15,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 33,
+    "spearman_rho": 0.9826058418942448,
+    "median_q_error": 1.0180785586877528
+   },
+   "A7X": {
+    "tp": 18,
+    "fp": 0,
+    "fn": 0,
+    "tn": 15,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 33,
+    "spearman_rho": 0.9973240230153841,
+    "median_q_error": 1.0009178693511371
+   }
+  }
+ },
+ "per_pipeline_family": {
+  "direct (G,D)": {
+   "A7": {
+    "tp": 21,
+    "fp": 0,
+    "fn": 0,
+    "tn": 24,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 45,
+    "spearman_rho": 0.9819081218542844,
+    "median_q_error": 1.0146426666666666
+   },
+   "A7X": {
+    "tp": 21,
+    "fp": 0,
+    "fn": 0,
+    "tn": 24,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 45,
+    "spearman_rho": 0.9952877598845076,
+    "median_q_error": 1.000033002409176
+   }
+  },
+  "join-emergent (J,F)": {
+   "A7": {
+    "tp": 36,
+    "fp": 0,
+    "fn": 0,
+    "tn": 9,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 45,
+    "spearman_rho": 0.9945981554677206,
+    "median_q_error": 1.0153362679574096
+   },
+   "A7X": {
+    "tp": 36,
+    "fp": 0,
+    "fn": 0,
+    "tn": 9,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 45,
+    "spearman_rho": 0.9989459815546771,
+    "median_q_error": 1.001059267857024
+   }
+  },
+  "window (W)": {
+   "A7": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 9,
+    "spearman_rho": 0.8166666666666667,
+    "median_q_error": 1.0186479286075403
+   },
+   "A7X": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 9,
+    "spearman_rho": 1.0,
+    "median_q_error": 1.0
+   }
+  }
+ },
+ "median_q_by_pipeline_group": {
+  "F": {
+   "A7": 1.0168465845878472,
+   "A7X": 1.0000242254596754,
+   "n": 18
+  },
+  "J": {
+   "A7": 1.012929473007063,
+   "A7X": 1.0017941751605033,
+   "n": 27
+  }
+ },
+ "testbed_rows": {
+  "A7": 101511.55555555556,
+  "A7X": 114367.44444444444
+ },
+ "testbed_rows_per_dataset": {
+  "A7": {
+   "lognormal_s101": 100766,
+   "lognormal_s202": 100905,
+   "lognormal_s303": 100661,
+   "mixed_s101": 102380,
+   "mixed_s202": 102400,
+   "mixed_s303": 101570,
+   "zipf_s101": 101716,
+   "zipf_s202": 101829,
+   "zipf_s303": 101377
+  },
+  "A7X": {
+   "lognormal_s101": 107979,
+   "lognormal_s202": 108429,
+   "lognormal_s303": 108058,
+   "mixed_s101": 120352,
+   "mixed_s202": 121093,
+   "mixed_s303": 120721,
+   "zipf_s101": 113824,
+   "zipf_s202": 114491,
+   "zipf_s303": 114360
+  }
+ },
+ "packet_bytes": {
+  "zipf_s101": {
+   "synopsis_bytes": 91379,
+   "A7_packet_bytes": 26002,
+   "A7_ratio_to_synopsis": 0.2845511550793946,
+   "A7X_packet_bytes": 55035,
+   "A7X_ratio_to_synopsis": 0.6022718567723437
+  },
+  "zipf_s202": {
+   "synopsis_bytes": 91398,
+   "A7_packet_bytes": 26026,
+   "A7_ratio_to_synopsis": 0.28475458981596974,
+   "A7X_packet_bytes": 55056,
+   "A7X_ratio_to_synopsis": 0.6023764196153089
+  },
+  "zipf_s303": {
+   "synopsis_bytes": 91351,
+   "A7_packet_bytes": 25999,
+   "A7_ratio_to_synopsis": 0.28460553250648596,
+   "A7X_packet_bytes": 55015,
+   "A7X_ratio_to_synopsis": 0.6022375233987587
+  },
+  "lognormal_s101": {
+   "synopsis_bytes": 100290,
+   "A7_packet_bytes": 33746,
+   "A7_ratio_to_synopsis": 0.33648419583208694,
+   "A7X_packet_bytes": 63396,
+   "A7X_ratio_to_synopsis": 0.6321268321866587
+  },
+  "lognormal_s202": {
+   "synopsis_bytes": 100308,
+   "A7_packet_bytes": 33781,
+   "A7_ratio_to_synopsis": 0.3367727399609204,
+   "A7X_packet_bytes": 63423,
+   "A7X_ratio_to_synopsis": 0.6322825696853691
+  },
+  "lognormal_s303": {
+   "synopsis_bytes": 100300,
+   "A7_packet_bytes": 33764,
+   "A7_ratio_to_synopsis": 0.33663010967098705,
+   "A7X_packet_bytes": 63405,
+   "A7X_ratio_to_synopsis": 0.6321535393818545
+  },
+  "mixed_s101": {
+   "synopsis_bytes": 91681,
+   "A7_packet_bytes": 29618,
+   "A7_ratio_to_synopsis": 0.3230549405002127,
+   "A7X_packet_bytes": 56958,
+   "A7X_ratio_to_synopsis": 0.6212628570805292
+  },
+  "mixed_s202": {
+   "synopsis_bytes": 91732,
+   "A7_packet_bytes": 29651,
+   "A7_ratio_to_synopsis": 0.32323507609122226,
+   "A7X_packet_bytes": 56991,
+   "A7X_ratio_to_synopsis": 0.6212771987964941
+  },
+  "mixed_s303": {
+   "synopsis_bytes": 91703,
+   "A7_packet_bytes": 29624,
+   "A7_ratio_to_synopsis": 0.3230428666455841,
+   "A7X_packet_bytes": 56964,
+   "A7X_ratio_to_synopsis": 0.6211792416823877
+  }
+ },
+ "gt_verdict_cross_check": {
+  "n_instances": 99,
+  "mismatches_vs_predictions_main": 0,
+  "max_abs_gt_load_diff_vs_predictions_main": 0.0
+ },
+ "sanity_check_A1_reproduction": {
+  "arm": "A1",
+  "source": "predictions_main.csv via score_eqinfo.prf",
+  "reproduced": {
+   "recall": 0.7666666666666667,
+   "precision": 1.0,
+   "f1": 0.8679245283018869,
+   "spearman_rho": 0.8089948112066913,
+   "median_q_error": 1.0435069103220274,
+   "tp": 46,
+   "fp": 0,
+   "fn": 14,
+   "tn": 39
+  },
+  "reference_results_summary_json": {
+   "recall": 0.7666666666666667,
+   "precision": 1.0,
+   "f1": 0.8679245283018869,
+   "spearman_rho": 0.8089948112066913,
+   "median_q_error": 1.0435069103220274,
+   "tp": 46,
+   "fp": 0,
+   "fn": 14,
+   "tn": 39
+  },
+  "matches": true
+ },
+ "reference_arms_from_results_summary_json": {
+  "A1": {
+   "tp": 46,
+   "fp": 0,
+   "fn": 14,
+   "tn": 39,
+   "recall": 0.7666666666666667,
+   "precision": 1.0,
+   "f1": 0.8679245283018869,
+   "n": 99,
+   "spearman_rho": 0.8089948112066913,
+   "median_q_error": 1.0435069103220274
+  },
+  "A2": {
+   "tp": 31,
+   "fp": 0,
+   "fn": 29,
+   "tn": 39,
+   "recall": 0.5166666666666667,
+   "precision": 1.0,
+   "f1": 0.6813186813186815,
+   "n": 99,
+   "spearman_rho": 0.8697362444613159,
+   "median_q_error": 2.1657566076096426
+  },
+  "A3": {
+   "tp": 25,
+   "fp": 0,
+   "fn": 35,
+   "tn": 39,
+   "recall": 0.4166666666666667,
+   "precision": 1.0,
+   "f1": 0.5882352941176471,
+   "n": 99,
+   "spearman_rho": 0.7944323500682986,
+   "median_q_error": 2.906
+  },
+  "A4": {
+   "tp": 60,
+   "fp": 0,
+   "fn": 0,
+   "tn": 39,
+   "recall": 1.0,
+   "precision": 1.0,
+   "f1": 1.0,
+   "n": 99,
+   "spearman_rho": 0.9948228837030073,
+   "median_q_error": 1.019614695731947
+  },
+  "A5": {
+   "tp": 60,
+   "fp": 0,
+   "fn": 0,
+   "tn": 39,
+   "recall": 1.0,
+   "precision": 1.0,
+   "f1": 1.0,
+   "n": 99,
+   "spearman_rho": 0.9985649410824042,
+   "median_q_error": 1.0014650519290254
+  },
+  "A8": {
+   "tp": 60,
+   "fp": 0,
+   "fn": 0,
+   "tn": 39,
+   "recall": 1.0,
+   "precision": 1.0,
+   "f1": 1.0,
+   "n": 99,
+   "spearman_rho": 0.9996196142950804,
+   "median_q_error": 1.000033002409176
+  }
+ },
+ "reference_testbed_rows_from_results_summary_json": {
+  "A1": 104574.55555555556,
+  "A2": 107409.11111111111,
+  "A3": 94559.44444444444,
+  "A4": 100000.0,
+  "A5": 100000.0,
+  "A8": 0.0
+ },
+ "max_packet_synopsis_ratio": {
+  "A7": 0.3367727399609204,
+  "A7X": 0.6322825696853691
+ },
+ "packet_exceeds_synopsis_any": {
+  "A7": false,
+  "A7X": false
+ },
+ "mcnemar_A5_vs_A7": {
+  "only_A5_correct": 0,
+  "only_other_correct": 0,
+  "p_exact": 1.0
+ },
+ "mcnemar_A5_vs_A7X": {
+  "only_A5_correct": 0,
+  "only_other_correct": 0,
+  "p_exact": 1.0
+ },
+ "delta_recall_A5_vs_A7": {
+  "point": 0.0,
+  "bootstrap": {
+   "mean": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "delta_recall_A5_vs_A7X": {
+  "point": 0.0,
+  "bootstrap": {
+   "mean": 0.0,
+   "ci95": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "interpretation": {
+  "rule": "if A7 matches A5 on recall AND its median Q-error is within 10% relative of A5's, narrow to 'any consumer of the heavy-hitter list'; if only A7X matches on both, narrow to 'stored exact heavy-hitter counts, consumed by sampling or prediction alike'; if neither matches A5 on load fidelity, the method-vs-information separation stands as written",
+  "A5_reference": {
+   "recall": 1.0,
+   "median_q_error": 1.0014650519290254
+  },
+  "A7": {
+   "recall": 1.0,
+   "recall_matches_A5": true,
+   "median_q_error": 1.0153362679574096,
+   "median_q_relative_diff_vs_A5": 0.013850923705890162,
+   "median_q_within_10pct_of_A5": true,
+   "matches_both": true
+  },
+  "A7X": {
+   "recall": 1.0,
+   "recall_matches_A5": true,
+   "median_q_error": 1.000487496459787,
+   "median_q_relative_diff_vs_A5": 0.0009761253948456999,
+   "median_q_within_10pct_of_A5": true,
+   "matches_both": true
+  },
+  "branch": 1,
+  "outcome": "A7 matches A5 on recall and median Q-error: mechanism claim narrows to \"any consumer of the heavy-hitter list\""
+ }
+}
