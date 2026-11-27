@@ -1,0 +1,11 @@
+{
+ "family": "near",
+ "zipf_s": 0.7,
+ "seed": 404,
+ "n_fact": 10000000,
+ "n_fact2": 6000000,
+ "p_null": 0.04,
+ "gen_seconds": 17.39,
+ "ground_truth_sql_seconds": 5.82,
+ "validation_ok": true
+}

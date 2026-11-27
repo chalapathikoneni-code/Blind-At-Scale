@@ -1,0 +1,29 @@
+{
+ "case": "selfjoin_real",
+ "frozen_config": {
+  "aqe": "off",
+  "driver_memory": "8g",
+  "executor_cores": 4,
+  "executor_memory": "8g",
+  "join": "sort-merge, autoBroadcastJoinThreshold=-1",
+  "num_executors": 18,
+  "shuffle_partitions": 128
+ },
+ "guard_overridden": true,
+ "guard_would_trip_reason": "predicted output 795242814 (cap 2000000000) / predicted max load 122469088 (cap 25000000)",
+ "join_key": "author_id",
+ "left_rows": 5368834,
+ "materialized": true,
+ "predicted_max_load": 122469088,
+ "predicted_output_rows": 795242814,
+ "predicted_sum_count_squared": 795242814,
+ "predicted_verdict": {
+  "abs_limit_0.02N": 15904856.280000001,
+  "mean_load": 6212834.484375,
+  "rel_limit_2x_mean": 12425668.96875,
+  "verdict_abs": "FAIL",
+  "verdict_rel": "FAIL"
+ },
+ "scale": "s4",
+ "self_join": true
+}

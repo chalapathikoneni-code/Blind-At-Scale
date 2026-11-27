@@ -1,0 +1,15 @@
+{
+ "checks_max_abs_diff": {
+  "counts_kA": 0,
+  "counts_kB": 0,
+  "counts_kC": 0,
+  "counts_kN": 0,
+  "null_count": 0,
+  "counts_fact2_kA": 0,
+  "counts_fact2_kB": 0,
+  "join_counts_kA": 0,
+  "join_counts_kB": 0,
+  "join_counts_kN": 0
+ },
+ "all_exact": true
+}

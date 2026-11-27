@@ -1,0 +1,38 @@
+[
+    {
+        "EbsConfiguration": {
+            "EbsBlockDeviceConfigs": [
+                {
+                    "VolumeSpecification": {
+                        "SizeInGB": 64,
+                        "VolumeType": "gp3"
+                    },
+                    "VolumesPerInstance": 1
+                }
+            ]
+        },
+        "InstanceCount": 1,
+        "InstanceRole": "MASTER",
+        "InstanceType": "m5.xlarge",
+        "Market": "ON_DEMAND",
+        "Name": "Master"
+    },
+    {
+        "EbsConfiguration": {
+            "EbsBlockDeviceConfigs": [
+                {
+                    "VolumeSpecification": {
+                        "SizeInGB": 64,
+                        "VolumeType": "gp3"
+                    },
+                    "VolumesPerInstance": 1
+                }
+            ]
+        },
+        "InstanceCount": 19,
+        "InstanceRole": "CORE",
+        "InstanceType": "m5.xlarge",
+        "Market": "ON_DEMAND",
+        "Name": "Core"
+    }
+]

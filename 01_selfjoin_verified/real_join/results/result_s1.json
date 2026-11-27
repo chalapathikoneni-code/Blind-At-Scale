@@ -1,0 +1,33 @@
+{
+ "case": "selfjoin_real",
+ "elapsed_sec": 69.2,
+ "frozen_config": {
+  "aqe": "off",
+  "driver_memory": "8g",
+  "executor_cores": 4,
+  "executor_memory": "8g",
+  "join": "sort-merge, autoBroadcastJoinThreshold=-1",
+  "num_executors": 18,
+  "shuffle_partitions": 128
+ },
+ "guard_overridden": true,
+ "guard_would_trip_reason": "predicted output 262464138 (cap 2000000000) / predicted max load 43344257 (cap 25000000)",
+ "join_key": "author_id",
+ "left_rows": 1260852,
+ "materialized": true,
+ "measured_output_rows": 262464138,
+ "output_parquet": "s3://YOUR_BUCKET/Access/RealJoin/s1/joined.parquet",
+ "predicted_max_load": 43344257,
+ "predicted_output_rows": 262464138,
+ "predicted_sum_count_squared": 262464138,
+ "predicted_verdict": {
+  "abs_limit_0.02N": 5249282.76,
+  "mean_load": 2050501.078125,
+  "rel_limit_2x_mean": 4101002.15625,
+  "verdict_abs": "FAIL",
+  "verdict_rel": "FAIL"
+ },
+ "scale": "s1",
+ "self_join": true,
+ "status": "OK"
+}
