@@ -1,0 +1,73 @@
+outeq_200k_zipf_s101 scan rep 0 1.346349114000077 exact True
+outeq_200k_zipf_s101 scan rep 1 1.2794888160001392 exact True
+outeq_200k_zipf_s101 scan rep 2 1.1173649360002855 exact True
+outeq_200k_zipf_s101 build rep 0 0.012645156999951723
+outeq_200k_zipf_s101 build rep 1 0.0627356879999752
+outeq_200k_zipf_s101 build rep 2 0.007667116999982682
+outeq_200k_zipf_s101 serialize rep 0 0.0012685739998232748
+outeq_200k_zipf_s101 serialize rep 1 0.0012463900002330774
+outeq_200k_zipf_s101 serialize rep 2 0.001411739000104717
+outeq_200k_zipf_s101 predict A8 rep 0 0.29019698999991306
+outeq_200k_zipf_s101 predict A8 rep 1 0.21838669499993557
+outeq_200k_zipf_s101 predict A8 rep 2 0.22049860400011312
+outeq_200k_zipf_s101 predict A5 rep 0 0.20619094199992105
+outeq_200k_zipf_s101 predict A5 rep 1 0.28859832099988125
+outeq_200k_zipf_s101 predict A5 rep 2 0.5622982640002192
+outeq_200k_zipf_s101 predict A9 rep 0 0.08559702499997002
+outeq_200k_zipf_s101 predict A9 rep 1 0.024776492999990296
+outeq_200k_zipf_s101 predict A9 rep 2 0.0824253860000681
+outeq_1m_zipf_s101 scan rep 0 2.0037424269999065 exact True
+outeq_1m_zipf_s101 scan rep 1 2.121421287999965 exact True
+outeq_1m_zipf_s101 scan rep 2 2.676467609000156 exact True
+outeq_1m_zipf_s101 build rep 0 0.012070463999862113
+outeq_1m_zipf_s101 build rep 1 0.013571337000030326
+outeq_1m_zipf_s101 build rep 2 0.014788472999953228
+outeq_1m_zipf_s101 serialize rep 0 0.0014741320001121494
+outeq_1m_zipf_s101 serialize rep 1 0.0023166060000221478
+outeq_1m_zipf_s101 serialize rep 2 0.0023512590000791533
+outeq_1m_zipf_s101 predict A8 rep 0 0.25994786499995826
+outeq_1m_zipf_s101 predict A8 rep 1 0.2078124250001565
+outeq_1m_zipf_s101 predict A8 rep 2 0.19866201299964814
+outeq_1m_zipf_s101 predict A5 rep 0 0.27845523900032276
+outeq_1m_zipf_s101 predict A5 rep 1 0.20323784999982308
+outeq_1m_zipf_s101 predict A5 rep 2 0.21773483600009058
+outeq_1m_zipf_s101 predict A9 rep 0 0.06331118100024469
+outeq_1m_zipf_s101 predict A9 rep 1 0.07726422999985516
+outeq_1m_zipf_s101 predict A9 rep 2 0.08750770400001784
+zipf_s101 scan rep 0 6.919737037000232 exact True
+zipf_s101 scan rep 1 7.309923011000137 exact True
+zipf_s101 scan rep 2 7.4398217699999805 exact True
+zipf_s101 build rep 0 0.08226943299996492
+zipf_s101 build rep 1 0.019273263000286533
+zipf_s101 build rep 2 0.05800945500004673
+zipf_s101 serialize rep 0 0.0013618230000247422
+zipf_s101 serialize rep 1 0.05284554499985461
+zipf_s101 serialize rep 2 0.0012766360000568966
+zipf_s101 predict A8 rep 0 0.3204119640004137
+zipf_s101 predict A8 rep 1 0.3015155660000346
+zipf_s101 predict A8 rep 2 0.5000427959998888
+zipf_s101 predict A5 rep 0 0.41919789199982915
+zipf_s101 predict A5 rep 1 0.21009041399975104
+zipf_s101 predict A5 rep 2 0.2316706889996567
+zipf_s101 predict A9 rep 0 0.01740490999964095
+zipf_s101 predict A9 rep 1 0.013210243999765225
+zipf_s101 predict A9 rep 2 0.012663034000070184
+zipf_s101_40m scan rep 0 15.287639412999852 exact True
+zipf_s101_40m scan rep 1 11.910947443999703 exact True
+zipf_s101_40m scan rep 2 12.749870098999963 exact True
+zipf_s101_40m build rep 0 0.012882702999831963
+zipf_s101_40m build rep 1 0.017780843999844365
+zipf_s101_40m build rep 2 0.009856120999756968
+zipf_s101_40m serialize rep 0 0.0014596609998989152
+zipf_s101_40m serialize rep 1 0.0016122600000016973
+zipf_s101_40m serialize rep 2 0.0012858800000685733
+zipf_s101_40m predict A8 rep 0 0.22371767399999953
+zipf_s101_40m predict A8 rep 1 0.20463913300000058
+zipf_s101_40m predict A8 rep 2 0.16884548699999868
+zipf_s101_40m predict A5 rep 0 0.27745522800023537
+zipf_s101_40m predict A5 rep 1 0.21513815899970723
+zipf_s101_40m predict A5 rep 2 0.20487661899960585
+zipf_s101_40m predict A9 rep 0 0.012203232999581815
+zipf_s101_40m predict A9 rep 1 0.012078996999662195
+zipf_s101_40m predict A9 rep 2 0.012213909999900352
+wrote /home/hatch/workspace/blind-at-scale/final_scientific_strengthening/results/e5_raw.json

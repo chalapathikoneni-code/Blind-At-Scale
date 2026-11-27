@@ -1,0 +1,12 @@
+{
+ "aqe": "off",
+ "aqe_enabled_conf": "false",
+ "case": "selfjoin",
+ "elapsed_sec": 10.3,
+ "predicted_max_load": 43344257,
+ "predicted_output_rows": 262464138,
+ "predicted_sum_count_squared": 262464138,
+ "reason": "predicted output 262464138 (cap 2000000000) / predicted max load 43344257 (cap 25000000)",
+ "self_join": true,
+ "status": "SKIPPED_GUARD"
+}

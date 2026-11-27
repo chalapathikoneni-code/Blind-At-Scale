@@ -1,0 +1,1845 @@
+{
+ "path": "capture/eventlog/<APPLICATION_ID>",
+ "app_name": "bas-e1e6-smoke",
+ "app_id": "<APPLICATION_ID>",
+ "app_start_ms": 1795630117876,
+ "app_end_ms": 1795630152076,
+ "user": "hadoop",
+ "spark_version": "3.5.8-amzn-0",
+ "executors": {
+  "3": "ip-10-192-21-9.ec2.internal",
+  "17": "ip-10-192-21-68.ec2.internal",
+  "15": "ip-10-192-21-174.ec2.internal",
+  "2": "ip-10-192-21-131.ec2.internal",
+  "18": "ip-10-192-21-117.ec2.internal",
+  "12": "ip-10-192-21-61.ec2.internal",
+  "9": "ip-10-192-21-42.ec2.internal",
+  "6": "ip-10-192-21-160.ec2.internal",
+  "10": "ip-10-192-21-126.ec2.internal",
+  "1": "ip-10-192-21-118.ec2.internal",
+  "5": "ip-10-192-21-226.ec2.internal",
+  "16": "ip-10-192-21-151.ec2.internal",
+  "11": "ip-10-192-21-167.ec2.internal",
+  "8": "ip-10-192-21-113.ec2.internal",
+  "14": "ip-10-192-21-101.ec2.internal",
+  "7": "ip-10-192-21-196.ec2.internal",
+  "4": "ip-10-192-21-6.ec2.internal",
+  "13": "ip-10-192-21-189.ec2.internal"
+ },
+ "executor_lost": [],
+ "tasks_total": 22,
+ "tasks_success": 22,
+ "tasks_failed": 0,
+ "task_fail_reasons": {},
+ "shuffle_read_bytes": 211749,
+ "shuffle_read_records": 40401,
+ "shuffle_write_bytes": 211749,
+ "shuffle_write_records": 40401,
+ "spill_mem": 0,
+ "spill_disk": 0,
+ "input_bytes": 0,
+ "input_records": 0,
+ "output_bytes": 158,
+ "output_records": 1,
+ "stages_completed": 10,
+ "stages_failed": 0,
+ "stage_info": {
+  "0": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 4,
+   "completion_ms": 1795630139075,
+   "submission_ms": 1795630136187,
+   "failure_reason": ""
+  },
+  "1": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 4,
+   "completion_ms": 1795630138705,
+   "submission_ms": 1795630136407,
+   "failure_reason": ""
+  },
+  "3": {
+   "name": "$anonfun$withThreadLocalCaptured$1 at FutureTask.java:264",
+   "num_tasks": 1,
+   "completion_ms": 1795630139157,
+   "submission_ms": 1795630138892,
+   "failure_reason": ""
+  },
+  "5": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795630139709,
+   "submission_ms": 1795630139447,
+   "failure_reason": ""
+  },
+  "8": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795630139934,
+   "submission_ms": 1795630139770,
+   "failure_reason": ""
+  },
+  "9": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 4,
+   "completion_ms": 1795630142409,
+   "submission_ms": 1795630140060,
+   "failure_reason": ""
+  },
+  "10": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 4,
+   "completion_ms": 1795630142336,
+   "submission_ms": 1795630140088,
+   "failure_reason": ""
+  },
+  "12": {
+   "name": "$anonfun$withThreadLocalCaptured$1 at FutureTask.java:264",
+   "num_tasks": 1,
+   "completion_ms": 1795630142432,
+   "submission_ms": 1795630142369,
+   "failure_reason": ""
+  },
+  "14": {
+   "name": "collect at /mnt/tmp/spark-6d417c6a-5f3e-4433-8e17-1ac2cb6a0ca2/smoke.py:32",
+   "num_tasks": 1,
+   "completion_ms": 1795630143192,
+   "submission_ms": 1795630142545,
+   "failure_reason": ""
+  },
+  "15": {
+   "name": "runJob at SparkHadoopWriter.scala:83",
+   "num_tasks": 1,
+   "completion_ms": 1795630144125,
+   "submission_ms": 1795630143401,
+   "failure_reason": ""
+  }
+ },
+ "jobs": [
+  {
+   "job_id": 0,
+   "app_name_prop": "bas-e1e6-smoke",
+   "submit_file": "/mnt/tmp/spark-6d417c6a-5f3e-4433-8e17-1ac2cb6a0ca2/common.py"
+  },
+  {
+   "job_id": 1,
+   "app_name_prop": "bas-e1e6-smoke",
+   "submit_file": "/mnt/tmp/spark-6d417c6a-5f3e-4433-8e17-1ac2cb6a0ca2/common.py"
+  },
+  {
+   "job_id": 2,
+   "app_name_prop": "bas-e1e6-smoke",
+   "submit_file": "/mnt/tmp/spark-6d417c6a-5f3e-4433-8e17-1ac2cb6a0ca2/common.py"
+  },
+  {
+   "job_id": 3,
+   "app_name_prop": "bas-e1e6-smoke",
+   "submit_file": "/mnt/tmp/spark-6d417c6a-5f3e-4433-8e17-1ac2cb6a0ca2/common.py"
+  },
+  {
+   "job_id": 4,
+   "app_name_prop": "bas-e1e6-smoke",
+   "submit_file": "/mnt/tmp/spark-6d417c6a-5f3e-4433-8e17-1ac2cb6a0ca2/common.py"
+  },
+  {
+   "job_id": 5,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 6,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 7,
+   "app_name_prop": "bas-e1e6-smoke",
+   "submit_file": "/mnt/tmp/spark-6d417c6a-5f3e-4433-8e17-1ac2cb6a0ca2/common.py"
+  },
+  {
+   "job_id": 8,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 9,
+   "app_name_prop": null,
+   "submit_file": null
+  }
+ ],
+ "app_attempt": null,
+ "stage_agg": {
+  "1": {
+   "tasks": 4,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 8457,
+   "sw_rec": 200,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 1672
+  },
+  "0": {
+   "tasks": 4,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 44684,
+   "sw_rec": 20000,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 1835
+  },
+  "3": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 8457,
+   "sr_rec": 200,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 115
+  },
+  "5": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 44684,
+   "sr_rec": 20000,
+   "sw_bytes": 50,
+   "sw_rec": 1,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 168
+  },
+  "8": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 50,
+   "sr_rec": 1,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 26
+  },
+  "10": {
+   "tasks": 4,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 12354,
+   "sw_rec": 200,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 1637
+  },
+  "9": {
+   "tasks": 4,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 146204,
+   "sw_rec": 20000,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 1677
+  },
+  "12": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 12354,
+   "sr_rec": 200,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 22
+  },
+  "14": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 146204,
+   "sr_rec": 20000,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 475
+  },
+  "15": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 1,
+   "max_run_ms": 615
+  }
+ },
+ "distinct_hosts": [
+  "ip-10-192-21-101.ec2.internal",
+  "ip-10-192-21-113.ec2.internal",
+  "ip-10-192-21-117.ec2.internal",
+  "ip-10-192-21-118.ec2.internal",
+  "ip-10-192-21-126.ec2.internal",
+  "ip-10-192-21-131.ec2.internal",
+  "ip-10-192-21-151.ec2.internal",
+  "ip-10-192-21-160.ec2.internal",
+  "ip-10-192-21-167.ec2.internal",
+  "ip-10-192-21-174.ec2.internal",
+  "ip-10-192-21-189.ec2.internal",
+  "ip-10-192-21-196.ec2.internal",
+  "ip-10-192-21-226.ec2.internal",
+  "ip-10-192-21-42.ec2.internal",
+  "ip-10-192-21-6.ec2.internal",
+  "ip-10-192-21-61.ec2.internal",
+  "ip-10-192-21-68.ec2.internal",
+  "ip-10-192-21-9.ec2.internal"
+ ],
+ "n_executors": 18,
+ "wall_sec": 34.2
+}
+======================================================================
+{
+ "path": "capture/eventlog/<APPLICATION_ID>",
+ "app_name": "bas-e1e6-prep",
+ "app_id": "<APPLICATION_ID>",
+ "app_start_ms": 1795630675591,
+ "app_end_ms": 1795630738433,
+ "user": "hadoop",
+ "spark_version": "3.5.8-amzn-0",
+ "executors": {
+  "1": "ip-10-192-21-196.ec2.internal",
+  "7": "ip-10-192-21-189.ec2.internal",
+  "12": "ip-10-192-21-117.ec2.internal",
+  "2": "ip-10-192-21-113.ec2.internal",
+  "16": "ip-10-192-21-9.ec2.internal",
+  "4": "ip-10-192-21-126.ec2.internal",
+  "6": "ip-10-192-21-61.ec2.internal",
+  "10": "ip-10-192-21-151.ec2.internal",
+  "9": "ip-10-192-21-174.ec2.internal",
+  "8": "ip-10-192-21-101.ec2.internal",
+  "14": "ip-10-192-21-118.ec2.internal",
+  "15": "ip-10-192-21-131.ec2.internal",
+  "5": "ip-10-192-21-167.ec2.internal",
+  "11": "ip-10-192-21-68.ec2.internal",
+  "18": "ip-10-192-21-226.ec2.internal",
+  "13": "ip-10-192-21-13.ec2.internal",
+  "3": "ip-10-192-21-42.ec2.internal",
+  "17": "ip-10-192-21-6.ec2.internal"
+ },
+ "executor_lost": [],
+ "tasks_total": 954,
+ "tasks_success": 954,
+ "tasks_failed": 0,
+ "task_fail_reasons": {},
+ "shuffle_read_bytes": 365777370,
+ "shuffle_read_records": 15643750,
+ "shuffle_write_bytes": 365777370,
+ "shuffle_write_records": 15643750,
+ "spill_mem": 0,
+ "spill_disk": 0,
+ "input_bytes": 3995135189,
+ "input_records": 9237156,
+ "output_bytes": 239762412,
+ "output_records": 9973138,
+ "stages_completed": 14,
+ "stages_failed": 0,
+ "stage_info": {
+  "0": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795630696032,
+   "submission_ms": 1795630693063,
+   "failure_reason": ""
+  },
+  "1": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 73,
+   "completion_ms": 1795630707240,
+   "submission_ms": 1795630699131,
+   "failure_reason": ""
+  },
+  "2": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 73,
+   "completion_ms": 1795630713244,
+   "submission_ms": 1795630708383,
+   "failure_reason": ""
+  },
+  "3": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 128,
+   "completion_ms": 1795630716888,
+   "submission_ms": 1795630713271,
+   "failure_reason": ""
+  },
+  "4": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 73,
+   "completion_ms": 1795630718828,
+   "submission_ms": 1795630717423,
+   "failure_reason": ""
+  },
+  "5": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 128,
+   "completion_ms": 1795630720459,
+   "submission_ms": 1795630718836,
+   "failure_reason": ""
+  },
+  "6": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 73,
+   "completion_ms": 1795630723727,
+   "submission_ms": 1795630720908,
+   "failure_reason": ""
+  },
+  "7": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795630723851,
+   "submission_ms": 1795630723728,
+   "failure_reason": ""
+  },
+  "8": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 73,
+   "completion_ms": 1795630725708,
+   "submission_ms": 1795630724129,
+   "failure_reason": ""
+  },
+  "9": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 128,
+   "completion_ms": 1795630726196,
+   "submission_ms": 1795630725721,
+   "failure_reason": ""
+  },
+  "10": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795630726249,
+   "submission_ms": 1795630726197,
+   "failure_reason": ""
+  },
+  "11": {
+   "name": "collect at /mnt/tmp/spark-2d140d86-5d44-46d9-a260-9ce5836d94a9/prep_openalex.py:116",
+   "num_tasks": 73,
+   "completion_ms": 1795630727924,
+   "submission_ms": 1795630726647,
+   "failure_reason": ""
+  },
+  "12": {
+   "name": "collect at /mnt/tmp/spark-2d140d86-5d44-46d9-a260-9ce5836d94a9/prep_openalex.py:116",
+   "num_tasks": 128,
+   "completion_ms": 1795630728516,
+   "submission_ms": 1795630727929,
+   "failure_reason": ""
+  },
+  "13": {
+   "name": "runJob at SparkHadoopWriter.scala:83",
+   "num_tasks": 1,
+   "completion_ms": 1795630729970,
+   "submission_ms": 1795630728753,
+   "failure_reason": ""
+  }
+ },
+ "jobs": [
+  {
+   "job_id": 0,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 1,
+   "app_name_prop": "bas-e1e6-prep",
+   "submit_file": "/mnt/tmp/spark-2d140d86-5d44-46d9-a260-9ce5836d94a9/common.py"
+  },
+  {
+   "job_id": 2,
+   "app_name_prop": "bas-e1e6-prep",
+   "submit_file": "/mnt/tmp/spark-2d140d86-5d44-46d9-a260-9ce5836d94a9/common.py"
+  },
+  {
+   "job_id": 3,
+   "app_name_prop": "bas-e1e6-prep",
+   "submit_file": "/mnt/tmp/spark-2d140d86-5d44-46d9-a260-9ce5836d94a9/common.py"
+  },
+  {
+   "job_id": 4,
+   "app_name_prop": "bas-e1e6-prep",
+   "submit_file": "/mnt/tmp/spark-2d140d86-5d44-46d9-a260-9ce5836d94a9/common.py"
+  },
+  {
+   "job_id": 5,
+   "app_name_prop": "bas-e1e6-prep",
+   "submit_file": "/mnt/tmp/spark-2d140d86-5d44-46d9-a260-9ce5836d94a9/common.py"
+  },
+  {
+   "job_id": 6,
+   "app_name_prop": "bas-e1e6-prep",
+   "submit_file": "/mnt/tmp/spark-2d140d86-5d44-46d9-a260-9ce5836d94a9/common.py"
+  },
+  {
+   "job_id": 7,
+   "app_name_prop": null,
+   "submit_file": null
+  }
+ ],
+ "app_attempt": null,
+ "stage_agg": {
+  "0": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 1520
+  },
+  "1": {
+   "tasks": 73,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 1539526,
+   "out_rec": 5368834,
+   "max_run_ms": 6703
+  },
+  "2": {
+   "tasks": 73,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 145637751,
+   "sw_rec": 4701341,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 1539526,
+   "out_rec": 0,
+   "max_run_ms": 4541
+  },
+  "3": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 145637751,
+   "sr_rec": 4701341,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 3064777,
+   "max_run_ms": 3002
+  },
+  "4": {
+   "tasks": 73,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 22571950,
+   "sw_rec": 1539526,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 1539526,
+   "out_rec": 0,
+   "max_run_ms": 1227
+  },
+  "5": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 22571950,
+   "sr_rec": 1539526,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 1539526,
+   "max_run_ms": 1214
+  },
+  "6": {
+   "tasks": 73,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 3650,
+   "sw_rec": 73,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 1539526,
+   "out_rec": 0,
+   "max_run_ms": 2627
+  },
+  "7": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 3650,
+   "sr_rec": 73,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 38
+  },
+  "8": {
+   "tasks": 73,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 145637751,
+   "sw_rec": 4701341,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 1539526,
+   "out_rec": 0,
+   "max_run_ms": 1487
+  },
+  "9": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 145637751,
+   "sr_rec": 4701341,
+   "sw_bytes": 6400,
+   "sw_rec": 128,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 339
+  },
+  "10": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 6400,
+   "sr_rec": 128,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 29
+  },
+  "11": {
+   "tasks": 73,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 51919868,
+   "sw_rec": 4701341,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 1539526,
+   "out_rec": 0,
+   "max_run_ms": 1196
+  },
+  "12": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 51919868,
+   "sr_rec": 4701341,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 360
+  },
+  "13": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 1,
+   "max_run_ms": 1137
+  }
+ },
+ "distinct_hosts": [
+  "ip-10-192-21-101.ec2.internal",
+  "ip-10-192-21-113.ec2.internal",
+  "ip-10-192-21-117.ec2.internal",
+  "ip-10-192-21-118.ec2.internal",
+  "ip-10-192-21-126.ec2.internal",
+  "ip-10-192-21-13.ec2.internal",
+  "ip-10-192-21-131.ec2.internal",
+  "ip-10-192-21-151.ec2.internal",
+  "ip-10-192-21-167.ec2.internal",
+  "ip-10-192-21-174.ec2.internal",
+  "ip-10-192-21-189.ec2.internal",
+  "ip-10-192-21-196.ec2.internal",
+  "ip-10-192-21-226.ec2.internal",
+  "ip-10-192-21-42.ec2.internal",
+  "ip-10-192-21-6.ec2.internal",
+  "ip-10-192-21-61.ec2.internal",
+  "ip-10-192-21-68.ec2.internal",
+  "ip-10-192-21-9.ec2.internal"
+ ],
+ "n_executors": 18,
+ "wall_sec": 62.8
+}
+======================================================================
+{
+ "path": "capture/eventlog/<APPLICATION_ID>",
+ "app_name": "bas-e1e6-a9-100m",
+ "app_id": "<APPLICATION_ID>",
+ "app_start_ms": 1795633303533,
+ "app_end_ms": 1795633357349,
+ "user": "hadoop",
+ "spark_version": "3.5.8-amzn-0",
+ "executors": {
+  "9": "ip-10-192-21-127.ec2.internal",
+  "17": "ip-10-192-21-140.ec2.internal",
+  "12": "ip-10-192-21-103.ec2.internal",
+  "13": "ip-10-192-21-52.ec2.internal",
+  "18": "ip-10-192-21-45.ec2.internal",
+  "3": "ip-10-192-21-164.ec2.internal",
+  "1": "ip-10-192-21-70.ec2.internal",
+  "11": "ip-10-192-21-138.ec2.internal",
+  "4": "ip-10-192-21-109.ec2.internal",
+  "16": "ip-10-192-21-64.ec2.internal",
+  "8": "ip-10-192-21-234.ec2.internal",
+  "15": "ip-10-192-21-78.ec2.internal",
+  "14": "ip-10-192-21-132.ec2.internal",
+  "10": "ip-10-192-21-115.ec2.internal",
+  "2": "ip-10-192-21-188.ec2.internal",
+  "5": "ip-10-192-21-14.ec2.internal",
+  "6": "ip-10-192-21-206.ec2.internal",
+  "7": "ip-10-192-21-18.ec2.internal"
+ },
+ "executor_lost": [],
+ "tasks_total": 1245,
+ "tasks_success": 1245,
+ "tasks_failed": 0,
+ "task_fail_reasons": {},
+ "shuffle_read_bytes": 71523787,
+ "shuffle_read_records": 7994630,
+ "shuffle_write_bytes": 71523787,
+ "shuffle_write_records": 7994630,
+ "spill_mem": 0,
+ "spill_disk": 0,
+ "input_bytes": 1017709777,
+ "input_records": 520000000,
+ "output_bytes": 1558,
+ "output_records": 12,
+ "stages_completed": 18,
+ "stages_failed": 0,
+ "stage_info": {
+  "0": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795633319981,
+   "submission_ms": 1795633317707,
+   "failure_reason": ""
+  },
+  "1": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795633322814,
+   "submission_ms": 1795633321271,
+   "failure_reason": ""
+  },
+  "2": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 72,
+   "completion_ms": 1795633329047,
+   "submission_ms": 1795633324990,
+   "failure_reason": ""
+  },
+  "3": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 128,
+   "completion_ms": 1795633329898,
+   "submission_ms": 1795633329085,
+   "failure_reason": ""
+  },
+  "4": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 72,
+   "completion_ms": 1795633331961,
+   "submission_ms": 1795633330537,
+   "failure_reason": ""
+  },
+  "5": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 128,
+   "completion_ms": 1795633332623,
+   "submission_ms": 1795633331970,
+   "failure_reason": ""
+  },
+  "6": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 72,
+   "completion_ms": 1795633334538,
+   "submission_ms": 1795633332938,
+   "failure_reason": ""
+  },
+  "7": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 128,
+   "completion_ms": 1795633335009,
+   "submission_ms": 1795633334544,
+   "failure_reason": ""
+  },
+  "8": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 72,
+   "completion_ms": 1795633338003,
+   "submission_ms": 1795633335343,
+   "failure_reason": ""
+  },
+  "9": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 128,
+   "completion_ms": 1795633338493,
+   "submission_ms": 1795633338009,
+   "failure_reason": ""
+  },
+  "10": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 56,
+   "completion_ms": 1795633340768,
+   "submission_ms": 1795633338919,
+   "failure_reason": ""
+  },
+  "11": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 128,
+   "completion_ms": 1795633341039,
+   "submission_ms": 1795633340772,
+   "failure_reason": ""
+  },
+  "12": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 56,
+   "completion_ms": 1795633342459,
+   "submission_ms": 1795633341514,
+   "failure_reason": ""
+  },
+  "13": {
+   "name": "collect at /mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/a9_100m.py:115",
+   "num_tasks": 128,
+   "completion_ms": 1795633342693,
+   "submission_ms": 1795633342464,
+   "failure_reason": ""
+  },
+  "14": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 72,
+   "completion_ms": 1795633343803,
+   "submission_ms": 1795633343167,
+   "failure_reason": ""
+  },
+  "15": {
+   "name": "count at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795633343874,
+   "submission_ms": 1795633343804,
+   "failure_reason": ""
+  },
+  "16": {
+   "name": "runJob at SparkHadoopWriter.scala:83",
+   "num_tasks": 1,
+   "completion_ms": 1795633345428,
+   "submission_ms": 1795633344229,
+   "failure_reason": ""
+  },
+  "17": {
+   "name": "runJob at SparkHadoopWriter.scala:83",
+   "num_tasks": 1,
+   "completion_ms": 1795633357197,
+   "submission_ms": 1795633355559,
+   "failure_reason": ""
+  }
+ },
+ "jobs": [
+  {
+   "job_id": 0,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 1,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 2,
+   "app_name_prop": "bas-e1e6-a9-100m",
+   "submit_file": "/mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/common.py"
+  },
+  {
+   "job_id": 3,
+   "app_name_prop": "bas-e1e6-a9-100m",
+   "submit_file": "/mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/common.py"
+  },
+  {
+   "job_id": 4,
+   "app_name_prop": "bas-e1e6-a9-100m",
+   "submit_file": "/mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/common.py"
+  },
+  {
+   "job_id": 5,
+   "app_name_prop": "bas-e1e6-a9-100m",
+   "submit_file": "/mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/common.py"
+  },
+  {
+   "job_id": 6,
+   "app_name_prop": "bas-e1e6-a9-100m",
+   "submit_file": "/mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/common.py"
+  },
+  {
+   "job_id": 7,
+   "app_name_prop": "bas-e1e6-a9-100m",
+   "submit_file": "/mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/common.py"
+  },
+  {
+   "job_id": 8,
+   "app_name_prop": "bas-e1e6-a9-100m",
+   "submit_file": "/mnt/tmp/spark-e3813037-c1ed-4fe1-9f92-ece28f434b29/common.py"
+  },
+  {
+   "job_id": 9,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 10,
+   "app_name_prop": null,
+   "submit_file": null
+  }
+ ],
+ "app_attempt": null,
+ "stage_agg": {
+  "0": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 1110
+  },
+  "1": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 1079
+  },
+  "2": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 12701990,
+   "sw_rec": 1438521,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 2952
+  },
+  "3": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 12701990,
+   "sr_rec": 1438521,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 531
+  },
+  "4": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 13530366,
+   "sw_rec": 1440000,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 1195
+  },
+  "5": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 13530366,
+   "sr_rec": 1440000,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 268
+  },
+  "6": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 12546604,
+   "sw_rec": 1440000,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 1457
+  },
+  "7": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 12546604,
+   "sr_rec": 1440000,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 236
+  },
+  "8": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 12671703,
+   "sw_rec": 1438220,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 2452
+  },
+  "9": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 12671703,
+   "sr_rec": 1438220,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 272
+  },
+  "10": {
+   "tasks": 56,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 9726637,
+   "sw_rec": 1117817,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 60000000,
+   "out_rec": 0,
+   "max_run_ms": 1744
+  },
+  "11": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 9726637,
+   "sr_rec": 1117817,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 156
+  },
+  "12": {
+   "tasks": 56,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 10342887,
+   "sw_rec": 1120000,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 60000000,
+   "out_rec": 0,
+   "max_run_ms": 811
+  },
+  "13": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 10342887,
+   "sr_rec": 1120000,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 132
+  },
+  "14": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 3600,
+   "sw_rec": 72,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 377
+  },
+  "15": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 3600,
+   "sr_rec": 72,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 47
+  },
+  "16": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 1,
+   "max_run_ms": 1087
+  },
+  "17": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 11,
+   "max_run_ms": 1521
+  }
+ },
+ "distinct_hosts": [
+  "ip-10-192-21-103.ec2.internal",
+  "ip-10-192-21-109.ec2.internal",
+  "ip-10-192-21-115.ec2.internal",
+  "ip-10-192-21-127.ec2.internal",
+  "ip-10-192-21-132.ec2.internal",
+  "ip-10-192-21-138.ec2.internal",
+  "ip-10-192-21-14.ec2.internal",
+  "ip-10-192-21-140.ec2.internal",
+  "ip-10-192-21-164.ec2.internal",
+  "ip-10-192-21-18.ec2.internal",
+  "ip-10-192-21-188.ec2.internal",
+  "ip-10-192-21-206.ec2.internal",
+  "ip-10-192-21-234.ec2.internal",
+  "ip-10-192-21-45.ec2.internal",
+  "ip-10-192-21-52.ec2.internal",
+  "ip-10-192-21-64.ec2.internal",
+  "ip-10-192-21-70.ec2.internal",
+  "ip-10-192-21-78.ec2.internal"
+ ],
+ "n_executors": 18,
+ "wall_sec": 53.8
+}
+======================================================================
+{
+ "path": "capture/eventlog/<APPLICATION_ID>",
+ "app_name": "bas-e1e6-e6synth-off",
+ "app_id": "<APPLICATION_ID>",
+ "app_start_ms": 1795633368375,
+ "app_end_ms": 1795633496447,
+ "user": "hadoop",
+ "spark_version": "3.5.8-amzn-0",
+ "executors": {
+  "6": "ip-10-192-21-206.ec2.internal",
+  "13": "ip-10-192-21-52.ec2.internal",
+  "17": "ip-10-192-21-140.ec2.internal",
+  "8": "ip-10-192-21-234.ec2.internal",
+  "2": "ip-10-192-21-188.ec2.internal",
+  "5": "ip-10-192-21-14.ec2.internal",
+  "7": "ip-10-192-21-18.ec2.internal",
+  "11": "ip-10-192-21-138.ec2.internal",
+  "9": "ip-10-192-21-127.ec2.internal",
+  "4": "ip-10-192-21-109.ec2.internal",
+  "3": "ip-10-192-21-164.ec2.internal",
+  "1": "ip-10-192-21-70.ec2.internal",
+  "12": "ip-10-192-21-103.ec2.internal",
+  "10": "ip-10-192-21-115.ec2.internal",
+  "18": "ip-10-192-21-45.ec2.internal",
+  "15": "ip-10-192-21-78.ec2.internal",
+  "14": "ip-10-192-21-132.ec2.internal",
+  "16": "ip-10-192-21-64.ec2.internal"
+ },
+ "executor_lost": [],
+ "tasks_total": 548,
+ "tasks_success": 548,
+ "tasks_failed": 0,
+ "task_fail_reasons": {},
+ "shuffle_read_bytes": 5039703273,
+ "shuffle_read_records": 202876741,
+ "shuffle_write_bytes": 5039703273,
+ "shuffle_write_records": 202876741,
+ "spill_mem": 0,
+ "spill_disk": 0,
+ "input_bytes": 3386779828,
+ "input_records": 400000000,
+ "output_bytes": 6004,
+ "output_records": 2,
+ "stages_completed": 10,
+ "stages_failed": 0,
+ "stage_info": {
+  "0": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795633384747,
+   "submission_ms": 1795633381976,
+   "failure_reason": ""
+  },
+  "1": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795633386994,
+   "submission_ms": 1795633385698,
+   "failure_reason": ""
+  },
+  "2": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 72,
+   "completion_ms": 1795633397455,
+   "submission_ms": 1795633391045,
+   "failure_reason": ""
+  },
+  "3": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 72,
+   "completion_ms": 1795633397358,
+   "submission_ms": 1795633391104,
+   "failure_reason": ""
+  },
+  "4": {
+   "name": "collect at /mnt/tmp/spark-92872f33-c4a8-440e-b1f8-4f87f08a9c97/e6_aqe.py:28",
+   "num_tasks": 128,
+   "completion_ms": 1795633434129,
+   "submission_ms": 1795633397491,
+   "failure_reason": ""
+  },
+  "5": {
+   "name": "runJob at SparkHadoopWriter.scala:83",
+   "num_tasks": 1,
+   "completion_ms": 1795633435340,
+   "submission_ms": 1795633434569,
+   "failure_reason": ""
+  },
+  "6": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 72,
+   "completion_ms": 1795633448870,
+   "submission_ms": 1795633444334,
+   "failure_reason": ""
+  },
+  "7": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 72,
+   "completion_ms": 1795633451190,
+   "submission_ms": 1795633444396,
+   "failure_reason": ""
+  },
+  "8": {
+   "name": "collect at /mnt/tmp/spark-92872f33-c4a8-440e-b1f8-4f87f08a9c97/e6_aqe.py:28",
+   "num_tasks": 128,
+   "completion_ms": 1795633486745,
+   "submission_ms": 1795633451205,
+   "failure_reason": ""
+  },
+  "9": {
+   "name": "runJob at SparkHadoopWriter.scala:83",
+   "num_tasks": 1,
+   "completion_ms": 1795633487310,
+   "submission_ms": 1795633486908,
+   "failure_reason": ""
+  }
+ },
+ "jobs": [
+  {
+   "job_id": 0,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 1,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 2,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 3,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 4,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 5,
+   "app_name_prop": null,
+   "submit_file": null
+  }
+ ],
+ "app_attempt": null,
+ "stage_agg": {
+  "0": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 1034
+  },
+  "1": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 878
+  },
+  "2": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 2504241480,
+   "sw_rec": 100000000,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 5631
+  },
+  "3": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 6898597,
+   "sw_rec": 1438521,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 1226
+  },
+  "4": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 2511140077,
+   "sr_rec": 101438521,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 36094
+  },
+  "5": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 1,
+   "max_run_ms": 518
+  },
+  "6": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 6894586,
+   "sw_rec": 1438220,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 4332
+  },
+  "7": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 2521668610,
+   "sw_rec": 100000000,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 4701
+  },
+  "8": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 2528563196,
+   "sr_rec": 101438220,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 35434
+  },
+  "9": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 1,
+   "max_run_ms": 307
+  }
+ },
+ "distinct_hosts": [
+  "ip-10-192-21-103.ec2.internal",
+  "ip-10-192-21-109.ec2.internal",
+  "ip-10-192-21-115.ec2.internal",
+  "ip-10-192-21-127.ec2.internal",
+  "ip-10-192-21-132.ec2.internal",
+  "ip-10-192-21-138.ec2.internal",
+  "ip-10-192-21-14.ec2.internal",
+  "ip-10-192-21-140.ec2.internal",
+  "ip-10-192-21-164.ec2.internal",
+  "ip-10-192-21-18.ec2.internal",
+  "ip-10-192-21-188.ec2.internal",
+  "ip-10-192-21-206.ec2.internal",
+  "ip-10-192-21-234.ec2.internal",
+  "ip-10-192-21-45.ec2.internal",
+  "ip-10-192-21-52.ec2.internal",
+  "ip-10-192-21-64.ec2.internal",
+  "ip-10-192-21-70.ec2.internal",
+  "ip-10-192-21-78.ec2.internal"
+ ],
+ "n_executors": 18,
+ "wall_sec": 128.1
+}
+======================================================================
+{
+ "path": "capture/eventlog/<APPLICATION_ID>",
+ "app_name": "bas-e1e6-e6synth-on",
+ "app_id": "<APPLICATION_ID>",
+ "app_start_ms": 1795633507034,
+ "app_end_ms": 1795633634553,
+ "user": "hadoop",
+ "spark_version": "3.5.8-amzn-0",
+ "executors": {
+  "4": "ip-10-192-21-115.ec2.internal",
+  "17": "ip-10-192-21-109.ec2.internal",
+  "1": "ip-10-192-21-18.ec2.internal",
+  "5": "ip-10-192-21-138.ec2.internal",
+  "7": "ip-10-192-21-52.ec2.internal",
+  "2": "ip-10-192-21-234.ec2.internal",
+  "18": "ip-10-192-21-14.ec2.internal",
+  "6": "ip-10-192-21-103.ec2.internal",
+  "15": "ip-10-192-21-188.ec2.internal",
+  "16": "ip-10-192-21-164.ec2.internal",
+  "9": "ip-10-192-21-78.ec2.internal",
+  "12": "ip-10-192-21-45.ec2.internal",
+  "10": "ip-10-192-21-64.ec2.internal",
+  "14": "ip-10-192-21-70.ec2.internal",
+  "3": "ip-10-192-21-127.ec2.internal",
+  "8": "ip-10-192-21-132.ec2.internal",
+  "13": "ip-10-192-21-35.ec2.internal",
+  "11": "ip-10-192-21-140.ec2.internal"
+ },
+ "executor_lost": [],
+ "tasks_total": 548,
+ "tasks_success": 548,
+ "tasks_failed": 0,
+ "task_fail_reasons": {},
+ "shuffle_read_bytes": 5039703273,
+ "shuffle_read_records": 202876741,
+ "shuffle_write_bytes": 5039703273,
+ "shuffle_write_records": 202876741,
+ "spill_mem": 0,
+ "spill_disk": 0,
+ "input_bytes": 3386779828,
+ "input_records": 400000000,
+ "output_bytes": 5922,
+ "output_records": 2,
+ "stages_completed": 10,
+ "stages_failed": 0,
+ "stage_info": {
+  "0": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795633523779,
+   "submission_ms": 1795633521177,
+   "failure_reason": ""
+  },
+  "1": {
+   "name": "parquet at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 1,
+   "completion_ms": 1795633526122,
+   "submission_ms": 1795633524772,
+   "failure_reason": ""
+  },
+  "2": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 72,
+   "completion_ms": 1795633535252,
+   "submission_ms": 1795633528435,
+   "failure_reason": ""
+  },
+  "3": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 72,
+   "completion_ms": 1795633534734,
+   "submission_ms": 1795633529255,
+   "failure_reason": ""
+  },
+  "6": {
+   "name": "collect at /mnt/tmp/spark-dff7db4e-2a5c-4a68-9182-697c53c24056/e6_aqe.py:28",
+   "num_tasks": 128,
+   "completion_ms": 1795633573973,
+   "submission_ms": 1795633535767,
+   "failure_reason": ""
+  },
+  "7": {
+   "name": "runJob at SparkHadoopWriter.scala:83",
+   "num_tasks": 1,
+   "completion_ms": 1795633575133,
+   "submission_ms": 1795633574413,
+   "failure_reason": ""
+  },
+  "8": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 72,
+   "completion_ms": 1795633590016,
+   "submission_ms": 1795633583502,
+   "failure_reason": ""
+  },
+  "9": {
+   "name": "javaToPython at NativeMethodAccessorImpl.java:0",
+   "num_tasks": 72,
+   "completion_ms": 1795633589621,
+   "submission_ms": 1795633583725,
+   "failure_reason": ""
+  },
+  "12": {
+   "name": "collect at /mnt/tmp/spark-dff7db4e-2a5c-4a68-9182-697c53c24056/e6_aqe.py:28",
+   "num_tasks": 128,
+   "completion_ms": 1795633624684,
+   "submission_ms": 1795633590334,
+   "failure_reason": ""
+  },
+  "13": {
+   "name": "runJob at SparkHadoopWriter.scala:83",
+   "num_tasks": 1,
+   "completion_ms": 1795633625272,
+   "submission_ms": 1795633624857,
+   "failure_reason": ""
+  }
+ },
+ "jobs": [
+  {
+   "job_id": 0,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 1,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 2,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 3,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 4,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 5,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 6,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 7,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 8,
+   "app_name_prop": null,
+   "submit_file": null
+  },
+  {
+   "job_id": 9,
+   "app_name_prop": null,
+   "submit_file": null
+  }
+ ],
+ "app_attempt": null,
+ "stage_agg": {
+  "0": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 1178
+  },
+  "1": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 933
+  },
+  "2": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 2504241480,
+   "sw_rec": 100000000,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 5736
+  },
+  "3": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 6898597,
+   "sw_rec": 1438521,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 1274
+  },
+  "6": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 2511140077,
+   "sr_rec": 101438521,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 37737
+  },
+  "7": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 1,
+   "max_run_ms": 389
+  },
+  "8": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 2521668610,
+   "sw_rec": 100000000,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 6234
+  },
+  "9": {
+   "tasks": 72,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 6894586,
+   "sw_rec": 1438220,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 100000000,
+   "out_rec": 0,
+   "max_run_ms": 1756
+  },
+  "12": {
+   "tasks": 128,
+   "failed": 0,
+   "sr_bytes": 2528563196,
+   "sr_rec": 101438220,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 0,
+   "max_run_ms": 34229
+  },
+  "13": {
+   "tasks": 1,
+   "failed": 0,
+   "sr_bytes": 0,
+   "sr_rec": 0,
+   "sw_bytes": 0,
+   "sw_rec": 0,
+   "spill_disk": 0,
+   "spill_mem": 0,
+   "in_rec": 0,
+   "out_rec": 1,
+   "max_run_ms": 307
+  }
+ },
+ "distinct_hosts": [
+  "ip-10-192-21-103.ec2.internal",
+  "ip-10-192-21-109.ec2.internal",
+  "ip-10-192-21-115.ec2.internal",
+  "ip-10-192-21-127.ec2.internal",
+  "ip-10-192-21-132.ec2.internal",
+  "ip-10-192-21-138.ec2.internal",
+  "ip-10-192-21-14.ec2.internal",
+  "ip-10-192-21-140.ec2.internal",
+  "ip-10-192-21-164.ec2.internal",
+  "ip-10-192-21-18.ec2.internal",
+  "ip-10-192-21-188.ec2.internal",
+  "ip-10-192-21-234.ec2.internal",
+  "ip-10-192-21-35.ec2.internal",
+  "ip-10-192-21-45.ec2.internal",
+  "ip-10-192-21-52.ec2.internal",
+  "ip-10-192-21-64.ec2.internal",
+  "ip-10-192-21-70.ec2.internal",
+  "ip-10-192-21-78.ec2.internal"
+ ],
+ "n_executors": 18,
+ "wall_sec": 127.5
+}
+======================================================================

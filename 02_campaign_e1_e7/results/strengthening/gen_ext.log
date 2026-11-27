@@ -1,0 +1,9 @@
+near s=0.7 seed=404 n=10000000: validation_ok=True gen=17.4s gt=5.8s
+near_s700_s404: generate returned validation_ok=True
+near s=0.7 seed=505 n=10000000: validation_ok=True gen=13.5s gt=9.1s
+near_s700_s505: generate returned validation_ok=True
+near s=0.78 seed=404 n=10000000: validation_ok=True gen=16.3s gt=8.7s
+near_s780_s404: generate returned validation_ok=True
+near s=0.78 seed=505 n=10000000: validation_ok=True gen=19.9s gt=8.3s
+near_s780_s505: generate returned validation_ok=True
+extension generation done

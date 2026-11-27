@@ -1,0 +1,690 @@
+{
+ "outeq_200k_zipf_s101": {
+  "scale": "200K",
+  "seed": 101,
+  "meta": {
+   "family": "zipf",
+   "seed": 101,
+   "n_fact": 200000,
+   "n_fact2": 120000,
+   "p_null": 0.04,
+   "gen_seconds": 0.29,
+   "ground_truth_sql_seconds": 0.09,
+   "validation_ok": true
+  },
+  "reps": {
+   "scan": [
+    {
+     "seconds": 1.346349114000077,
+     "peak_mem_mb_delta": 98.265625,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    },
+    {
+     "seconds": 1.2794888160001392,
+     "peak_mem_mb_delta": 99.859375,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    },
+    {
+     "seconds": 1.1173649360002855,
+     "peak_mem_mb_delta": 98.5546875,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    }
+   ],
+   "build": [
+    {
+     "seconds": 0.012645156999951723,
+     "peak_mem_mb_delta": 1.23828125,
+     "n_syn_cols": 4,
+     "phase": "build"
+    },
+    {
+     "seconds": 0.0627356879999752,
+     "peak_mem_mb_delta": 1.23828125,
+     "n_syn_cols": 4,
+     "phase": "build"
+    },
+    {
+     "seconds": 0.007667116999982682,
+     "peak_mem_mb_delta": 1.23828125,
+     "n_syn_cols": 4,
+     "phase": "build"
+    }
+   ],
+   "serialize": [
+    {
+     "seconds": 0.0012685739998232748,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 74887,
+     "phase": "serialize"
+    },
+    {
+     "seconds": 0.0012463900002330774,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 74887,
+     "phase": "serialize"
+    },
+    {
+     "seconds": 0.001411739000104717,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 74887,
+     "phase": "serialize"
+    }
+   ],
+   "predict_A8": [
+    {
+     "seconds": 0.29019698999991306,
+     "peak_mem_mb_delta": 11.265625,
+     "phase": "predict",
+     "arm": "A8"
+    },
+    {
+     "seconds": 0.21838669499993557,
+     "peak_mem_mb_delta": 11.359375,
+     "phase": "predict",
+     "arm": "A8"
+    },
+    {
+     "seconds": 0.22049860400011312,
+     "peak_mem_mb_delta": 11.359375,
+     "phase": "predict",
+     "arm": "A8"
+    }
+   ],
+   "predict_A5": [
+    {
+     "seconds": 0.20619094199992105,
+     "peak_mem_mb_delta": 12.0546875,
+     "phase": "predict",
+     "arm": "A5"
+    },
+    {
+     "seconds": 0.28859832099988125,
+     "peak_mem_mb_delta": 11.9765625,
+     "phase": "predict",
+     "arm": "A5"
+    },
+    {
+     "seconds": 0.5622982640002192,
+     "peak_mem_mb_delta": 12.04296875,
+     "phase": "predict",
+     "arm": "A5"
+    }
+   ],
+   "predict_A9": [
+    {
+     "seconds": 0.08559702499997002,
+     "peak_mem_mb_delta": 2.859375,
+     "phase": "predict",
+     "arm": "A9"
+    },
+    {
+     "seconds": 0.024776492999990296,
+     "peak_mem_mb_delta": 2.98828125,
+     "phase": "predict",
+     "arm": "A9"
+    },
+    {
+     "seconds": 0.0824253860000681,
+     "peak_mem_mb_delta": 3.0234375,
+     "phase": "predict",
+     "arm": "A9"
+    }
+   ]
+  },
+  "counts_validated": true,
+  "counts_source": "scan-derived (validated exact)",
+  "fact_rows": 200000,
+  "fact2_rows": 120000,
+  "fact_bytes": 3876249,
+  "fact2_bytes": 636448
+ },
+ "outeq_1m_zipf_s101": {
+  "scale": "1M",
+  "seed": 101,
+  "meta": {
+   "family": "zipf",
+   "seed": 101,
+   "n_fact": 1000000,
+   "n_fact2": 600000,
+   "p_null": 0.04,
+   "gen_seconds": 0.7,
+   "ground_truth_sql_seconds": 0.25,
+   "validation_ok": true
+  },
+  "reps": {
+   "scan": [
+    {
+     "seconds": 2.0037424269999065,
+     "peak_mem_mb_delta": 125.95703125,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    },
+    {
+     "seconds": 2.121421287999965,
+     "peak_mem_mb_delta": 125.18359375,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    },
+    {
+     "seconds": 2.676467609000156,
+     "peak_mem_mb_delta": 125.19921875,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    }
+   ],
+   "build": [
+    {
+     "seconds": 0.012070463999862113,
+     "peak_mem_mb_delta": 1.234375,
+     "n_syn_cols": 4,
+     "phase": "build"
+    },
+    {
+     "seconds": 0.013571337000030326,
+     "peak_mem_mb_delta": 1.234375,
+     "n_syn_cols": 4,
+     "phase": "build"
+    },
+    {
+     "seconds": 0.014788472999953228,
+     "peak_mem_mb_delta": 1.234375,
+     "n_syn_cols": 4,
+     "phase": "build"
+    }
+   ],
+   "serialize": [
+    {
+     "seconds": 0.0014741320001121494,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 81412,
+     "phase": "serialize"
+    },
+    {
+     "seconds": 0.0023166060000221478,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 81412,
+     "phase": "serialize"
+    },
+    {
+     "seconds": 0.0023512590000791533,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 81412,
+     "phase": "serialize"
+    }
+   ],
+   "predict_A8": [
+    {
+     "seconds": 0.25994786499995826,
+     "peak_mem_mb_delta": 11.5,
+     "phase": "predict",
+     "arm": "A8"
+    },
+    {
+     "seconds": 0.2078124250001565,
+     "peak_mem_mb_delta": 11.2578125,
+     "phase": "predict",
+     "arm": "A8"
+    },
+    {
+     "seconds": 0.19866201299964814,
+     "peak_mem_mb_delta": 11.33203125,
+     "phase": "predict",
+     "arm": "A8"
+    }
+   ],
+   "predict_A5": [
+    {
+     "seconds": 0.27845523900032276,
+     "peak_mem_mb_delta": 11.82421875,
+     "phase": "predict",
+     "arm": "A5"
+    },
+    {
+     "seconds": 0.20323784999982308,
+     "peak_mem_mb_delta": 11.87109375,
+     "phase": "predict",
+     "arm": "A5"
+    },
+    {
+     "seconds": 0.21773483600009058,
+     "peak_mem_mb_delta": 11.859375,
+     "phase": "predict",
+     "arm": "A5"
+    }
+   ],
+   "predict_A9": [
+    {
+     "seconds": 0.06331118100024469,
+     "peak_mem_mb_delta": 3.05078125,
+     "phase": "predict",
+     "arm": "A9"
+    },
+    {
+     "seconds": 0.07726422999985516,
+     "peak_mem_mb_delta": 3.046875,
+     "phase": "predict",
+     "arm": "A9"
+    },
+    {
+     "seconds": 0.08750770400001784,
+     "peak_mem_mb_delta": 3.046875,
+     "phase": "predict",
+     "arm": "A9"
+    }
+   ]
+  },
+  "counts_validated": true,
+  "counts_source": "scan-derived (validated exact)",
+  "fact_rows": 1000000,
+  "fact2_rows": 600000,
+  "fact_bytes": 18588544,
+  "fact2_bytes": 3181312
+ },
+ "zipf_s101": {
+  "scale": "10M",
+  "seed": 101,
+  "meta": {
+   "family": "zipf",
+   "seed": 101,
+   "n_fact": 10000000,
+   "n_fact2": 6000000,
+   "p_null": 0.04,
+   "gen_seconds": 4.91,
+   "ground_truth_sql_seconds": 2.2,
+   "validation_ok": true
+  },
+  "reps": {
+   "scan": [
+    {
+     "seconds": 6.919737037000232,
+     "peak_mem_mb_delta": 282.6484375,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    },
+    {
+     "seconds": 7.309923011000137,
+     "peak_mem_mb_delta": 265.95703125,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    },
+    {
+     "seconds": 7.4398217699999805,
+     "peak_mem_mb_delta": 257.6171875,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    }
+   ],
+   "build": [
+    {
+     "seconds": 0.08226943299996492,
+     "peak_mem_mb_delta": 1.5078125,
+     "n_syn_cols": 4,
+     "phase": "build"
+    },
+    {
+     "seconds": 0.019273263000286533,
+     "peak_mem_mb_delta": 1.515625,
+     "n_syn_cols": 4,
+     "phase": "build"
+    },
+    {
+     "seconds": 0.05800945500004673,
+     "peak_mem_mb_delta": 1.48828125,
+     "n_syn_cols": 4,
+     "phase": "build"
+    }
+   ],
+   "serialize": [
+    {
+     "seconds": 0.0013618230000247422,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 91379,
+     "phase": "serialize"
+    },
+    {
+     "seconds": 0.05284554499985461,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 91379,
+     "phase": "serialize"
+    },
+    {
+     "seconds": 0.0012766360000568966,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 91379,
+     "phase": "serialize"
+    }
+   ],
+   "predict_A8": [
+    {
+     "seconds": 0.3204119640004137,
+     "peak_mem_mb_delta": 11.4453125,
+     "phase": "predict",
+     "arm": "A8"
+    },
+    {
+     "seconds": 0.3015155660000346,
+     "peak_mem_mb_delta": 11.3828125,
+     "phase": "predict",
+     "arm": "A8"
+    },
+    {
+     "seconds": 0.5000427959998888,
+     "peak_mem_mb_delta": 11.1796875,
+     "phase": "predict",
+     "arm": "A8"
+    }
+   ],
+   "predict_A5": [
+    {
+     "seconds": 0.41919789199982915,
+     "peak_mem_mb_delta": 11.859375,
+     "phase": "predict",
+     "arm": "A5"
+    },
+    {
+     "seconds": 0.21009041399975104,
+     "peak_mem_mb_delta": 11.87890625,
+     "phase": "predict",
+     "arm": "A5"
+    },
+    {
+     "seconds": 0.2316706889996567,
+     "peak_mem_mb_delta": 12.015625,
+     "phase": "predict",
+     "arm": "A5"
+    }
+   ],
+   "predict_A9": [
+    {
+     "seconds": 0.01740490999964095,
+     "peak_mem_mb_delta": 3.11328125,
+     "phase": "predict",
+     "arm": "A9"
+    },
+    {
+     "seconds": 0.013210243999765225,
+     "peak_mem_mb_delta": 3.13671875,
+     "phase": "predict",
+     "arm": "A9"
+    },
+    {
+     "seconds": 0.012663034000070184,
+     "peak_mem_mb_delta": 3.07421875,
+     "phase": "predict",
+     "arm": "A9"
+    }
+   ]
+  },
+  "counts_validated": true,
+  "counts_source": "scan-derived (validated exact)",
+  "fact_rows": 10000000,
+  "fact2_rows": 6000000,
+  "fact_bytes": 185630276,
+  "fact2_bytes": 31621527
+ },
+ "zipf_s101_40m": {
+  "scale": "40M",
+  "seed": 101,
+  "meta": {
+   "family": "zipf",
+   "seed": 101,
+   "n_fact": 40000000,
+   "n_fact2": 24000000,
+   "p_null": 0.04,
+   "gen_seconds": 18.67,
+   "ground_truth_sql_seconds": 8.91,
+   "validation_ok": true
+  },
+  "reps": {
+   "scan": [
+    {
+     "seconds": 15.287639412999852,
+     "peak_mem_mb_delta": 725.0859375,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    },
+    {
+     "seconds": 11.910947443999703,
+     "peak_mem_mb_delta": 715.51171875,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    },
+    {
+     "seconds": 12.749870098999963,
+     "peak_mem_mb_delta": 692.515625,
+     "validation_max_abs_diff": {
+      "distinct_A": 0,
+      "fact2_kA": 0,
+      "fact2_kB": 0,
+      "fact_kA": 0,
+      "fact_kB": 0,
+      "fact_kC": 0,
+      "fact_kN": 0,
+      "null_count": 0
+     },
+     "validation_exact": true,
+     "phase": "scan"
+    }
+   ],
+   "build": [
+    {
+     "seconds": 0.012882702999831963,
+     "peak_mem_mb_delta": 1.48828125,
+     "n_syn_cols": 4,
+     "phase": "build"
+    },
+    {
+     "seconds": 0.017780843999844365,
+     "peak_mem_mb_delta": 1.49609375,
+     "n_syn_cols": 4,
+     "phase": "build"
+    },
+    {
+     "seconds": 0.009856120999756968,
+     "peak_mem_mb_delta": 1.5078125,
+     "n_syn_cols": 4,
+     "phase": "build"
+    }
+   ],
+   "serialize": [
+    {
+     "seconds": 0.0014596609998989152,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 96514,
+     "phase": "serialize"
+    },
+    {
+     "seconds": 0.0016122600000016973,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 96514,
+     "phase": "serialize"
+    },
+    {
+     "seconds": 0.0012858800000685733,
+     "peak_mem_mb_delta": 0.0,
+     "bytes": 96514,
+     "phase": "serialize"
+    }
+   ],
+   "predict_A8": [
+    {
+     "seconds": 0.22371767399999953,
+     "peak_mem_mb_delta": 11.4453125,
+     "phase": "predict",
+     "arm": "A8"
+    },
+    {
+     "seconds": 0.20463913300000058,
+     "peak_mem_mb_delta": 11.484375,
+     "phase": "predict",
+     "arm": "A8"
+    },
+    {
+     "seconds": 0.16884548699999868,
+     "peak_mem_mb_delta": 11.5546875,
+     "phase": "predict",
+     "arm": "A8"
+    }
+   ],
+   "predict_A5": [
+    {
+     "seconds": 0.27745522800023537,
+     "peak_mem_mb_delta": 11.84765625,
+     "phase": "predict",
+     "arm": "A5"
+    },
+    {
+     "seconds": 0.21513815899970723,
+     "peak_mem_mb_delta": 11.6796875,
+     "phase": "predict",
+     "arm": "A5"
+    },
+    {
+     "seconds": 0.20487661899960585,
+     "peak_mem_mb_delta": 12.0,
+     "phase": "predict",
+     "arm": "A5"
+    }
+   ],
+   "predict_A9": [
+    {
+     "seconds": 0.012203232999581815,
+     "peak_mem_mb_delta": 3.1640625,
+     "phase": "predict",
+     "arm": "A9"
+    },
+    {
+     "seconds": 0.012078996999662195,
+     "peak_mem_mb_delta": 3.140625,
+     "phase": "predict",
+     "arm": "A9"
+    },
+    {
+     "seconds": 0.012213909999900352,
+     "peak_mem_mb_delta": 3.1171875,
+     "phase": "predict",
+     "arm": "A9"
+    }
+   ]
+  },
+  "counts_validated": true,
+  "counts_source": "scan-derived (validated exact)",
+  "fact_rows": 40000000,
+  "fact2_rows": 24000000,
+  "fact_bytes": 742124238,
+  "fact2_bytes": 126487955
+ }
+}

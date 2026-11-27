@@ -1,0 +1,9 @@
+{
+ "elapsed_sec": 13.8,
+ "executors_seen": 19,
+ "joined_rows": 20000,
+ "max_partition_rows": 20000,
+ "num_partitions": 1,
+ "status": "OK",
+ "step": "smoke"
+}

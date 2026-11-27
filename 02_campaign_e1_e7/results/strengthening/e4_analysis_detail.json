@@ -1,0 +1,1193 @@
+{
+ "sets": {
+  "synthetic_physical": {
+   "ratio": {
+    "n": 7,
+    "median": 1.0,
+    "min": 1.0,
+    "max": 1.000097977402848,
+    "mean": 1.0000181267667585
+   },
+   "spearman_rho": 0.9534625892455925,
+   "pearson_log10": 0.9999999995201048,
+   "exec_vs_maxdur_spearman": 0.396412483586046,
+   "exec_vs_spill_spearman": 0.0
+  },
+  "realdata_stageC_physical_24": {
+   "ratio": {
+    "n": 24,
+    "median": 0.9912080646104697,
+    "min": 0.8574482931867028,
+    "max": 1.0353094136767096,
+    "mean": 0.9645221414042222
+   },
+   "spearman_rho": 0.9705227876241096,
+   "pearson_log10": 0.9993665874323183,
+   "exec_vs_maxdur_spearman": 0.5921254251971318,
+   "spill_all_zero": true,
+   "per_point": [
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "G_A",
+     "analytic": 199975,
+     "executed": 207031,
+     "ratio": 1.0352844105513188
+    },
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "G_B",
+     "analytic": 191226,
+     "executed": 168975,
+     "ratio": 0.8836402999592106
+    },
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "G_C",
+     "analytic": 10596,
+     "executed": 10547,
+     "ratio": 0.9953756134390336
+    },
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "G_N",
+     "analytic": 2390495,
+     "executed": 2390495,
+     "ratio": 1.0
+    },
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "J_A",
+     "analytic": 199975,
+     "executed": 207036,
+     "ratio": 1.0353094136767096
+    },
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "J_B",
+     "analytic": 191226,
+     "executed": 168978,
+     "ratio": 0.8836559882024411
+    },
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "J_N",
+     "analytic": 10596,
+     "executed": 10549,
+     "ratio": 0.9955643639109097
+    },
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "W_A",
+     "analytic": 199975,
+     "executed": 207031,
+     "ratio": 1.0352844105513188
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "G_A",
+     "analytic": 187622,
+     "executed": 178114,
+     "ratio": 0.9493236400848515
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "G_B",
+     "analytic": 179135,
+     "executed": 153599,
+     "ratio": 0.8574482931867028
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "G_C",
+     "analytic": 9772,
+     "executed": 9733,
+     "ratio": 0.9960090053213262
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "G_N",
+     "analytic": 2162640,
+     "executed": 2162640,
+     "ratio": 1.0
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "J_A",
+     "analytic": 187622,
+     "executed": 178117,
+     "ratio": 0.9493396296809543
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "J_B",
+     "analytic": 179135,
+     "executed": 153602,
+     "ratio": 0.85746504033271
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "J_N",
+     "analytic": 9772,
+     "executed": 9735,
+     "ratio": 0.9962136717151043
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "W_A",
+     "analytic": 187622,
+     "executed": 178114,
+     "ratio": 0.9493236400848515
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "G_A",
+     "analytic": 215595,
+     "executed": 212796,
+     "ratio": 0.9870173241494469
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "G_B",
+     "analytic": 205013,
+     "executed": 181924,
+     "ratio": 0.8873778735982596
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "G_C",
+     "analytic": 11295,
+     "executed": 11257,
+     "ratio": 0.9966356795042054
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "G_N",
+     "analytic": 2719036,
+     "executed": 2719036,
+     "ratio": 1.0
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "J_A",
+     "analytic": 215595,
+     "executed": 212801,
+     "ratio": 0.9870405157819059
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "J_B",
+     "analytic": 205013,
+     "executed": 181927,
+     "ratio": 0.887392506816641
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "J_N",
+     "analytic": 11295,
+     "executed": 11259,
+     "ratio": 0.9968127490039841
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "W_A",
+     "analytic": 215595,
+     "executed": 212796,
+     "ratio": 0.9870173241494469
+    }
+   ]
+  },
+  "realdata_stageC_analyticF_6": {
+   "n": 6,
+   "note": "executed == analytic by construction (D4); ratio 1.0 for all 6; never pooled with physical set",
+   "points": [
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "F_A",
+     "analytic": 173798004
+    },
+    {
+     "instance": "NYC_TLC_2026-01",
+     "pipeline": "F_B",
+     "analytic": 330477337
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "F_A",
+     "analytic": 148623071
+    },
+    {
+     "instance": "NYC_TLC_2026-02",
+     "pipeline": "F_B",
+     "analytic": 257451181
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "F_A",
+     "analytic": 187374735
+    },
+    {
+     "instance": "NYC_TLC_2026-03",
+     "pipeline": "F_B",
+     "analytic": 359123568
+    }
+   ]
+  },
+  "synthetic_analyticF_2": {
+   "n": 2,
+   "note": "analytic by construction (D4); ratio 1.0; never pooled"
+  }
+ },
+ "pipelines": [
+  {
+   "campaign": "synthetic",
+   "pipeline": "G_A",
+   "kind": "physical",
+   "stage_id": 6,
+   "analytic_load": 10873845,
+   "executed_load_verifier": 10873845,
+   "executed_load_logderived": 10873845,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 10873845,
+    "tot_read_records": 100000000,
+    "tot_read_bytes": 2504843135,
+    "tot_write_bytes": 7167,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 15331,
+    "dur_median_ms": 2908.0,
+    "dur_max_over_median": 5.272008253094911,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795448833601_0002_01_000001/spark_job.py:410"
+   }
+  },
+  {
+   "campaign": "synthetic",
+   "pipeline": "G_B",
+   "kind": "physical",
+   "stage_id": 11,
+   "analytic_load": 1571791,
+   "executed_load_verifier": 1571791,
+   "executed_load_logderived": 1571791,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 1571791,
+    "tot_read_records": 100000000,
+    "tot_read_bytes": 2520215300,
+    "tot_write_bytes": 7166,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 3129,
+    "dur_median_ms": 1614.5,
+    "dur_max_over_median": 1.9380613192938991,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795448833601_0002_01_000001/spark_job.py:410"
+   }
+  },
+  {
+   "campaign": "synthetic",
+   "pipeline": "G_N",
+   "kind": "physical",
+   "stage_id": 16,
+   "analytic_load": 10442419,
+   "executed_load_verifier": 10442419,
+   "executed_load_logderived": 10442419,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 10442419,
+    "tot_read_records": 100000000,
+    "tot_read_bytes": 2522277059,
+    "tot_write_bytes": 7167,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 10150,
+    "dur_median_ms": 1149.0,
+    "dur_max_over_median": 8.833768494342907,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795448833601_0002_01_000001/spark_job.py:410"
+   }
+  },
+  {
+   "campaign": "synthetic",
+   "pipeline": "J_A",
+   "kind": "physical",
+   "stage_id": 22,
+   "analytic_load": 10873845,
+   "executed_load_verifier": 10873999,
+   "executed_load_logderived": 10873999,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 10873999,
+    "tot_read_records": 100020000,
+    "tot_read_bytes": 2505031388,
+    "tot_write_bytes": 7167,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 18353,
+    "dur_median_ms": 2083.5,
+    "dur_max_over_median": 8.808735301175906,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795448833601_0002_01_000001/spark_job.py:410"
+   }
+  },
+  {
+   "campaign": "synthetic",
+   "pipeline": "J_B",
+   "kind": "physical",
+   "stage_id": 30,
+   "analytic_load": 1571791,
+   "executed_load_verifier": 1571945,
+   "executed_load_logderived": 1571945,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 1571945,
+    "tot_read_records": 100020000,
+    "tot_read_bytes": 2520403553,
+    "tot_write_bytes": 7166,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 4220,
+    "dur_median_ms": 2264.0,
+    "dur_max_over_median": 1.8639575971731448,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795448833601_0002_01_000001/spark_job.py:410"
+   }
+  },
+  {
+   "campaign": "synthetic",
+   "pipeline": "J_N",
+   "kind": "physical",
+   "stage_id": 38,
+   "analytic_load": 10442419,
+   "executed_load_verifier": 10442573,
+   "executed_load_logderived": 10442573,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 10442573,
+    "tot_read_records": 100020000,
+    "tot_read_bytes": 2522465312,
+    "tot_write_bytes": 7167,
+    "spill_total": 748309212,
+    "spill_tasks": 1,
+    "spill_max_task": 748309212,
+    "dur_max_ms": 18709,
+    "dur_median_ms": 1673.5,
+    "dur_max_over_median": 11.179563788467284,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795448833601_0002_01_000001/spark_job.py:410"
+   }
+  },
+  {
+   "campaign": "synthetic",
+   "pipeline": "W_A",
+   "kind": "physical",
+   "stage_id": 51,
+   "analytic_load": 10873845,
+   "executed_load_verifier": 10873845,
+   "executed_load_logderived": 10873845,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 10873845,
+    "tot_read_records": 100000000,
+    "tot_read_bytes": 237497467,
+    "tot_write_bytes": 7167,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 884,
+    "dur_median_ms": 220.0,
+    "dur_max_over_median": 4.0181818181818185,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795448833601_0002_01_000001/spark_job.py:410"
+   }
+  },
+  {
+   "campaign": "synthetic",
+   "pipeline": "F_A",
+   "kind": "analytic",
+   "stage_id": null,
+   "analytic_load": 54690910911173.0,
+   "executed_load_verifier": null,
+   "executed_load_logderived": null,
+   "stage": null
+  },
+  {
+   "campaign": "synthetic",
+   "pipeline": "F_B",
+   "kind": "analytic",
+   "stage_id": null,
+   "analytic_load": 371507261637.0,
+   "executed_load_verifier": null,
+   "executed_load_logderived": null,
+   "stage": null
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "G_A",
+   "kind": "physical",
+   "stage_id": 14,
+   "analytic_load": 199975,
+   "executed_load_verifier": 207031,
+   "executed_load_logderived": 207031,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 207031,
+    "tot_read_records": 3724889,
+    "tot_read_bytes": 189327602,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 1488,
+    "dur_median_ms": 286.0,
+    "dur_max_over_median": 5.2027972027972025,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "G_B",
+   "kind": "physical",
+   "stage_id": 21,
+   "analytic_load": 191226,
+   "executed_load_verifier": 168975,
+   "executed_load_logderived": 168975,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 168975,
+    "tot_read_records": 3724889,
+    "tot_read_bytes": 189268007,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 1135,
+    "dur_median_ms": 132.0,
+    "dur_max_over_median": 8.598484848484848,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "G_C",
+   "kind": "physical",
+   "stage_id": 28,
+   "analytic_load": 10596,
+   "executed_load_verifier": 10547,
+   "executed_load_logderived": 10547,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 10547,
+    "tot_read_records": 40272,
+    "tot_read_bytes": 2111396,
+    "tot_write_bytes": 6272,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 344,
+    "dur_median_ms": 72.5,
+    "dur_max_over_median": 4.744827586206896,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "G_N",
+   "kind": "physical",
+   "stage_id": 35,
+   "analytic_load": 2390495,
+   "executed_load_verifier": 2390495,
+   "executed_load_logderived": 2390495,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 2390495,
+    "tot_read_records": 3724889,
+    "tot_read_bytes": 197883257,
+    "tot_write_bytes": 448,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 8000,
+    "dur_median_ms": 23.0,
+    "dur_max_over_median": 347.82608695652175,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "J_A",
+   "kind": "physical",
+   "stage_id": 43,
+   "analytic_load": 199975,
+   "executed_load_verifier": 207036,
+   "executed_load_logderived": 207036,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 207036,
+    "tot_read_records": 3725154,
+    "tot_read_bytes": 189334101,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 2424,
+    "dur_median_ms": 390.0,
+    "dur_max_over_median": 6.2153846153846155,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "J_B",
+   "kind": "physical",
+   "stage_id": 53,
+   "analytic_load": 191226,
+   "executed_load_verifier": 168978,
+   "executed_load_logderived": 168978,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 168978,
+    "tot_read_records": 3725154,
+    "tot_read_bytes": 189274506,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 1607,
+    "dur_median_ms": 263.5,
+    "dur_max_over_median": 6.098671726755218,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "J_N",
+   "kind": "physical",
+   "stage_id": 63,
+   "analytic_load": 10596,
+   "executed_load_verifier": 10549,
+   "executed_load_logderived": 10549,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 10549,
+    "tot_read_records": 40533,
+    "tot_read_bytes": 2117784,
+    "tot_write_bytes": 6272,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 239,
+    "dur_median_ms": 55.0,
+    "dur_max_over_median": 4.345454545454546,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "W_A",
+   "kind": "physical",
+   "stage_id": 80,
+   "analytic_load": 199975,
+   "executed_load_verifier": 207031,
+   "executed_load_logderived": 207031,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 207031,
+    "tot_read_records": 3724889,
+    "tot_read_bytes": 2226922,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 204,
+    "dur_median_ms": 53.0,
+    "dur_max_over_median": 3.849056603773585,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "F_A",
+   "kind": "analytic",
+   "stage_id": null,
+   "analytic_load": 173798004,
+   "executed_load_verifier": null,
+   "executed_load_logderived": null,
+   "stage": null
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-01",
+   "pipeline": "F_B",
+   "kind": "analytic",
+   "stage_id": null,
+   "analytic_load": 330477337,
+   "executed_load_verifier": null,
+   "executed_load_logderived": null,
+   "stage": null
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "G_A",
+   "kind": "physical",
+   "stage_id": 99,
+   "analytic_load": 187622,
+   "executed_load_verifier": 178114,
+   "executed_load_logderived": 178114,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 178114,
+    "tot_read_records": 3399866,
+    "tot_read_bytes": 173020224,
+    "tot_write_bytes": 6383,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 664,
+    "dur_median_ms": 63.0,
+    "dur_max_over_median": 10.53968253968254,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "G_B",
+   "kind": "physical",
+   "stage_id": 106,
+   "analytic_load": 179135,
+   "executed_load_verifier": 153599,
+   "executed_load_logderived": 153599,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 153599,
+    "tot_read_records": 3399866,
+    "tot_read_bytes": 172870838,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 707,
+    "dur_median_ms": 81.0,
+    "dur_max_over_median": 8.728395061728396,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "G_C",
+   "kind": "physical",
+   "stage_id": 113,
+   "analytic_load": 9772,
+   "executed_load_verifier": 9733,
+   "executed_load_logderived": 9733,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 9733,
+    "tot_read_records": 37373,
+    "tot_read_bytes": 1957015,
+    "tot_write_bytes": 6216,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 72,
+    "dur_median_ms": 18.0,
+    "dur_max_over_median": 4.0,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "G_N",
+   "kind": "physical",
+   "stage_id": 120,
+   "analytic_load": 2162640,
+   "executed_load_verifier": 2162640,
+   "executed_load_logderived": 2162640,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 2162640,
+    "tot_read_records": 3399866,
+    "tot_read_bytes": 180895107,
+    "tot_write_bytes": 448,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 6134,
+    "dur_median_ms": 9.0,
+    "dur_max_over_median": 681.5555555555555,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "J_A",
+   "kind": "physical",
+   "stage_id": 128,
+   "analytic_load": 187622,
+   "executed_load_verifier": 178117,
+   "executed_load_logderived": 178117,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 178117,
+    "tot_read_records": 3400131,
+    "tot_read_bytes": 173026723,
+    "tot_write_bytes": 6383,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 818,
+    "dur_median_ms": 103.5,
+    "dur_max_over_median": 7.903381642512077,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "J_B",
+   "kind": "physical",
+   "stage_id": 138,
+   "analytic_load": 179135,
+   "executed_load_verifier": 153602,
+   "executed_load_logderived": 153602,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 153602,
+    "tot_read_records": 3400131,
+    "tot_read_bytes": 172877337,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 863,
+    "dur_median_ms": 98.5,
+    "dur_max_over_median": 8.761421319796954,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "J_N",
+   "kind": "physical",
+   "stage_id": 148,
+   "analytic_load": 9772,
+   "executed_load_verifier": 9735,
+   "executed_load_logderived": 9735,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 9735,
+    "tot_read_records": 37633,
+    "tot_read_bytes": 1963353,
+    "tot_write_bytes": 6216,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 164,
+    "dur_median_ms": 24.5,
+    "dur_max_over_median": 6.6938775510204085,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "W_A",
+   "kind": "physical",
+   "stage_id": 165,
+   "analytic_load": 187622,
+   "executed_load_verifier": 178114,
+   "executed_load_logderived": 178114,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 178114,
+    "tot_read_records": 3399866,
+    "tot_read_bytes": 2059138,
+    "tot_write_bytes": 6383,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 73,
+    "dur_median_ms": 11.0,
+    "dur_max_over_median": 6.636363636363637,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "F_A",
+   "kind": "analytic",
+   "stage_id": null,
+   "analytic_load": 148623071,
+   "executed_load_verifier": null,
+   "executed_load_logderived": null,
+   "stage": null
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-02",
+   "pipeline": "F_B",
+   "kind": "analytic",
+   "stage_id": null,
+   "analytic_load": 257451181,
+   "executed_load_verifier": null,
+   "executed_load_logderived": null,
+   "stage": null
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "G_A",
+   "kind": "physical",
+   "stage_id": 184,
+   "analytic_load": 215595,
+   "executed_load_verifier": 212796,
+   "executed_load_logderived": 212796,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 212796,
+    "tot_read_records": 3952451,
+    "tot_read_bytes": 201392967,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 806,
+    "dur_median_ms": 48.5,
+    "dur_max_over_median": 16.61855670103093,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "G_B",
+   "kind": "physical",
+   "stage_id": 191,
+   "analytic_load": 205013,
+   "executed_load_verifier": 181924,
+   "executed_load_logderived": 181924,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 181924,
+    "tot_read_records": 3952451,
+    "tot_read_bytes": 201348417,
+    "tot_write_bytes": 6383,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 634,
+    "dur_median_ms": 65.5,
+    "dur_max_over_median": 9.679389312977099,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "G_C",
+   "kind": "physical",
+   "stage_id": 198,
+   "analytic_load": 11295,
+   "executed_load_verifier": 11257,
+   "executed_load_logderived": 11257,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 11257,
+    "tot_read_records": 44208,
+    "tot_read_bytes": 2303005,
+    "tot_write_bytes": 6216,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 77,
+    "dur_median_ms": 13.0,
+    "dur_max_over_median": 5.923076923076923,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "G_N",
+   "kind": "physical",
+   "stage_id": 205,
+   "analytic_load": 2719036,
+   "executed_load_verifier": 2719036,
+   "executed_load_logderived": 2719036,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 2719036,
+    "tot_read_records": 3952451,
+    "tot_read_bytes": 210511076,
+    "tot_write_bytes": 448,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 6566,
+    "dur_median_ms": 7.0,
+    "dur_max_over_median": 938.0,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "J_A",
+   "kind": "physical",
+   "stage_id": 213,
+   "analytic_load": 215595,
+   "executed_load_verifier": 212801,
+   "executed_load_logderived": 212801,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 212801,
+    "tot_read_records": 3952716,
+    "tot_read_bytes": 201399466,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 894,
+    "dur_median_ms": 75.5,
+    "dur_max_over_median": 11.841059602649006,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "J_B",
+   "kind": "physical",
+   "stage_id": 223,
+   "analytic_load": 205013,
+   "executed_load_verifier": 181927,
+   "executed_load_logderived": 181927,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 181927,
+    "tot_read_records": 3952716,
+    "tot_read_bytes": 201354916,
+    "tot_write_bytes": 6383,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 992,
+    "dur_median_ms": 83.5,
+    "dur_max_over_median": 11.880239520958083,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "J_N",
+   "kind": "physical",
+   "stage_id": 233,
+   "analytic_load": 11295,
+   "executed_load_verifier": 11259,
+   "executed_load_logderived": 11259,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 11259,
+    "tot_read_records": 44467,
+    "tot_read_bytes": 2309337,
+    "tot_write_bytes": 6216,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 64,
+    "dur_median_ms": 16.0,
+    "dur_max_over_median": 4.0,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "W_A",
+   "kind": "physical",
+   "stage_id": 250,
+   "analytic_load": 215595,
+   "executed_load_verifier": 212796,
+   "executed_load_logderived": 212796,
+   "stage": {
+    "n_tasks": 128,
+    "n_failed": 0,
+    "max_read_records": 212796,
+    "tot_read_records": 3952451,
+    "tot_read_bytes": 2339166,
+    "tot_write_bytes": 6384,
+    "spill_total": 0,
+    "spill_tasks": 0,
+    "spill_max_task": 0,
+    "dur_max_ms": 47,
+    "dur_median_ms": 8.0,
+    "dur_max_over_median": 5.875,
+    "stage_name": "collect at /mnt/yarn/usercache/hadoop/appcache/<APPLICATION_ID>/container_1795491295161_0002_01_000001/spark_job_realdata.py:266"
+   }
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "F_A",
+   "kind": "analytic",
+   "stage_id": null,
+   "analytic_load": 187374735,
+   "executed_load_verifier": null,
+   "executed_load_logderived": null,
+   "stage": null
+  },
+  {
+   "campaign": "realdata_stageC",
+   "instance": "NYC_TLC_2026-03",
+   "pipeline": "F_B",
+   "kind": "analytic",
+   "stage_id": null,
+   "analytic_load": 359123568,
+   "executed_load_verifier": null,
+   "executed_load_logderived": null,
+   "stage": null
+  }
+ ],
+ "spill_events": [
+  {
+   "campaign": "synthetic",
+   "stage_id": 38,
+   "spill_bytes_logderived": 748309212,
+   "spill_tasks": 1,
+   "spill_max_task_bytes": 748309212,
+   "stage_name_head": "collect at /mnt/yarn/usercache/hadoop/appcache/application_1",
+   "n_failed_in_stage": 0
+  },
+  {
+   "campaign": "realdata",
+   "stage_id": 298,
+   "spill_bytes_logderived": 2517426184,
+   "spill_tasks": 2,
+   "spill_max_task_bytes": 1570737237,
+   "stage_name_head": "collect at /mnt/yarn/usercache/hadoop/appcache/application_1",
+   "n_failed_in_stage": 0
+  },
+  {
+   "campaign": "realdata",
+   "stage_id": 308,
+   "spill_bytes_logderived": 1892575254,
+   "spill_tasks": 2,
+   "spill_max_task_bytes": 946593533,
+   "stage_name_head": "collect at /mnt/yarn/usercache/hadoop/appcache/application_1",
+   "n_failed_in_stage": 0
+  }
+ ],
+ "stageS": {
+  "S/NYC_TLC_100M/D_A": {
+   "gt_load": 262,
+   "analytic": 262,
+   "spill_total": null,
+   "stage_id": null
+  },
+  "S/NYC_TLC_100M/F_A": {
+   "gt_load": 134525346872,
+   "analytic": 134525346872,
+   "spill_total": null,
+   "stage_id": null
+  },
+  "S/NYC_TLC_100M/F_B": {
+   "gt_load": 278665174202,
+   "analytic": 278665174202,
+   "spill_total": null,
+   "stage_id": null
+  },
+  "S/NYC_TLC_100M/G_A": {
+   "gt_load": 5997032,
+   "analytic": 5846613,
+   "spill_total": 0,
+   "stage_id": 269
+  },
+  "S/NYC_TLC_100M/G_B": {
+   "gt_load": 4758481,
+   "analytic": 5488940,
+   "spill_total": 0,
+   "stage_id": 276
+  },
+  "S/NYC_TLC_100M/G_C": {
+   "gt_load": 319783,
+   "analytic": 321443,
+   "spill_total": 0,
+   "stage_id": 283
+  },
+  "S/NYC_TLC_100M/G_N": {
+   "gt_load": 74261964,
+   "analytic": 74261964,
+   "spill_total": 0,
+   "stage_id": 290
+  },
+  "S/NYC_TLC_100M/J_A": {
+   "gt_load": 5997037,
+   "analytic": 5846613,
+   "spill_total": 2517426184,
+   "stage_id": 298
+  },
+  "S/NYC_TLC_100M/J_B": {
+   "gt_load": 4758484,
+   "analytic": 5488940,
+   "spill_total": 1892575254,
+   "stage_id": 308
+  },
+  "S/NYC_TLC_100M/J_N": {
+   "gt_load": 319785,
+   "analytic": 321443,
+   "spill_total": 0,
+   "stage_id": 318
+  },
+  "S/NYC_TLC_100M/W_A": {
+   "gt_load": 5997032,
+   "analytic": 5846613,
+   "spill_total": 0,
+   "stage_id": 335
+  }
+ }
+}

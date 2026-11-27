@@ -1,0 +1,41 @@
+{
+ "arms": {
+  "endbiased": {
+   "abs_limit_0.02N": 26408916.66,
+   "mean_load": 10315983.0703125,
+   "predicted_max_load": 126895136.0,
+   "predicted_output_rows": 1320445833.0,
+   "rel_limit_2x_mean": 20631966.140625,
+   "verdict_abs": "FAIL",
+   "verdict_rel": "FAIL"
+  },
+  "synopsis": {
+   "abs_limit_0.02N": 15904856.280000001,
+   "mean_load": 6212834.484375,
+   "predicted_max_load": 122469088,
+   "predicted_output_rows": 795242814,
+   "rel_limit_2x_mean": 12425668.96875,
+   "verdict_abs": "FAIL",
+   "verdict_rel": "FAIL"
+  },
+  "uniform": {
+   "abs_limit_0.02N": 26299800.0,
+   "mean_load": 10273359.375,
+   "predicted_max_load": 89550000.0,
+   "predicted_output_rows": 1314990000.0,
+   "rel_limit_2x_mean": 20546718.75,
+   "verdict_abs": "FAIL",
+   "verdict_rel": "FAIL"
+  }
+ },
+ "case": "selfjoin",
+ "elapsed_sec": 25.3,
+ "join_key": "author_id",
+ "left_rows": 5368834,
+ "predicted_max_load": 122469088,
+ "predicted_output_rows": 795242814,
+ "predicted_sum_count_squared": 795242814,
+ "reason": "predicted output 795242814 (cap 2000000000) / predicted max load 122469088 (cap 25000000)",
+ "self_join": true,
+ "status": "SKIPPED_GUARD"
+}

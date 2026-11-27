@@ -1,0 +1,67 @@
+{
+ "arm": "A9",
+ "note": "D_A (distinct) excluded: diagnostic only, as in the study. J_N treats the NULL group per the pre-registration (exact-head pseudo-key).",
+ "packet_bytes": 78447,
+ "predictions": {
+  "F_A": {
+   "pred_load": 54692534163674.0,
+   "verdict": "FAIL"
+  },
+  "F_B": {
+   "pred_load": 375808000337.0,
+   "verdict": "FAIL"
+  },
+  "G_A": {
+   "pred_load": 9537885.0,
+   "verdict": "FAIL"
+  },
+  "G_B": {
+   "pred_load": 772471.0,
+   "verdict": "PASS"
+  },
+  "G_C": {
+   "pred_load": 97657.0,
+   "verdict": "PASS"
+  },
+  "G_N": {
+   "pred_load": 9161039.0,
+   "verdict": "FAIL"
+  },
+  "J_A": {
+   "pred_load": 10589073.0,
+   "verdict": "FAIL"
+  },
+  "J_B": {
+   "pred_load": 1910654.0,
+   "verdict": "PASS"
+  },
+  "J_N": {
+   "pred_load": 10120462.0,
+   "verdict": "FAIL"
+  },
+  "W_A": {
+   "pred_load": 9537885.0,
+   "verdict": "FAIL"
+  }
+ },
+ "retained_counts": {
+  "fact2_kA": 1070,
+  "fact2_kB": 1092,
+  "fact_kA": 1066,
+  "fact_kB": 1078,
+  "fact_kC": 1075,
+  "fact_kN": 1069
+ },
+ "scale": "100M",
+ "status": "OK",
+ "step": "a9_100m",
+ "threshold_T": 2000000,
+ "thresholds": {
+  "fact2_kA": 31931,
+  "fact2_kB": 56696,
+  "fact_kA": 53213,
+  "fact_kB": 94484,
+  "fact_kC": 97657,
+  "fact_kN": 51090
+ }
+}

@@ -1,0 +1,101 @@
+{
+ "rows": [
+  {
+   "pipeline": "F_A",
+   "pred": 54692534163674.0,
+   "verdict_pred": "FAIL",
+   "gt_load": 54690910911173.0,
+   "gt_verdict": "FAIL",
+   "Q_vs_gt_load": 1.00003,
+   "agree": true
+  },
+  {
+   "pipeline": "F_B",
+   "pred": 375808000337.0,
+   "verdict_pred": "FAIL",
+   "gt_load": 371507261637.0,
+   "gt_verdict": "FAIL",
+   "Q_vs_gt_load": 1.011576,
+   "agree": true
+  },
+  {
+   "pipeline": "G_A",
+   "pred": 9537885.0,
+   "verdict_pred": "FAIL",
+   "gt_load": 10873845,
+   "gt_verdict": "FAIL",
+   "Q_vs_gt_load": 1.140069,
+   "agree": true,
+   "gt_max_group": 9537885,
+   "Q_vs_max_group": 1.0
+  },
+  {
+   "pipeline": "G_B",
+   "pred": 772471.0,
+   "verdict_pred": "PASS",
+   "gt_load": 1571791,
+   "gt_verdict": "PASS",
+   "Q_vs_gt_load": 2.034757,
+   "agree": true,
+   "gt_max_group": 772471,
+   "Q_vs_max_group": 1.0
+  },
+  {
+   "pipeline": "G_C",
+   "pred": 97657.0,
+   "verdict_pred": "PASS",
+   "gt": null,
+   "note": "no executed GT in Nov 100M set (9-pipeline headline set)"
+  },
+  {
+   "pipeline": "G_N",
+   "pred": 9161039.0,
+   "verdict_pred": "FAIL",
+   "gt_load": 10442419,
+   "gt_verdict": "FAIL",
+   "Q_vs_gt_load": 1.139873,
+   "agree": true,
+   "gt_max_group": 9161039,
+   "Q_vs_max_group": 1.0
+  },
+  {
+   "pipeline": "J_A",
+   "pred": 10589073.0,
+   "verdict_pred": "FAIL",
+   "gt_load": 10873999,
+   "gt_verdict": "FAIL",
+   "Q_vs_gt_load": 1.026908,
+   "agree": true
+  },
+  {
+   "pipeline": "J_B",
+   "pred": 1910654.0,
+   "verdict_pred": "PASS",
+   "gt_load": 1571945,
+   "gt_verdict": "PASS",
+   "Q_vs_gt_load": 1.215471,
+   "agree": true
+  },
+  {
+   "pipeline": "J_N",
+   "pred": 10120462.0,
+   "verdict_pred": "FAIL",
+   "gt_load": 10442573,
+   "gt_verdict": "FAIL",
+   "Q_vs_gt_load": 1.031828,
+   "agree": true
+  },
+  {
+   "pipeline": "W_A",
+   "pred": 9537885.0,
+   "verdict_pred": "FAIL",
+   "gt_load": 10873845,
+   "gt_verdict": "FAIL",
+   "Q_vs_gt_load": 1.140069,
+   "agree": true
+  }
+ ],
+ "agreement": "9/9",
+ "median_Q": 1.139873,
+ "packet_bytes": 78447
+}

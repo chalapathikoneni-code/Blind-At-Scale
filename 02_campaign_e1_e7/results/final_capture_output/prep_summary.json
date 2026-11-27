@@ -1,0 +1,61 @@
+{
+ "dim_rows": 3064777,
+ "fact_rows": 5368834,
+ "openalex_snapshot_date": "2026-10-14",
+ "parts": [
+  {
+   "bytes": 1070341481,
+   "url": "s3://openalex/data/parquet/works/updated_date=2026-09-30/part_0000.parquet",
+   "works": 400000
+  },
+  {
+   "bytes": 1066330199,
+   "url": "s3://openalex/data/parquet/works/updated_date=2026-10-09/part_0004.parquet",
+   "works": 400000
+  },
+  {
+   "bytes": 1052909323,
+   "url": "s3://openalex/data/parquet/works/updated_date=2026-10-09/part_0002.parquet",
+   "works": 400000
+  },
+  {
+   "bytes": 1042776577,
+   "url": "s3://openalex/data/parquet/works/updated_date=2026-10-08/part_0013.parquet",
+   "works": 339526
+  }
+ ],
+ "staged_bytes": 4232357580,
+ "step": "prep",
+ "top_author_counts": [
+  11056,
+  8733,
+  7945,
+  6507,
+  6150,
+  6122,
+  5254,
+  5075,
+  4501,
+  3915,
+  3915,
+  3914,
+  3677,
+  3488,
+  3316,
+  3194,
+  2944,
+  2918,
+  2553,
+  2410,
+  2401,
+  2320,
+  2307,
+  2293,
+  2273,
+  2272,
+  2253,
+  2163,
+  2056,
+  1911
+ ]
+}
