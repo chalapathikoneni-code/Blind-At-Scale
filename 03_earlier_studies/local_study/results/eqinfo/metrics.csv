@@ -1,0 +1,9 @@
+arm,recall,precision,f1,spearman_rho,median_q_error,tp,fp,fn,tn,mean_testbed_fact_rows,source
+A7,1.0000,1.0000,1.0000,0.9960,1.015,60,0,0,39,101512,predictions_eqinfo
+A7X,1.0000,1.0000,1.0000,0.9992,1.000,60,0,0,39,114367,predictions_eqinfo
+A1,0.7667,1.0000,0.8679,0.8090,1.044,46,0,14,39,104575,results/summary.json
+A2,0.5167,1.0000,0.6813,0.8697,2.166,31,0,29,39,107409,results/summary.json
+A3,0.4167,1.0000,0.5882,0.7944,2.906,25,0,35,39,94559,results/summary.json
+A4,1.0000,1.0000,1.0000,0.9948,1.020,60,0,0,39,100000,results/summary.json
+A5,1.0000,1.0000,1.0000,0.9986,1.001,60,0,0,39,100000,results/summary.json
+A8,1.0000,1.0000,1.0000,0.9996,1.000,60,0,0,39,0,results/summary.json
