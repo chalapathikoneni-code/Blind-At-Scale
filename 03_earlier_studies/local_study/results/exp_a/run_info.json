@@ -1,0 +1,242 @@
+{
+ "zipf_s101": {
+  "synopsis_bytes": 91379,
+  "packet_bytes": 59250,
+  "thresholds": {
+   "fact_kA": 5320,
+   "fact_kB": 9449,
+   "fact_kC": 9766,
+   "fact_kN": 5110,
+   "fact2_kA": 3194,
+   "fact2_kB": 5670
+  },
+  "retained": {
+   "fact_kA": 1073,
+   "fact_kB": 1090,
+   "fact_kC": 1075,
+   "fact_kN": 1070,
+   "fact2_kA": 1074,
+   "fact2_kB": 1091
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 8,
+  "n_pred_fail_h0": 8
+ },
+ "zipf_s202": {
+  "synopsis_bytes": 91398,
+  "packet_bytes": 59128,
+  "thresholds": {
+   "fact_kA": 5323,
+   "fact_kB": 9449,
+   "fact_kC": 9766,
+   "fact_kN": 5109,
+   "fact2_kA": 3192,
+   "fact2_kB": 5669
+  },
+  "retained": {
+   "fact_kA": 1073,
+   "fact_kB": 1084,
+   "fact_kC": 1076,
+   "fact_kN": 1078,
+   "fact2_kA": 1065,
+   "fact2_kB": 1083
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 8,
+  "n_pred_fail_h0": 8
+ },
+ "zipf_s303": {
+  "synopsis_bytes": 91351,
+  "packet_bytes": 58789,
+  "thresholds": {
+   "fact_kA": 5321,
+   "fact_kB": 9450,
+   "fact_kC": 9766,
+   "fact_kN": 5110,
+   "fact2_kA": 3194,
+   "fact2_kB": 5671
+  },
+  "retained": {
+   "fact_kA": 1065,
+   "fact_kB": 1075,
+   "fact_kC": 1075,
+   "fact_kN": 1070,
+   "fact2_kA": 1064,
+   "fact2_kB": 1075
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 8,
+  "n_pred_fail_h0": 8
+ },
+ "lognormal_s101": {
+  "synopsis_bytes": 100290,
+  "packet_bytes": 64099,
+  "thresholds": {
+   "fact_kA": 8873,
+   "fact_kB": 9752,
+   "fact_kC": 9766,
+   "fact_kN": 8519,
+   "fact2_kA": 5326,
+   "fact2_kB": 5851
+  },
+  "retained": {
+   "fact_kA": 1078,
+   "fact_kB": 1091,
+   "fact_kC": 1082,
+   "fact_kN": 1076,
+   "fact2_kA": 1069,
+   "fact2_kB": 1098
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 6,
+  "n_pred_fail_h0": 6
+ },
+ "lognormal_s202": {
+  "synopsis_bytes": 100308,
+  "packet_bytes": 64215,
+  "thresholds": {
+   "fact_kA": 8873,
+   "fact_kB": 9751,
+   "fact_kC": 9766,
+   "fact_kN": 8520,
+   "fact2_kA": 5323,
+   "fact2_kB": 5851
+  },
+  "retained": {
+   "fact_kA": 1077,
+   "fact_kB": 1100,
+   "fact_kC": 1076,
+   "fact_kN": 1078,
+   "fact2_kA": 1073,
+   "fact2_kB": 1103
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 6,
+  "n_pred_fail_h0": 6
+ },
+ "lognormal_s303": {
+  "synopsis_bytes": 100300,
+  "packet_bytes": 64382,
+  "thresholds": {
+   "fact_kA": 8874,
+   "fact_kB": 9752,
+   "fact_kC": 9766,
+   "fact_kN": 8522,
+   "fact2_kA": 5324,
+   "fact2_kB": 5851
+  },
+  "retained": {
+   "fact_kA": 1074,
+   "fact_kB": 1100,
+   "fact_kC": 1078,
+   "fact_kN": 1082,
+   "fact2_kA": 1086,
+   "fact2_kB": 1104
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 6,
+  "n_pred_fail_h0": 6
+ },
+ "mixed_s101": {
+  "synopsis_bytes": 91681,
+  "packet_bytes": 58642,
+  "thresholds": {
+   "fact_kA": 5952,
+   "fact_kB": 9766,
+   "fact_kC": 9766,
+   "fact_kN": 5594,
+   "fact2_kA": 3571,
+   "fact2_kB": 5860
+  },
+  "retained": {
+   "fact_kA": 1053,
+   "fact_kB": 1062,
+   "fact_kC": 1071,
+   "fact_kN": 1055,
+   "fact2_kA": 1047,
+   "fact2_kB": 1061
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 6,
+  "n_pred_fail_h0": 6
+ },
+ "mixed_s202": {
+  "synopsis_bytes": 91732,
+  "packet_bytes": 58601,
+  "thresholds": {
+   "fact_kA": 5950,
+   "fact_kB": 9766,
+   "fact_kC": 9766,
+   "fact_kN": 5593,
+   "fact2_kA": 3570,
+   "fact2_kB": 5860
+  },
+  "retained": {
+   "fact_kA": 1053,
+   "fact_kB": 1065,
+   "fact_kC": 1073,
+   "fact_kN": 1053,
+   "fact2_kA": 1050,
+   "fact2_kB": 1050
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 6,
+  "n_pred_fail_h0": 6
+ },
+ "mixed_s303": {
+  "synopsis_bytes": 91703,
+  "packet_bytes": 58734,
+  "thresholds": {
+   "fact_kA": 5945,
+   "fact_kB": 9766,
+   "fact_kC": 9766,
+   "fact_kN": 5593,
+   "fact2_kA": 3573,
+   "fact2_kB": 5860
+  },
+  "retained": {
+   "fact_kA": 1044,
+   "fact_kB": 1058,
+   "fact_kC": 1073,
+   "fact_kN": 1058,
+   "fact2_kA": 1062,
+   "fact2_kB": 1065
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 6,
+  "n_pred_fail_h0": 6
+ },
+ "zipf_s101_40m": {
+  "synopsis_bytes": 96514,
+  "packet_bytes": 63334,
+  "thresholds": {
+   "fact_kA": 21283,
+   "fact_kB": 37796,
+   "fact_kC": 39063,
+   "fact_kN": 20433,
+   "fact2_kA": 12772,
+   "fact2_kB": 22679
+  },
+  "retained": {
+   "fact_kA": 1072,
+   "fact_kB": 1085,
+   "fact_kC": 1074,
+   "fact_kN": 1072,
+   "fact2_kA": 1073,
+   "fact2_kB": 1074
+  },
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "n_gt_fail": 8,
+  "n_pred_fail_h0": 8
+ }
+}

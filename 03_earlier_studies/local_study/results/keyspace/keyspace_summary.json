@@ -1,0 +1,3928 @@
+{
+ "datasets": {
+  "keyspace_K1M_zipf_s101": {
+   "K": 1000000,
+   "family": "zipf",
+   "seed": 101,
+   "n_fact": 5000000,
+   "n_fact2": 3000000,
+   "config": "K1M",
+   "k_over_K": 0.001024,
+   "synopsis_bytes": 85042,
+   "validation_all_exact": true
+  },
+  "keyspace_K200_mixed_s101": {
+   "K": 200000,
+   "family": "mixed",
+   "seed": 101,
+   "n_fact": 10000000,
+   "n_fact2": 6000000,
+   "config": "K200",
+   "k_over_K": 0.00512,
+   "synopsis_bytes": 89349,
+   "validation_all_exact": true
+  },
+  "keyspace_K200_zipf_s101": {
+   "K": 200000,
+   "family": "zipf",
+   "seed": 101,
+   "n_fact": 10000000,
+   "n_fact2": 6000000,
+   "config": "K200",
+   "k_over_K": 0.00512,
+   "synopsis_bytes": 88049,
+   "validation_all_exact": true
+  },
+  "keyspace_K200_zipf_s202": {
+   "K": 200000,
+   "family": "zipf",
+   "seed": 202,
+   "n_fact": 10000000,
+   "n_fact2": 6000000,
+   "config": "K200",
+   "k_over_K": 0.00512,
+   "synopsis_bytes": 88080,
+   "validation_all_exact": true
+  }
+ },
+ "arms": [
+  "A1",
+  "A2",
+  "A3",
+  "A4",
+  "A5",
+  "A8"
+ ],
+ "configs": {
+  "K200": {
+   "K": 200000,
+   "n_instances": 33,
+   "datasets": [
+    "keyspace_K200_mixed_s101",
+    "keyspace_K200_zipf_s101",
+    "keyspace_K200_zipf_s202"
+   ],
+   "synopsis_bytes": {
+    "keyspace_K200_mixed_s101": 89349,
+    "keyspace_K200_zipf_s101": 88049,
+    "keyspace_K200_zipf_s202": 88080
+   },
+   "k_over_K": 0.00512,
+   "views": {
+    "fixed200k": {
+     "n_gt_fail": 22,
+     "arms": {
+      "A1": {
+       "tp": 16,
+       "fp": 0,
+       "fn": 6,
+       "tn": 11,
+       "recall": 0.7272727272727273,
+       "precision": 1.0,
+       "f1": 0.8421052631578948,
+       "n": 33,
+       "spearman_rho": 0.7856485987854597,
+       "median_q_error": 1.0436189423673972
+      },
+      "A2": {
+       "tp": 14,
+       "fp": 0,
+       "fn": 8,
+       "tn": 11,
+       "recall": 0.6363636363636364,
+       "precision": 1.0,
+       "f1": 0.7777777777777778,
+       "n": 33,
+       "spearman_rho": 0.8855446899939807,
+       "median_q_error": 2.0
+      },
+      "A3": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 14,
+       "tn": 11,
+       "recall": 0.36363636363636365,
+       "precision": 1.0,
+       "f1": 0.5333333333333333,
+       "n": 33,
+       "spearman_rho": 0.779933110367893,
+       "median_q_error": 6.0144726712856045
+      },
+      "A4": {
+       "tp": 22,
+       "fp": 0,
+       "fn": 0,
+       "tn": 11,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 33,
+       "spearman_rho": 0.991304347826087,
+       "median_q_error": 1.0235935290262494
+      },
+      "A5": {
+       "tp": 22,
+       "fp": 0,
+       "fn": 0,
+       "tn": 11,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 33,
+       "spearman_rho": 0.9987455361609494,
+       "median_q_error": 1.0005570776255708
+      },
+      "A8": {
+       "tp": 22,
+       "fp": 0,
+       "fn": 0,
+       "tn": 11,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 33,
+       "spearman_rho": 0.9989966555183948,
+       "median_q_error": 1.0000012512244185
+      }
+     },
+     "recall_JF": {
+      "A1": {
+       "tp": 6,
+       "fp": 0,
+       "fn": 6,
+       "tn": 3,
+       "recall": 0.5,
+       "precision": 1.0,
+       "f1": 0.6666666666666666,
+       "n": 15
+      },
+      "A2": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 4,
+       "tn": 3,
+       "recall": 0.6666666666666666,
+       "precision": 1.0,
+       "f1": 0.8,
+       "n": 15
+      },
+      "A3": {
+       "tp": 6,
+       "fp": 0,
+       "fn": 6,
+       "tn": 3,
+       "recall": 0.5,
+       "precision": 1.0,
+       "f1": 0.6666666666666666,
+       "n": 15
+      },
+      "A4": {
+       "tp": 12,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 15
+      },
+      "A5": {
+       "tp": 12,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 15
+      },
+      "A8": {
+       "tp": 12,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 15
+      }
+     },
+     "recall_GDW": {
+      "A1": {
+       "tp": 10,
+       "fp": 0,
+       "fn": 0,
+       "tn": 8,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 18
+      },
+      "A2": {
+       "tp": 6,
+       "fp": 0,
+       "fn": 4,
+       "tn": 8,
+       "recall": 0.6,
+       "precision": 1.0,
+       "f1": 0.7499999999999999,
+       "n": 18
+      },
+      "A3": {
+       "tp": 2,
+       "fp": 0,
+       "fn": 8,
+       "tn": 8,
+       "recall": 0.2,
+       "precision": 1.0,
+       "f1": 0.33333333333333337,
+       "n": 18
+      },
+      "A4": {
+       "tp": 10,
+       "fp": 0,
+       "fn": 0,
+       "tn": 8,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 18
+      },
+      "A5": {
+       "tp": 10,
+       "fp": 0,
+       "fn": 0,
+       "tn": 8,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 18
+      },
+      "A8": {
+       "tp": 10,
+       "fp": 0,
+       "fn": 0,
+       "tn": 8,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 18
+      }
+     },
+     "recall_by_pipeline": {
+      "A1": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       }
+      },
+      "A2": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "tn": 1,
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.6666666666666666,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "tn": 0,
+        "recall": 0.3333333333333333,
+        "precision": 1.0,
+        "f1": 0.5,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "tn": 0,
+        "recall": 0.3333333333333333,
+        "precision": 1.0,
+        "f1": 0.5,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "tn": 0,
+        "recall": 0.3333333333333333,
+        "precision": 1.0,
+        "f1": 0.5,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "tn": 1,
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.6666666666666666,
+        "n": 3
+       }
+      },
+      "A3": {
+       "D_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.6666666666666666,
+        "precision": 1.0,
+        "f1": 0.8,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "tn": 1,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "tn": 1,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       }
+      },
+      "A4": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       }
+      },
+      "A5": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       }
+      },
+      "A8": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       }
+      }
+     }
+    },
+    "norm002": {
+     "n_gt_fail": 22,
+     "arms": {
+      "A1": {
+       "tp": 16,
+       "fp": 0,
+       "fn": 6,
+       "tn": 11,
+       "recall": 0.7272727272727273,
+       "precision": 1.0,
+       "f1": 0.8421052631578948,
+       "n": 33,
+       "spearman_rho": 0.7856485987854597,
+       "median_q_error": 1.0436189423673972
+      },
+      "A2": {
+       "tp": 14,
+       "fp": 0,
+       "fn": 8,
+       "tn": 11,
+       "recall": 0.6363636363636364,
+       "precision": 1.0,
+       "f1": 0.7777777777777778,
+       "n": 33,
+       "spearman_rho": 0.8855446899939807,
+       "median_q_error": 2.0
+      },
+      "A3": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 14,
+       "tn": 11,
+       "recall": 0.36363636363636365,
+       "precision": 1.0,
+       "f1": 0.5333333333333333,
+       "n": 33,
+       "spearman_rho": 0.779933110367893,
+       "median_q_error": 6.0144726712856045
+      },
+      "A4": {
+       "tp": 22,
+       "fp": 0,
+       "fn": 0,
+       "tn": 11,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 33,
+       "spearman_rho": 0.991304347826087,
+       "median_q_error": 1.0235935290262494
+      },
+      "A5": {
+       "tp": 22,
+       "fp": 0,
+       "fn": 0,
+       "tn": 11,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 33,
+       "spearman_rho": 0.9987455361609494,
+       "median_q_error": 1.0005570776255708
+      },
+      "A8": {
+       "tp": 22,
+       "fp": 0,
+       "fn": 0,
+       "tn": 11,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 33,
+       "spearman_rho": 0.9989966555183948,
+       "median_q_error": 1.0000012512244185
+      }
+     },
+     "recall_JF": {
+      "A1": {
+       "tp": 6,
+       "fp": 0,
+       "fn": 6,
+       "tn": 3,
+       "recall": 0.5,
+       "precision": 1.0,
+       "f1": 0.6666666666666666,
+       "n": 15
+      },
+      "A2": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 4,
+       "tn": 3,
+       "recall": 0.6666666666666666,
+       "precision": 1.0,
+       "f1": 0.8,
+       "n": 15
+      },
+      "A3": {
+       "tp": 6,
+       "fp": 0,
+       "fn": 6,
+       "tn": 3,
+       "recall": 0.5,
+       "precision": 1.0,
+       "f1": 0.6666666666666666,
+       "n": 15
+      },
+      "A4": {
+       "tp": 12,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 15
+      },
+      "A5": {
+       "tp": 12,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 15
+      },
+      "A8": {
+       "tp": 12,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 15
+      }
+     },
+     "recall_GDW": {
+      "A1": {
+       "tp": 10,
+       "fp": 0,
+       "fn": 0,
+       "tn": 8,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 18
+      },
+      "A2": {
+       "tp": 6,
+       "fp": 0,
+       "fn": 4,
+       "tn": 8,
+       "recall": 0.6,
+       "precision": 1.0,
+       "f1": 0.7499999999999999,
+       "n": 18
+      },
+      "A3": {
+       "tp": 2,
+       "fp": 0,
+       "fn": 8,
+       "tn": 8,
+       "recall": 0.2,
+       "precision": 1.0,
+       "f1": 0.33333333333333337,
+       "n": 18
+      },
+      "A4": {
+       "tp": 10,
+       "fp": 0,
+       "fn": 0,
+       "tn": 8,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 18
+      },
+      "A5": {
+       "tp": 10,
+       "fp": 0,
+       "fn": 0,
+       "tn": 8,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 18
+      },
+      "A8": {
+       "tp": 10,
+       "fp": 0,
+       "fn": 0,
+       "tn": 8,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 18
+      }
+     },
+     "recall_by_pipeline": {
+      "A1": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       }
+      },
+      "A2": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "tn": 1,
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.6666666666666666,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "tn": 0,
+        "recall": 0.3333333333333333,
+        "precision": 1.0,
+        "f1": 0.5,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "tn": 0,
+        "recall": 0.3333333333333333,
+        "precision": 1.0,
+        "f1": 0.5,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "tn": 0,
+        "recall": 0.3333333333333333,
+        "precision": 1.0,
+        "f1": 0.5,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "tn": 1,
+        "recall": 0.5,
+        "precision": 1.0,
+        "f1": 0.6666666666666666,
+        "n": 3
+       }
+      },
+      "A3": {
+       "D_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.6666666666666666,
+        "precision": 1.0,
+        "f1": 0.8,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "tn": 1,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "tn": 1,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       }
+      },
+      "A4": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       }
+      },
+      "A5": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       }
+      },
+      "A8": {
+       "D_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "F_B": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "G_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_A": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 3
+       },
+       "J_N": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       },
+       "W_A": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 3
+       }
+      }
+     }
+    }
+   },
+   "gt_loads": {
+    "keyspace_K200_mixed_s101|G_A": 175543.0,
+    "keyspace_K200_mixed_s101|G_B": 8231.0,
+    "keyspace_K200_mixed_s101|G_C": 87.0,
+    "keyspace_K200_mixed_s101|G_N": 600000.0,
+    "keyspace_K200_mixed_s101|J_A": 394290.0,
+    "keyspace_K200_mixed_s101|J_B": 135055.0,
+    "keyspace_K200_mixed_s101|J_N": 369508.0,
+    "keyspace_K200_mixed_s101|F_A": 36848613622.0,
+    "keyspace_K200_mixed_s101|F_B": 424725004.0,
+    "keyspace_K200_mixed_s101|W_A": 175543.0,
+    "keyspace_K200_mixed_s101|D_A": 82808.0,
+    "keyspace_K200_zipf_s101|G_A": 781280.0,
+    "keyspace_K200_zipf_s101|G_B": 30338.0,
+    "keyspace_K200_zipf_s101|G_C": 87.0,
+    "keyspace_K200_zipf_s101|G_N": 750442.0,
+    "keyspace_K200_zipf_s101|J_A": 875162.0,
+    "keyspace_K200_zipf_s101|J_B": 115462.0,
+    "keyspace_K200_zipf_s101|J_N": 840740.0,
+    "keyspace_K200_zipf_s101|F_A": 367497063793.0,
+    "keyspace_K200_zipf_s101|F_B": 573532059.0,
+    "keyspace_K200_zipf_s101|W_A": 781280.0,
+    "keyspace_K200_zipf_s101|D_A": 99961.0,
+    "keyspace_K200_zipf_s202|G_A": 782299.0,
+    "keyspace_K200_zipf_s202|G_B": 30509.0,
+    "keyspace_K200_zipf_s202|G_C": 85.0,
+    "keyspace_K200_zipf_s202|G_N": 751291.0,
+    "keyspace_K200_zipf_s202|J_A": 876488.0,
+    "keyspace_K200_zipf_s202|J_B": 115964.0,
+    "keyspace_K200_zipf_s202|J_N": 841514.0,
+    "keyspace_K200_zipf_s202|F_A": 367769371775.0,
+    "keyspace_K200_zipf_s202|F_B": 582286299.0,
+    "keyspace_K200_zipf_s202|W_A": 782299.0,
+    "keyspace_K200_zipf_s202|D_A": 99941.0
+   },
+   "pred_loads": {
+    "A1": {
+     "keyspace_K200_mixed_s101|G_A": 183200.0,
+     "keyspace_K200_mixed_s101|G_B": 10400.0,
+     "keyspace_K200_mixed_s101|G_C": 600.0,
+     "keyspace_K200_mixed_s101|G_N": 617100.0,
+     "keyspace_K200_mixed_s101|J_A": 176200.0,
+     "keyspace_K200_mixed_s101|J_B": 16400.0,
+     "keyspace_K200_mixed_s101|J_N": 159900.0,
+     "keyspace_K200_mixed_s101|F_A": 37476960000.0,
+     "keyspace_K200_mixed_s101|F_B": 411550000.0,
+     "keyspace_K200_mixed_s101|W_A": 183200.0,
+     "keyspace_K200_mixed_s101|D_A": 83990.8,
+     "keyspace_K200_zipf_s101|G_A": 784700.0,
+     "keyspace_K200_zipf_s101|G_B": 30100.0,
+     "keyspace_K200_zipf_s101|G_C": 600.0,
+     "keyspace_K200_zipf_s101|G_N": 751000.0,
+     "keyspace_K200_zipf_s101|J_A": 29600.0,
+     "keyspace_K200_zipf_s101|J_B": 4300.0,
+     "keyspace_K200_zipf_s101|J_N": 28000.0,
+     "keyspace_K200_zipf_s101|F_A": 364088890000.0,
+     "keyspace_K200_zipf_s101|F_B": 525610000.0,
+     "keyspace_K200_zipf_s101|W_A": 784700.0,
+     "keyspace_K200_zipf_s101|D_A": 99960.9,
+     "keyspace_K200_zipf_s202|G_A": 777100.0,
+     "keyspace_K200_zipf_s202|G_B": 33800.0,
+     "keyspace_K200_zipf_s202|G_C": 600.0,
+     "keyspace_K200_zipf_s202|G_N": 741600.0,
+     "keyspace_K200_zipf_s202|J_A": 96900.0,
+     "keyspace_K200_zipf_s202|J_B": 9300.0,
+     "keyspace_K200_zipf_s202|J_N": 101200.0,
+     "keyspace_K200_zipf_s202|F_A": 370410240000.0,
+     "keyspace_K200_zipf_s202|F_B": 683030000.0,
+     "keyspace_K200_zipf_s202|W_A": 777100.0,
+     "keyspace_K200_zipf_s202|D_A": 99957.8
+    },
+    "A2": {
+     "keyspace_K200_mixed_s101|G_A": 174830.0,
+     "keyspace_K200_mixed_s101|G_B": 8520.0,
+     "keyspace_K200_mixed_s101|G_C": 150.0,
+     "keyspace_K200_mixed_s101|G_N": 165870.0,
+     "keyspace_K200_mixed_s101|J_A": 183960.0,
+     "keyspace_K200_mixed_s101|J_B": 27450.0,
+     "keyspace_K200_mixed_s101|J_N": 175240.0,
+     "keyspace_K200_mixed_s101|F_A": 18334128000.0,
+     "keyspace_K200_mixed_s101|F_B": 112839300.0,
+     "keyspace_K200_mixed_s101|W_A": 174830.0,
+     "keyspace_K200_mixed_s101|D_A": 82593.2,
+     "keyspace_K200_zipf_s101|G_A": 780350.0,
+     "keyspace_K200_zipf_s101|G_B": 30570.0,
+     "keyspace_K200_zipf_s101|G_C": 160.0,
+     "keyspace_K200_zipf_s101|G_N": 753690.0,
+     "keyspace_K200_zipf_s101|J_A": 784220.0,
+     "keyspace_K200_zipf_s101|J_B": 37570.0,
+     "keyspace_K200_zipf_s101|J_N": 757210.0,
+     "keyspace_K200_zipf_s101|F_A": 367787348700.0,
+     "keyspace_K200_zipf_s101|F_B": 561386100.0,
+     "keyspace_K200_zipf_s101|W_A": 780350.0,
+     "keyspace_K200_zipf_s101|D_A": 99959.2,
+     "keyspace_K200_zipf_s202|G_A": 130710.0,
+     "keyspace_K200_zipf_s202|G_B": 10750.0,
+     "keyspace_K200_zipf_s202|G_C": 170.0,
+     "keyspace_K200_zipf_s202|G_N": 125460.0,
+     "keyspace_K200_zipf_s202|J_A": 135700.0,
+     "keyspace_K200_zipf_s202|J_B": 19730.0,
+     "keyspace_K200_zipf_s202|J_N": 130300.0,
+     "keyspace_K200_zipf_s202|F_A": 10605524200.0,
+     "keyspace_K200_zipf_s202|F_B": 70165900.0,
+     "keyspace_K200_zipf_s202|W_A": 130710.0,
+     "keyspace_K200_zipf_s202|D_A": 72939.8
+    },
+    "A3": {
+     "keyspace_K200_mixed_s101|G_A": 175820.0,
+     "keyspace_K200_mixed_s101|G_B": 8570.0,
+     "keyspace_K200_mixed_s101|G_C": 160.0,
+     "keyspace_K200_mixed_s101|G_N": 164040.0,
+     "keyspace_K200_mixed_s101|J_A": 178100.0,
+     "keyspace_K200_mixed_s101|J_B": 21320.0,
+     "keyspace_K200_mixed_s101|J_N": 166260.0,
+     "keyspace_K200_mixed_s101|F_A": 18601775600.0,
+     "keyspace_K200_mixed_s101|F_B": 80773000.0,
+     "keyspace_K200_mixed_s101|W_A": 175820.0,
+     "keyspace_K200_mixed_s101|D_A": 82764.7,
+     "keyspace_K200_zipf_s101|G_A": 129900.0,
+     "keyspace_K200_zipf_s101|G_B": 10500.0,
+     "keyspace_K200_zipf_s101|G_C": 160.0,
+     "keyspace_K200_zipf_s101|G_N": 124630.0,
+     "keyspace_K200_zipf_s101|J_A": 133840.0,
+     "keyspace_K200_zipf_s101|J_B": 18010.0,
+     "keyspace_K200_zipf_s101|J_N": 127950.0,
+     "keyspace_K200_zipf_s101|F_A": 10152041400.0,
+     "keyspace_K200_zipf_s101|F_B": 65160800.0,
+     "keyspace_K200_zipf_s101|W_A": 129900.0,
+     "keyspace_K200_zipf_s101|D_A": 72719.7,
+     "keyspace_K200_zipf_s202|G_A": 53030.0,
+     "keyspace_K200_zipf_s202|G_B": 5920.0,
+     "keyspace_K200_zipf_s202|G_C": 170.0,
+     "keyspace_K200_zipf_s202|G_N": 49940.0,
+     "keyspace_K200_zipf_s202|J_A": 55950.0,
+     "keyspace_K200_zipf_s202|J_B": 12350.0,
+     "keyspace_K200_zipf_s202|J_N": 52650.0,
+     "keyspace_K200_zipf_s202|F_A": 1654872200.0,
+     "keyspace_K200_zipf_s202|F_B": 21047400.0,
+     "keyspace_K200_zipf_s202|W_A": 53030.0,
+     "keyspace_K200_zipf_s202|D_A": 41157.3
+    },
+    "A4": {
+     "keyspace_K200_mixed_s101|G_A": 183400.0,
+     "keyspace_K200_mixed_s101|G_B": 10900.0,
+     "keyspace_K200_mixed_s101|G_C": 600.0,
+     "keyspace_K200_mixed_s101|G_N": 606600.0,
+     "keyspace_K200_mixed_s101|J_A": 402400.0,
+     "keyspace_K200_mixed_s101|J_B": 132100.0,
+     "keyspace_K200_mixed_s101|J_N": 379100.0,
+     "keyspace_K200_mixed_s101|F_A": 2200000.0,
+     "keyspace_K200_mixed_s101|F_B": 5620000.0,
+     "keyspace_K200_mixed_s101|W_A": 183400.0,
+     "keyspace_K200_mixed_s101|D_A": 84022.8,
+     "keyspace_K200_zipf_s101|G_A": 770700.0,
+     "keyspace_K200_zipf_s101|G_B": 32500.0,
+     "keyspace_K200_zipf_s101|G_C": 600.0,
+     "keyspace_K200_zipf_s101|G_N": 758200.0,
+     "keyspace_K200_zipf_s101|J_A": 867200.0,
+     "keyspace_K200_zipf_s101|J_B": 119500.0,
+     "keyspace_K200_zipf_s101|J_N": 850300.0,
+     "keyspace_K200_zipf_s101|F_A": 24060000.0,
+     "keyspace_K200_zipf_s101|F_B": 5910000.0,
+     "keyspace_K200_zipf_s101|W_A": 770700.0,
+     "keyspace_K200_zipf_s101|D_A": 99955.0,
+     "keyspace_K200_zipf_s202|G_A": 767800.0,
+     "keyspace_K200_zipf_s202|G_B": 31600.0,
+     "keyspace_K200_zipf_s202|G_C": 700.0,
+     "keyspace_K200_zipf_s202|G_N": 748400.0,
+     "keyspace_K200_zipf_s202|J_A": 863400.0,
+     "keyspace_K200_zipf_s202|J_B": 118700.0,
+     "keyspace_K200_zipf_s202|J_N": 832000.0,
+     "keyspace_K200_zipf_s202|F_A": 20370000.0,
+     "keyspace_K200_zipf_s202|F_B": 4390000.0,
+     "keyspace_K200_zipf_s202|W_A": 767800.0,
+     "keyspace_K200_zipf_s202|D_A": 99953.7
+    },
+    "A5": {
+     "keyspace_K200_mixed_s101|G_A": 175500.0,
+     "keyspace_K200_mixed_s101|G_B": 8200.0,
+     "keyspace_K200_mixed_s101|G_C": 600.0,
+     "keyspace_K200_mixed_s101|G_N": 600000.0,
+     "keyspace_K200_mixed_s101|J_A": 394700.0,
+     "keyspace_K200_mixed_s101|J_B": 139100.0,
+     "keyspace_K200_mixed_s101|J_N": 370600.0,
+     "keyspace_K200_mixed_s101|F_A": 36887840000.0,
+     "keyspace_K200_mixed_s101|F_B": 471470000.0,
+     "keyspace_K200_mixed_s101|W_A": 175500.0,
+     "keyspace_K200_mixed_s101|D_A": 82709.4,
+     "keyspace_K200_zipf_s101|G_A": 781300.0,
+     "keyspace_K200_zipf_s101|G_B": 30300.0,
+     "keyspace_K200_zipf_s101|G_C": 600.0,
+     "keyspace_K200_zipf_s101|G_N": 750400.0,
+     "keyspace_K200_zipf_s101|J_A": 877400.0,
+     "keyspace_K200_zipf_s101|J_B": 116300.0,
+     "keyspace_K200_zipf_s101|J_N": 842200.0,
+     "keyspace_K200_zipf_s101|F_A": 367493580000.0,
+     "keyspace_K200_zipf_s101|F_B": 573680000.0,
+     "keyspace_K200_zipf_s101|W_A": 781300.0,
+     "keyspace_K200_zipf_s101|D_A": 99959.6,
+     "keyspace_K200_zipf_s202|G_A": 782300.0,
+     "keyspace_K200_zipf_s202|G_B": 30500.0,
+     "keyspace_K200_zipf_s202|G_C": 600.0,
+     "keyspace_K200_zipf_s202|G_N": 751300.0,
+     "keyspace_K200_zipf_s202|J_A": 876000.0,
+     "keyspace_K200_zipf_s202|J_B": 119300.0,
+     "keyspace_K200_zipf_s202|J_N": 841300.0,
+     "keyspace_K200_zipf_s202|F_A": 367802930000.0,
+     "keyspace_K200_zipf_s202|F_B": 583190000.0,
+     "keyspace_K200_zipf_s202|W_A": 782300.0,
+     "keyspace_K200_zipf_s202|D_A": 99960.0
+    },
+    "A8": {
+     "keyspace_K200_mixed_s101|G_A": 175543.0,
+     "keyspace_K200_mixed_s101|G_B": 8231.0,
+     "keyspace_K200_mixed_s101|G_C": 87.0,
+     "keyspace_K200_mixed_s101|G_N": 600000.0,
+     "keyspace_K200_mixed_s101|J_A": 394809.9,
+     "keyspace_K200_mixed_s101|J_B": 140689.1,
+     "keyspace_K200_mixed_s101|J_N": 370173.2,
+     "keyspace_K200_mixed_s101|F_A": 36866133482.3,
+     "keyspace_K200_mixed_s101|F_B": 477653825.8,
+     "keyspace_K200_mixed_s101|W_A": 175543.0,
+     "keyspace_K200_mixed_s101|D_A": 82716.9,
+     "keyspace_K200_zipf_s101|G_A": 781280.0,
+     "keyspace_K200_zipf_s101|G_B": 30338.0,
+     "keyspace_K200_zipf_s101|G_C": 87.0,
+     "keyspace_K200_zipf_s101|G_N": 750442.0,
+     "keyspace_K200_zipf_s101|J_A": 875670.3,
+     "keyspace_K200_zipf_s101|J_B": 117139.3,
+     "keyspace_K200_zipf_s101|J_N": 841369.8,
+     "keyspace_K200_zipf_s101|F_A": 367497523614.3,
+     "keyspace_K200_zipf_s101|F_B": 573625203.6,
+     "keyspace_K200_zipf_s101|W_A": 781280.0,
+     "keyspace_K200_zipf_s101|D_A": 99959.5,
+     "keyspace_K200_zipf_s202|G_A": 782299.0,
+     "keyspace_K200_zipf_s202|G_B": 30509.0,
+     "keyspace_K200_zipf_s202|G_C": 85.0,
+     "keyspace_K200_zipf_s202|G_N": 751291.0,
+     "keyspace_K200_zipf_s202|J_A": 876015.6,
+     "keyspace_K200_zipf_s202|J_B": 117074.0,
+     "keyspace_K200_zipf_s202|J_N": 841263.2,
+     "keyspace_K200_zipf_s202|F_A": 367769488068.1,
+     "keyspace_K200_zipf_s202|F_B": 582368120.4,
+     "keyspace_K200_zipf_s202|W_A": 782299.0,
+     "keyspace_K200_zipf_s202|D_A": 99960.0
+    }
+   }
+  },
+  "K1M": {
+   "K": 1000000,
+   "n_instances": 11,
+   "datasets": [
+    "keyspace_K1M_zipf_s101"
+   ],
+   "synopsis_bytes": {
+    "keyspace_K1M_zipf_s101": 85042
+   },
+   "k_over_K": 0.001024,
+   "views": {
+    "fixed200k": {
+     "n_gt_fail": 8,
+     "arms": {
+      "A1": {
+       "tp": 6,
+       "fp": 0,
+       "fn": 2,
+       "tn": 3,
+       "recall": 0.75,
+       "precision": 1.0,
+       "f1": 0.8571428571428571,
+       "n": 11,
+       "spearman_rho": 0.6529680365296804,
+       "median_q_error": 1.0293643704201827
+      },
+      "A2": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 11,
+       "spearman_rho": 0.9726027397260274,
+       "median_q_error": 1.0327741935483872
+      },
+      "A3": {
+       "tp": 3,
+       "fp": 0,
+       "fn": 5,
+       "tn": 3,
+       "recall": 0.375,
+       "precision": 1.0,
+       "f1": 0.5454545454545454,
+       "n": 11,
+       "spearman_rho": 0.8812785388127855,
+       "median_q_error": 5.881832061068702
+      },
+      "A4": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 11,
+       "spearman_rho": 0.8630136986301371,
+       "median_q_error": 1.0270631741140215
+      },
+      "A5": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 11,
+       "spearman_rho": 1.0,
+       "median_q_error": 1.0004981452040276
+      },
+      "A8": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 11,
+       "spearman_rho": 1.0,
+       "median_q_error": 1.0000016813885069
+      }
+     },
+     "recall_JF": {
+      "A1": {
+       "tp": 2,
+       "fp": 0,
+       "fn": 2,
+       "tn": 1,
+       "recall": 0.5,
+       "precision": 1.0,
+       "f1": 0.6666666666666666,
+       "n": 5
+      },
+      "A2": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 1,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 5
+      },
+      "A3": {
+       "tp": 2,
+       "fp": 0,
+       "fn": 2,
+       "tn": 1,
+       "recall": 0.5,
+       "precision": 1.0,
+       "f1": 0.6666666666666666,
+       "n": 5
+      },
+      "A4": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 1,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 5
+      },
+      "A5": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 1,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 5
+      },
+      "A8": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 1,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 5
+      }
+     },
+     "recall_GDW": {
+      "A1": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      },
+      "A2": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      },
+      "A3": {
+       "tp": 1,
+       "fp": 0,
+       "fn": 3,
+       "tn": 2,
+       "recall": 0.25,
+       "precision": 1.0,
+       "f1": 0.4,
+       "n": 6
+      },
+      "A4": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      },
+      "A5": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      },
+      "A8": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      }
+     },
+     "recall_by_pipeline": {
+      "A1": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      },
+      "A2": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      },
+      "A3": {
+       "D_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       }
+      },
+      "A4": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      },
+      "A5": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      },
+      "A8": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      }
+     }
+    },
+    "norm002": {
+     "n_gt_fail": 8,
+     "arms": {
+      "A1": {
+       "tp": 6,
+       "fp": 0,
+       "fn": 2,
+       "tn": 3,
+       "recall": 0.75,
+       "precision": 1.0,
+       "f1": 0.8571428571428571,
+       "n": 11,
+       "spearman_rho": 0.6529680365296804,
+       "median_q_error": 1.0293643704201827
+      },
+      "A2": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 11,
+       "spearman_rho": 0.9726027397260274,
+       "median_q_error": 1.0327741935483872
+      },
+      "A3": {
+       "tp": 3,
+       "fp": 0,
+       "fn": 5,
+       "tn": 3,
+       "recall": 0.375,
+       "precision": 1.0,
+       "f1": 0.5454545454545454,
+       "n": 11,
+       "spearman_rho": 0.8812785388127855,
+       "median_q_error": 5.881832061068702
+      },
+      "A4": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 11,
+       "spearman_rho": 0.8630136986301371,
+       "median_q_error": 1.0270631741140215
+      },
+      "A5": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 11,
+       "spearman_rho": 1.0,
+       "median_q_error": 1.0004981452040276
+      },
+      "A8": {
+       "tp": 8,
+       "fp": 0,
+       "fn": 0,
+       "tn": 3,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 11,
+       "spearman_rho": 1.0,
+       "median_q_error": 1.0000016813885069
+      }
+     },
+     "recall_JF": {
+      "A1": {
+       "tp": 2,
+       "fp": 0,
+       "fn": 2,
+       "tn": 1,
+       "recall": 0.5,
+       "precision": 1.0,
+       "f1": 0.6666666666666666,
+       "n": 5
+      },
+      "A2": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 1,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 5
+      },
+      "A3": {
+       "tp": 2,
+       "fp": 0,
+       "fn": 2,
+       "tn": 1,
+       "recall": 0.5,
+       "precision": 1.0,
+       "f1": 0.6666666666666666,
+       "n": 5
+      },
+      "A4": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 1,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 5
+      },
+      "A5": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 1,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 5
+      },
+      "A8": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 1,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 5
+      }
+     },
+     "recall_GDW": {
+      "A1": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      },
+      "A2": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      },
+      "A3": {
+       "tp": 1,
+       "fp": 0,
+       "fn": 3,
+       "tn": 2,
+       "recall": 0.25,
+       "precision": 1.0,
+       "f1": 0.4,
+       "n": 6
+      },
+      "A4": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      },
+      "A5": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      },
+      "A8": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "tn": 2,
+       "recall": 1.0,
+       "precision": 1.0,
+       "f1": 1.0,
+       "n": 6
+      }
+     },
+     "recall_by_pipeline": {
+      "A1": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      },
+      "A2": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      },
+      "A3": {
+       "D_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "tn": 0,
+        "recall": 0.0,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       }
+      },
+      "A4": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      },
+      "A5": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      },
+      "A8": {
+       "D_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "F_B": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "G_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_C": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "G_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "J_B": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1,
+        "recall": NaN,
+        "precision": NaN,
+        "f1": NaN,
+        "n": 1
+       },
+       "J_N": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       },
+       "W_A": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "n": 1
+       }
+      }
+     }
+    }
+   },
+   "gt_loads": {
+    "keyspace_K1M_zipf_s101|G_A": 346734.0,
+    "keyspace_K1M_zipf_s101|G_B": 8004.0,
+    "keyspace_K1M_zipf_s101|G_C": 18.0,
+    "keyspace_K1M_zipf_s101|G_N": 333282.0,
+    "keyspace_K1M_zipf_s101|J_A": 392660.0,
+    "keyspace_K1M_zipf_s101|J_B": 48912.0,
+    "keyspace_K1M_zipf_s101|J_N": 377588.0,
+    "keyspace_K1M_zipf_s101|F_A": 72456665631.0,
+    "keyspace_K1M_zipf_s101|F_B": 39573175.0,
+    "keyspace_K1M_zipf_s101|W_A": 346734.0,
+    "keyspace_K1M_zipf_s101|D_A": 96903.0
+   },
+   "pred_loads": {
+    "A1": {
+     "keyspace_K1M_zipf_s101|G_A": 349100.0,
+     "keyspace_K1M_zipf_s101|G_B": 8000.0,
+     "keyspace_K1M_zipf_s101|G_C": 300.0,
+     "keyspace_K1M_zipf_s101|G_N": 328900.0,
+     "keyspace_K1M_zipf_s101|J_A": 3000.0,
+     "keyspace_K1M_zipf_s101|J_B": 1000.0,
+     "keyspace_K1M_zipf_s101|J_N": 1800.0,
+     "keyspace_K1M_zipf_s101|F_A": 74584310000.0,
+     "keyspace_K1M_zipf_s101|F_B": 43770000.0,
+     "keyspace_K1M_zipf_s101|W_A": 349100.0,
+     "keyspace_K1M_zipf_s101|D_A": 96953.0
+    },
+    "A2": {
+     "keyspace_K1M_zipf_s101|G_A": 346120.0,
+     "keyspace_K1M_zipf_s101|G_B": 7750.0,
+     "keyspace_K1M_zipf_s101|G_C": 60.0,
+     "keyspace_K1M_zipf_s101|G_N": 331450.0,
+     "keyspace_K1M_zipf_s101|J_A": 348120.0,
+     "keyspace_K1M_zipf_s101|J_B": 11260.0,
+     "keyspace_K1M_zipf_s101|J_N": 333330.0,
+     "keyspace_K1M_zipf_s101|F_A": 73564513600.0,
+     "keyspace_K1M_zipf_s101|F_B": 36699700.0,
+     "keyspace_K1M_zipf_s101|W_A": 346120.0,
+     "keyspace_K1M_zipf_s101|D_A": 96860.8
+    },
+    "A3": {
+     "keyspace_K1M_zipf_s101|G_A": 58950.0,
+     "keyspace_K1M_zipf_s101|G_B": 2640.0,
+     "keyspace_K1M_zipf_s101|G_C": 60.0,
+     "keyspace_K1M_zipf_s101|G_N": 202300.0,
+     "keyspace_K1M_zipf_s101|J_A": 61300.0,
+     "keyspace_K1M_zipf_s101|J_B": 6200.0,
+     "keyspace_K1M_zipf_s101|J_N": 57580.0,
+     "keyspace_K1M_zipf_s101|F_A": 2005555900.0,
+     "keyspace_K1M_zipf_s101|F_B": 3487900.0,
+     "keyspace_K1M_zipf_s101|W_A": 58950.0,
+     "keyspace_K1M_zipf_s101|D_A": 44539.7
+    },
+    "A4": {
+     "keyspace_K1M_zipf_s101|G_A": 339800.0,
+     "keyspace_K1M_zipf_s101|G_B": 8800.0,
+     "keyspace_K1M_zipf_s101|G_C": 300.0,
+     "keyspace_K1M_zipf_s101|G_N": 324500.0,
+     "keyspace_K1M_zipf_s101|J_A": 384100.0,
+     "keyspace_K1M_zipf_s101|J_B": 52700.0,
+     "keyspace_K1M_zipf_s101|J_N": 367700.0,
+     "keyspace_K1M_zipf_s101|F_A": 1580000.0,
+     "keyspace_K1M_zipf_s101|F_B": 270000.0,
+     "keyspace_K1M_zipf_s101|W_A": 339800.0,
+     "keyspace_K1M_zipf_s101|D_A": 96656.0
+    },
+    "A5": {
+     "keyspace_K1M_zipf_s101|G_A": 346700.0,
+     "keyspace_K1M_zipf_s101|G_B": 8000.0,
+     "keyspace_K1M_zipf_s101|G_C": 300.0,
+     "keyspace_K1M_zipf_s101|G_N": 333300.0,
+     "keyspace_K1M_zipf_s101|J_A": 393000.0,
+     "keyspace_K1M_zipf_s101|J_B": 46600.0,
+     "keyspace_K1M_zipf_s101|J_N": 377400.0,
+     "keyspace_K1M_zipf_s101|F_A": 72457130000.0,
+     "keyspace_K1M_zipf_s101|F_B": 38970000.0,
+     "keyspace_K1M_zipf_s101|W_A": 346700.0,
+     "keyspace_K1M_zipf_s101|D_A": 96879.0
+    },
+    "A8": {
+     "keyspace_K1M_zipf_s101|G_A": 346734.0,
+     "keyspace_K1M_zipf_s101|G_B": 8004.0,
+     "keyspace_K1M_zipf_s101|G_C": 18.0,
+     "keyspace_K1M_zipf_s101|G_N": 333282.0,
+     "keyspace_K1M_zipf_s101|J_A": 392249.9,
+     "keyspace_K1M_zipf_s101|J_B": 49366.1,
+     "keyspace_K1M_zipf_s101|J_N": 377035.4,
+     "keyspace_K1M_zipf_s101|F_A": 72456543803.4,
+     "keyspace_K1M_zipf_s101|F_B": 39560713.5,
+     "keyspace_K1M_zipf_s101|W_A": 346734.0,
+     "keyspace_K1M_zipf_s101|D_A": 96880.1
+    }
+   }
+  }
+ }
+}

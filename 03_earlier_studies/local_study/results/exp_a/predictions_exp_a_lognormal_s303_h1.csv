@@ -1,0 +1,12 @@
+dataset,family,seed,n_fact,pipeline,gt_load,gt_verdict,arm,pred_load,pred_verdict,testbed_fact_rows,r,synopsis_bytes
+lognormal_s303,lognormal,303,10000000,G_A,186787.0,PASS,A9,186787.0,PASS,0,,100300
+lognormal_s303,lognormal,303,10000000,G_B,19336.0,PASS,A9,19336.0,PASS,0,,100300
+lognormal_s303,lognormal,303,10000000,G_C,1000.0,PASS,A9,9766.0,PASS,0,,100300
+lognormal_s303,lognormal,303,10000000,G_N,400000.0,FAIL,A9,400000.0,FAIL,0,,100300
+lognormal_s303,lognormal,303,10000000,J_A,289626.0,FAIL,A9,307448.0,FAIL,0,,100300
+lognormal_s303,lognormal,303,10000000,J_B,108205.0,PASS,A9,156032.0,PASS,0,,100300
+lognormal_s303,lognormal,303,10000000,J_N,277182.0,FAIL,A9,295089.0,FAIL,0,,100300
+lognormal_s303,lognormal,303,10000000,F_A,21269889159.0,FAIL,A9,21299106278.0,FAIL,0,,100300
+lognormal_s303,lognormal,303,10000000,F_B,289506769.0,FAIL,A9,323306606.0,FAIL,0,,100300
+lognormal_s303,lognormal,303,10000000,W_A,186787.0,PASS,A9,186787.0,PASS,0,,100300
+lognormal_s303,lognormal,303,10000000,D_A,84686.0,FAIL,A9,84554.9,FAIL,0,,100300

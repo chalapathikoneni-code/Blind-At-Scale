@@ -1,0 +1,32 @@
+{
+ "FB-SYN": {
+  "repaired": 51,
+  "fixable_failures": 51,
+  "repair_rate": 1.0,
+  "full_scale_pass_rate": 0.9090909090909091
+ },
+ "FB-SAMPLE": {
+  "repaired": 37,
+  "fixable_failures": 51,
+  "repair_rate": 0.7254901960784313,
+  "full_scale_pass_rate": 0.7676767676767676
+ },
+ "FB-PLACEBO": {
+  "repaired": 3,
+  "fixable_failures": 51,
+  "repair_rate": 0.058823529411764705,
+  "full_scale_pass_rate": 0.42424242424242425
+ },
+ "FB-RETRY": {
+  "repaired": 0,
+  "fixable_failures": 51,
+  "repair_rate": 0.0,
+  "full_scale_pass_rate": 0.3939393939393939
+ },
+ "FB-REWRITE": {
+  "repaired": 51,
+  "fixable_failures": 51,
+  "repair_rate": 1.0,
+  "full_scale_pass_rate": 0.9090909090909091
+ }
+}

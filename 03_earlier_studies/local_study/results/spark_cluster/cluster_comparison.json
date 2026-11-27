@@ -1,0 +1,650 @@
+{
+ "experiment": "Blind at Scale \u2014 Workstream 4: local recovery of the pod comparison section",
+ "labelling": "multi-worker standalone cluster on a single host",
+ "dataset": "zipf_s101 (fact 10M / fact2 6M / dim 20k)",
+ "spark_gt_source": "results/spark_cluster/spark_ground_truth_zipf_s101.json (reconstructed from the operator's verbatim report; canonical full file + event log on the research-ops volume at /workspace/blind-pod/)",
+ "predictions_source": "data/zipf_s101/predictions_main.csv (local study)",
+ "threshold_audit": {
+  "study_threshold": 200000.0,
+  "anomalous_value": 20000.0,
+  "per_pipeline": {
+   "G_A": {
+    "gt_load": 1086736.0,
+    "recorded_verdict": "FAIL",
+    "verdict_under_200000": "FAIL",
+    "verdict_under_20000": "FAIL"
+   },
+   "G_B": {
+    "gt_load": 156387.0,
+    "recorded_verdict": "PASS",
+    "verdict_under_200000": "PASS",
+    "verdict_under_20000": "FAIL"
+   },
+   "G_N": {
+    "gt_load": 1043904.0,
+    "recorded_verdict": "FAIL",
+    "verdict_under_200000": "FAIL",
+    "verdict_under_20000": "FAIL"
+   },
+   "J_A": {
+    "gt_load": 1086890.0,
+    "recorded_verdict": "FAIL",
+    "verdict_under_200000": "FAIL",
+    "verdict_under_20000": "FAIL"
+   },
+   "J_B": {
+    "gt_load": 156541.0,
+    "recorded_verdict": "PASS",
+    "verdict_under_200000": "PASS",
+    "verdict_under_20000": "FAIL"
+   },
+   "J_N": {
+    "gt_load": 1044058.0,
+    "recorded_verdict": "FAIL",
+    "verdict_under_200000": "FAIL",
+    "verdict_under_20000": "FAIL"
+   },
+   "F_A": {
+    "gt_load": 546740246171.0,
+    "recorded_verdict": "FAIL",
+    "verdict_under_200000": "FAIL",
+    "verdict_under_20000": "FAIL"
+   },
+   "F_B": {
+    "gt_load": 3719508913.0,
+    "recorded_verdict": "FAIL",
+    "verdict_under_200000": "FAIL",
+    "verdict_under_20000": "FAIL"
+   },
+   "W_A": {
+    "gt_load": 1086736.0,
+    "recorded_verdict": "FAIL",
+    "verdict_under_200000": "FAIL",
+    "verdict_under_20000": "FAIL"
+   }
+  },
+  "recorded_match_study": 9,
+  "recorded_match_anomaly": 7,
+  "conclusion": "All 9 recorded verdicts equal the verdicts recomputed under T = 200,000; under T = 20,000, G_B and J_B would flip to FAIL (7/9 match). The verdict path therefore applied the study threshold. Code inspection (pod/collect_results.py:129,235-238): one t_load variable feeds the root field, per-pipeline fields and verdicts; run_pod.sh passes no --t-load, so t_load = 0.02 * manifest.n_fact = 0.02 * 10,000,000 = 200,000 for the headline run (manifest n_fact written by spark_pipelines.py from fact.count()). t_load = 20000 arises exactly when n_fact = 1,000,000 (a reduced-scale invocation) and cannot describe the headline verdicts. No verdict changes."
+ },
+ "local_simulation_vs_spark": {
+  "verdict_agreement": "9/9",
+  "per_pipeline": {
+   "G_A": {
+    "spark_gt_load": 1086736.0,
+    "local_sim_gt_load": 953047.0,
+    "ratio_spark_over_sim": 1.1402753484350718,
+    "q_error": 1.1402753484350718,
+    "local_sim_verdict": "FAIL",
+    "spark_verdict": "FAIL",
+    "verdict_agrees": true,
+    "gt_load_source": "spark_event_log_tasks_shuffle_read"
+   },
+   "G_B": {
+    "spark_gt_load": 156387.0,
+    "local_sim_gt_load": 77009.0,
+    "ratio_spark_over_sim": 2.030762638133205,
+    "q_error": 2.030762638133205,
+    "local_sim_verdict": "PASS",
+    "spark_verdict": "PASS",
+    "verdict_agrees": true,
+    "gt_load_source": "spark_event_log_tasks_shuffle_read"
+   },
+   "G_N": {
+    "spark_gt_load": 1043904.0,
+    "local_sim_gt_load": 916064.0,
+    "ratio_spark_over_sim": 1.1395535683096378,
+    "q_error": 1.1395535683096378,
+    "local_sim_verdict": "FAIL",
+    "spark_verdict": "FAIL",
+    "verdict_agrees": true,
+    "gt_load_source": "spark_event_log_tasks_shuffle_read"
+   },
+   "J_A": {
+    "spark_gt_load": 1086890.0,
+    "local_sim_gt_load": 1050884.0,
+    "ratio_spark_over_sim": 1.0342625827398648,
+    "q_error": 1.0342625827398648,
+    "local_sim_verdict": "FAIL",
+    "spark_verdict": "FAIL",
+    "verdict_agrees": true,
+    "gt_load_source": "spark_event_log_tasks_shuffle_read"
+   },
+   "J_B": {
+    "spark_gt_load": 156541.0,
+    "local_sim_gt_load": 175912.0,
+    "ratio_spark_over_sim": 0.8898824412206103,
+    "q_error": 1.123743939287471,
+    "local_sim_verdict": "PASS",
+    "spark_verdict": "PASS",
+    "verdict_agrees": true,
+    "gt_load_source": "spark_event_log_tasks_shuffle_read"
+   },
+   "J_N": {
+    "spark_gt_load": 1044058.0,
+    "local_sim_gt_load": 1010115.0,
+    "ratio_spark_over_sim": 1.0336031045970013,
+    "q_error": 1.0336031045970013,
+    "local_sim_verdict": "FAIL",
+    "spark_verdict": "FAIL",
+    "verdict_agrees": true,
+    "gt_load_source": "spark_event_log_tasks_shuffle_read"
+   },
+   "F_A": {
+    "spark_gt_load": 546740246171.0,
+    "local_sim_gt_load": 546740246171.0,
+    "ratio_spark_over_sim": 1.0,
+    "q_error": 1.0,
+    "local_sim_verdict": "FAIL",
+    "spark_verdict": "FAIL",
+    "verdict_agrees": true,
+    "gt_load_source": "analytic_splitmix64_from_spark_counts (F pipeline; raw join status SKIPPED_NOT_MATERIALISABLE; D4)"
+   },
+   "F_B": {
+    "spark_gt_load": 3719508913.0,
+    "local_sim_gt_load": 3719508913.0,
+    "ratio_spark_over_sim": 1.0,
+    "q_error": 1.0,
+    "local_sim_verdict": "FAIL",
+    "spark_verdict": "FAIL",
+    "verdict_agrees": true,
+    "gt_load_source": "analytic_splitmix64_from_spark_counts (F pipeline; raw join status SKIPPED_NOT_MATERIALISABLE; D4)"
+   },
+   "W_A": {
+    "spark_gt_load": 1086736.0,
+    "local_sim_gt_load": 953047.0,
+    "ratio_spark_over_sim": 1.1402753484350718,
+    "q_error": 1.1402753484350718,
+    "local_sim_verdict": "FAIL",
+    "spark_verdict": "FAIL",
+    "verdict_agrees": true,
+    "gt_load_source": "spark_event_log_tasks_shuffle_read"
+   }
+  },
+  "median_q_error": 1.123743939287471,
+  "note": "F_A/F_B analytic loads from Spark-produced counts equal the local simulation ground truth exactly (ratio 1.0) because the on-pod counts are bit-identical to the local counts (SHA-256 headline check PASS). G/W Spark loads are the D2/D5 repartition upper bound (sum of group counts of colliding keys in the busiest murmur3 partition), hence ratios 1.14-2.03 vs the local max-group definition; J loads differ only by the D1 hash function (murmur3 vs splitmix64), ratios 0.89-1.03."
+ },
+ "arms_vs_spark": {
+  "A1": {
+   "verdict_agreement": "9/9",
+   "disagreements": [],
+   "median_q_error_vs_spark": 1.135683979517191,
+   "per_pipeline": {
+    "G_A": {
+     "pred_load": 956900.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.135683979517191
+    },
+    "G_B": {
+     "pred_load": 77100.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156387.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 2.028365758754864
+    },
+    "G_N": {
+     "pred_load": 911500.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1043904.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1452594624245749
+    },
+    "J_A": {
+     "pred_load": 959500.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086890.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1327670661803022
+    },
+    "J_B": {
+     "pred_load": 81800.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156541.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.9137041564792177
+    },
+    "J_N": {
+     "pred_load": 914900.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1044058.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1411717127554923
+    },
+    "F_A": {
+     "pred_load": 530101020000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 546740246171.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0313887835397864
+    },
+    "F_B": {
+     "pred_load": 3680170000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 3719508913.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0106894282057621
+    },
+    "W_A": {
+     "pred_load": 956900.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.135683979517191
+    }
+   }
+  },
+  "A2": {
+   "verdict_agreement": "9/9",
+   "disagreements": [],
+   "median_q_error_vs_spark": 1.1415054305581815,
+   "per_pipeline": {
+    "G_A": {
+     "pred_load": 952020.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1415054305581815
+    },
+    "G_B": {
+     "pred_load": 78580.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156387.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.9901628913209468
+    },
+    "G_N": {
+     "pred_load": 914410.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1043904.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1416148117365295
+    },
+    "J_A": {
+     "pred_load": 955000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086890.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1381047120418848
+    },
+    "J_B": {
+     "pred_load": 84780.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156541.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.8464378391129983
+    },
+    "J_N": {
+     "pred_load": 916870.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1044058.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.138719774886298
+    },
+    "F_A": {
+     "pred_load": 542119384000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 546740246171.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0085236984829895
+    },
+    "F_B": {
+     "pred_load": 3616918000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 3719508913.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0283641799454675
+    },
+    "W_A": {
+     "pred_load": 952020.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1415054305581815
+    }
+   }
+  },
+  "A3": {
+   "verdict_agreement": "4/9",
+   "disagreements": [
+    "G_A",
+    "G_N",
+    "J_A",
+    "J_N",
+    "W_A"
+   ],
+   "median_q_error_vs_spark": 6.775517621860193,
+   "per_pipeline": {
+    "G_A": {
+     "pred_load": 158390.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": false,
+     "q_error_vs_spark": 6.861140223498959
+    },
+    "G_B": {
+     "pred_load": 26500.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156387.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 5.901396226415095
+    },
+    "G_N": {
+     "pred_load": 154070.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 1043904.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": false,
+     "q_error_vs_spark": 6.775517621860193
+    },
+    "J_A": {
+     "pred_load": 161440.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 1086890.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": false,
+     "q_error_vs_spark": 6.732470267591675
+    },
+    "J_B": {
+     "pred_load": 34310.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156541.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 4.562547362285048
+    },
+    "J_N": {
+     "pred_load": 157100.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 1044058.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": false,
+     "q_error_vs_spark": 6.645817950350096
+    },
+    "F_A": {
+     "pred_load": 15171163800.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 546740246171.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 36.038121621954936
+    },
+    "F_B": {
+     "pred_load": 428536100.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 3719508913.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 8.679569616188694
+    },
+    "W_A": {
+     "pred_load": 158390.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": false,
+     "q_error_vs_spark": 6.861140223498959
+    }
+   }
+  },
+  "A4": {
+   "verdict_agreement": "9/9",
+   "disagreements": [],
+   "median_q_error_vs_spark": 1.1542602230483272,
+   "per_pipeline": {
+    "G_A": {
+     "pred_load": 941500.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1542602230483272
+    },
+    "G_B": {
+     "pred_load": 75100.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156387.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 2.082383488681758
+    },
+    "G_N": {
+     "pred_load": 903200.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1043904.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1557838795394153
+    },
+    "J_A": {
+     "pred_load": 1044700.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086890.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.040384799463961
+    },
+    "J_B": {
+     "pred_load": 171700.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156541.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0968372503050319
+    },
+    "J_N": {
+     "pred_load": 996600.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1044058.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0476199076861328
+    },
+    "F_A": {
+     "pred_load": 459900000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 546740246171.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1188.824192587519
+    },
+    "F_B": {
+     "pred_load": 77470000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 3719508913.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 48.01224878017297
+    },
+    "W_A": {
+     "pred_load": 941500.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1542602230483272
+    }
+   }
+  },
+  "A5": {
+   "verdict_agreement": "9/9",
+   "disagreements": [],
+   "median_q_error_vs_spark": 1.0802281830319214,
+   "per_pipeline": {
+    "G_A": {
+     "pred_load": 953000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1403315844700945
+    },
+    "G_B": {
+     "pred_load": 77000.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156387.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 2.031
+    },
+    "G_N": {
+     "pred_load": 916100.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1043904.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1395087872503002
+    },
+    "J_A": {
+     "pred_load": 1046000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086890.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.039091778202677
+    },
+    "J_B": {
+     "pred_load": 169100.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156541.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0802281830319214
+    },
+    "J_N": {
+     "pred_load": 1007200.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1044058.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.036594519459889
+    },
+    "F_A": {
+     "pred_load": 546742510000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 546740246171.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0000041405932998
+    },
+    "F_B": {
+     "pred_load": 3718420000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 3719508913.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0002928429279103
+    },
+    "W_A": {
+     "pred_load": 953000.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1403315844700945
+    }
+   }
+  },
+  "A8": {
+   "verdict_agreement": "9/9",
+   "disagreements": [],
+   "median_q_error_vs_spark": 1.0867842929328417,
+   "per_pipeline": {
+    "G_A": {
+     "pred_load": 953047.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1402753484350718
+    },
+    "G_B": {
+     "pred_load": 77009.0,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156387.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 2.030762638133205
+    },
+    "G_N": {
+     "pred_load": 916064.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1043904.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1395535683096378
+    },
+    "J_A": {
+     "pred_load": 1046765.7,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086890.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0383316916096887
+    },
+    "J_B": {
+     "pred_load": 170126.3,
+     "pred_verdict": "PASS",
+     "spark_gt_load": 156541.0,
+     "spark_verdict": "PASS",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0867842929328417
+    },
+    "J_N": {
+     "pred_load": 1006880.3,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1044058.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0369236541821307
+    },
+    "F_A": {
+     "pred_load": 546738850963.3,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 546740246171.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0000025518722468
+    },
+    "F_B": {
+     "pred_load": 3716096808.4,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 3719508913.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.0009181958317896
+    },
+    "W_A": {
+     "pred_load": 953047.0,
+     "pred_verdict": "FAIL",
+     "spark_gt_load": 1086736.0,
+     "spark_verdict": "FAIL",
+     "verdict_agrees": true,
+     "q_error_vs_spark": 1.1402753484350718
+    }
+   }
+  }
+ },
+ "deviations_frame": "D1 murmur3 vs splitmix64; D2/D5 G/W realised as repartition shuffle (upper bound of local def); D3 J shuffle-merge, broadcast off; D4 F raw join not materialisable \u2014 analytic load from Spark counts; D6 scan splits; D7 AQE off. Full text in pod/spark_pipelines.py."
+}

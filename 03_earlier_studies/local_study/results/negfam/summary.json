@@ -1,0 +1,310 @@
+{
+ "datasets": [
+  "negfam_s101",
+  "negfam_s202"
+ ],
+ "n_instances": 8,
+ "n_gt_fail": 8,
+ "pooled": {
+  "A8-NF": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 8,
+   "tn": 0,
+   "recall": 0.0,
+   "precision": null,
+   "f1": 0.0,
+   "n": 8
+  },
+  "A5-NF": {
+   "tp": 0,
+   "fp": 0,
+   "fn": 8,
+   "tn": 0,
+   "recall": 0.0,
+   "precision": null,
+   "f1": 0.0,
+   "n": 8
+  },
+  "A1-NF": {
+   "tp": 8,
+   "fp": 0,
+   "fn": 0,
+   "tn": 0,
+   "recall": 1.0,
+   "precision": 1.0,
+   "f1": 1.0,
+   "n": 8
+  },
+  "A4-NF": {
+   "tp": 6,
+   "fp": 0,
+   "fn": 2,
+   "tn": 0,
+   "recall": 0.75,
+   "precision": 1.0,
+   "f1": 0.8571428571428571,
+   "n": 8
+  }
+ },
+ "per_pipeline": {
+  "A8-NF": {
+   "V1": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 2
+   },
+   "V2": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 2
+   },
+   "V3": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 2
+   },
+   "V4": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 2
+   }
+  },
+  "A5-NF": {
+   "V1": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 2
+   },
+   "V2": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 2
+   },
+   "V3": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 2
+   },
+   "V4": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 2
+   }
+  },
+  "A1-NF": {
+   "V1": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 2
+   },
+   "V2": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 2
+   },
+   "V3": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 2
+   },
+   "V4": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 2
+   }
+  },
+  "A4-NF": {
+   "V1": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 2
+   },
+   "V2": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 2
+   },
+   "V3": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 2
+   },
+   "V4": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 2
+   }
+  }
+ },
+ "per_dataset": {
+  "A8-NF": {
+   "negfam_s101": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 4
+   },
+   "negfam_s202": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 4
+   }
+  },
+  "A5-NF": {
+   "negfam_s101": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 4
+   },
+   "negfam_s202": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 4,
+    "tn": 0,
+    "recall": 0.0,
+    "precision": null,
+    "f1": 0.0,
+    "n": 4
+   }
+  },
+  "A1-NF": {
+   "negfam_s101": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 4
+   },
+   "negfam_s202": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "recall": 1.0,
+    "precision": 1.0,
+    "f1": 1.0,
+    "n": 4
+   }
+  },
+  "A4-NF": {
+   "negfam_s101": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "tn": 0,
+    "recall": 0.75,
+    "precision": 1.0,
+    "f1": 0.8571428571428571,
+    "n": 4
+   },
+   "negfam_s202": {
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "tn": 0,
+    "recall": 0.75,
+    "precision": 1.0,
+    "f1": 0.8571428571428571,
+    "n": 4
+   }
+  }
+ }
+}

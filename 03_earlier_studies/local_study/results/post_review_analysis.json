@@ -1,0 +1,72 @@
+{
+ "A3_subsets": {
+  "J": {
+   "median_q_error": 4.133970882101056,
+   "median_pred_over_gt": 0.24189817212543072
+  },
+  "F": {
+   "median_q_error": 4.833134284557091,
+   "median_pred_over_gt": 0.20885915141648603
+  }
+ },
+ "mcnemar_A5_vs_A3_corrected": {
+  "only_A5_correct": 35,
+  "only_A3_correct": 0,
+  "p_exact": 5.820766091346741e-11
+ },
+ "A1_dim_keys_retained_of_20000": {
+  "lognormal_s101": 202,
+  "lognormal_s202": 213,
+  "lognormal_s303": 182,
+  "mixed_s101": 205,
+  "mixed_s202": 221,
+  "mixed_s303": 186,
+  "zipf_s101": 206,
+  "zipf_s202": 216,
+  "zipf_s303": 182
+ },
+ "A1_dim_keys_retained_mean": 201.44444444444446,
+ "stored_only_A8": {
+  "instances_within_1pct_of_gt": 66,
+  "instances_total": 99,
+  "fraction": 0.6666666666666666,
+  "per_pipeline_family": {
+   "D": {
+    "determined": 9,
+    "total": 9
+   },
+   "F": {
+    "determined": 12,
+    "total": 18
+   },
+   "G": {
+    "determined": 36,
+    "total": 36
+   },
+   "J": {
+    "determined": 0,
+    "total": 27
+   },
+   "W": {
+    "determined": 9,
+    "total": 9
+   }
+  }
+ },
+ "cluster_bootstrap_delta_recall_A5_minus_A4": {
+  "point": 0.0,
+  "ci95": [
+   0.0,
+   0.0
+  ],
+  "clusters": 9
+ },
+ "timing_zipf_s101_seconds": {
+  "synopsis_build": 0.009,
+  "all_arms_evaluation": 0.196
+ },
+ "perfect_proportion_lower_bounds_95": {
+  "recall_60_of_60": 0.9512970866899025,
+  "repair_51_of_51": 0.9429520476395572
+ }
+}
