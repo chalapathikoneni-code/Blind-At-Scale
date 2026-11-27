@@ -1,0 +1,131 @@
+{
+ "experiment": "Blind at Scale \u2014 Workstream 4: Spark cluster ground truth",
+ "labelling": "multi-worker standalone cluster on a single host",
+ "master": "spark://127.0.0.1:7077",
+ "spark_version": "3.5.3",
+ "app_id": "app-20261106164103-0000",
+ "dataset": "zipf seed 101 (fact 10M / fact2 6M / dim 20k), generated on the pod by pod/gen_on_pod.py",
+ "n_fact": 10000000,
+ "n_fact2": 6000000,
+ "p_null": 0.04,
+ "counts_sha256": "f9f3fa8b29356e870df37e292f755a03d20fdcd016484d79dbcced148dcb528f",
+ "headline_expected_check": "PASS (per-key counts bit-identical to the local study)",
+ "t_load": 200000.0,
+ "t_load_note": "Applied threshold T_LOAD = 200,000 = 0.02 * n_fact (PREREGISTRATION.md S.3). The operator report noted a t_load value of 20000 in an auxiliary pod output; see the reconciliation in results/spark_cluster/cluster_comparison.json and NUMBER_PROVENANCE.md: collect_results.py uses a single t_load variable for the root field, the per-pipeline fields and the verdicts, and every recorded verdict in this file is exactly the verdict that T = 200,000 produces (recomputed and asserted locally). 20000 = 0.02 * 1,000,000 is the signature of a reduced-scale (1M-row) invocation, not of this headline run (n_fact = 10,000,000 in the run manifest, written by spark_pipelines.py from fact.count()).",
+ "load_definition": "GT_LOAD = max over the pipeline's tasks of Shuffle Read Metrics.Total Records Read (per-partition load; input/scan records are not verdict-bearing \u2014 file splitting is a storage artefact). For F pipelines GT_LOAD is the analytic splitmix64 load from Spark-produced per-key counts (D4). FAIL iff GT_LOAD > T_LOAD. See pod/spark_pipelines.py.",
+ "deviations": "D1 murmur3 vs splitmix64; D2/D5 G/W realised as repartition shuffle (upper bound of local def); D3 J shuffle-merge, broadcast off; D4 F raw join not materialisable \u2014 analytic load from Spark counts; D6 scan splits; D7 AQE off. Full text in pod/spark_pipelines.py.",
+ "environment": {
+  "openjdk": "17.0.20.1",
+  "pod_python_venv": "3.13.18",
+  "numpy": "2.5.4",
+  "pyarrow": "26.0.1",
+  "shuffle_partitions": 128,
+  "aliveworkers": 2
+ },
+ "pod": {
+  "name": "blind-at-scale-gt",
+  "spec": "8 vCPU AMD EPYC 9575F / 16 GB RAM / 80 GB disk",
+  "region": "EU-RO-1",
+  "rate_usd_per_hr": 0.29,
+  "template": "research-standard (kya0m00ekg)",
+  "volume": "research-ops (lhxc1nip98) at /workspace",
+  "preflight": "PASS",
+  "spend_usd": 0.16,
+  "balance_before": 14.16,
+  "balance_after": 14.0,
+  "terminated": "2026-11-06 11:48:03 EST (audit-confirmed deleted; no pod running)"
+ },
+ "pipelines": {
+  "G_A": {
+   "status": "OK",
+   "gt_load": 1086736,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 200000.0,
+   "max_group_count": 953047,
+   "n_failed_tasks": 0,
+   "spill_bytes_total": 0
+  },
+  "G_B": {
+   "status": "OK",
+   "gt_load": 156387,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "PASS",
+   "t_load": 200000.0,
+   "max_group_count": 77009,
+   "n_failed_tasks": 0,
+   "spill_bytes_total": 0
+  },
+  "G_N": {
+   "status": "OK",
+   "gt_load": 1043904,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 200000.0,
+   "max_group_count": 916064,
+   "n_failed_tasks": 0,
+   "spill_bytes_total": 0
+  },
+  "J_A": {
+   "status": "OK",
+   "gt_load": 1086890,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 200000.0,
+   "join_output_rows": 10000000,
+   "n_failed_tasks": 0,
+   "spill_bytes_total": 0
+  },
+  "J_B": {
+   "status": "OK",
+   "gt_load": 156541,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "PASS",
+   "t_load": 200000.0,
+   "join_output_rows": 10000000,
+   "n_failed_tasks": 0,
+   "spill_bytes_total": 0
+  },
+  "J_N": {
+   "status": "OK",
+   "gt_load": 1044058,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 200000.0,
+   "join_output_rows": 9600000,
+   "n_failed_tasks": 0,
+   "spill_bytes_total": 0
+  },
+  "F_A": {
+   "status": "SKIPPED_NOT_MATERIALISABLE",
+   "gt_load": 546740246171,
+   "gt_load_source": "analytic_splitmix64_from_spark_counts (F pipeline; raw join status SKIPPED_NOT_MATERIALISABLE; D4)",
+   "verdict": "FAIL",
+   "t_load": 200000.0,
+   "exact_join_output_rows": 898098021014,
+   "n_failed_tasks": 0,
+   "spill_bytes_total": 0
+  },
+  "F_B": {
+   "status": "SKIPPED_NOT_MATERIALISABLE",
+   "gt_load": 3719508913,
+   "gt_load_source": "analytic_splitmix64_from_spark_counts (F pipeline; raw join status SKIPPED_NOT_MATERIALISABLE; D4)",
+   "verdict": "FAIL",
+   "t_load": 200000.0,
+   "exact_join_output_rows": 17566403854,
+   "n_failed_tasks": 0,
+   "spill_bytes_total": 0
+  },
+  "W_A": {
+   "status": "OK",
+   "gt_load": 1086736,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 200000.0,
+   "max_window_partition_rows": 953047,
+   "n_failed_tasks": 0,
+   "spill_bytes_total": 0
+  }
+ },
+ "_provenance": "RECONSTRUCTED 2026-11-06 from the pod operator's verbatim verified report (run window 11:10-11:50 AM EST, 2026-11-06). This file carries every verdict-bearing field reported for the 9 headline pipelines. The canonical full spark_ground_truth.json (with per-stage durations, task counts and byte metrics), the Spark event log, and all run logs remain on the research-ops network volume at /workspace/blind-pod/ (186 MB: results_out/, eventlog/, spark-logs/, bas-data/). The pod itself was terminated and deleted after the run. The arm comparison that collect_results.py would have produced on the pod (empty there because predictions_main.csv was not uploaded) is computed locally in results/spark_cluster/cluster_comparison.json."
+}

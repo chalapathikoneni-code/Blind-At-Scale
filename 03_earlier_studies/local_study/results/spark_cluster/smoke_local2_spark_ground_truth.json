@@ -1,0 +1,791 @@
+{
+ "experiment": "Blind at Scale \u2014 Workstream 4: Spark cluster ground truth",
+ "labelling": "NOT A CLUSTER RUN \u2014 master=local[2]",
+ "master": "local[2]",
+ "spark_version": "3.5.3",
+ "app_id": "local-1793966361788",
+ "dataset": "zipf seed 101 (fact 10M / fact2 6M / dim 20k) unless n_fact says otherwise",
+ "n_fact": 500000,
+ "t_load": 10000.0,
+ "load_definition": "GT_LOAD = max over the pipeline's tasks of Shuffle Read Metrics.Total Records Read (per-partition load; input/scan records are reported separately as gt_load_incl_input and are not verdict-bearing \u2014 file splitting is a storage artefact). For F pipelines GT_LOAD is the analytic splitmix64 load from Spark-produced per-key counts (D4). FAIL iff GT_LOAD > T_LOAD. See spark_pipelines.py.",
+ "deviations": "D1 murmur3 vs splitmix64; D2/D5 G/W realised as repartition shuffle (upper bound of local def); D3 J shuffle-merge, broadcast off; D4 F raw join not materialisable \u2014 analytic load from Spark counts; D6 scan splits; D7 AQE off. Full text in spark_pipelines.py.",
+ "pipelines": {
+  "G_A": {
+   "status": "OK",
+   "n_tasks": 130,
+   "n_failed_tasks": 0,
+   "gt_load_shuffle_read": 54420,
+   "gt_load_stage_id": 6,
+   "gt_load_incl_input": 500000,
+   "max_task_load_incl_write": 1000000,
+   "max_task_shuffle_bytes": 1548131,
+   "max_task_input_records": 500000,
+   "max_task_shuffle_read_records": 54420,
+   "spill_bytes_max_task": 0,
+   "spill_bytes_total": 0,
+   "max_task_time_ms": 783,
+   "wall_seconds": 5.77,
+   "stage_durations": [
+    {
+     "stage_id": 5,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:220",
+     "n_tasks": 2,
+     "submission_ms": 1793966370276,
+     "completion_ms": 1793966371077,
+     "duration_ms": 801,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 6,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:220",
+     "n_tasks": 128,
+     "submission_ms": 1793966371090,
+     "completion_ms": 1793966375081,
+     "duration_ms": 3991,
+     "max_task_load_records": 54420,
+     "max_task_shuffle_read_records": 54420
+    }
+   ],
+   "gt_load": 54420,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 10000.0,
+   "result_rows": 19564,
+   "max_group_count": 47794,
+   "local_sim": {
+    "gt_load": 47794.0,
+    "gt_verdict": "FAIL"
+   },
+   "arm_predictions": {
+    "A1": {
+     "pred_load": 47000.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.157872340425532
+    },
+    "A5": {
+     "pred_load": 47800.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.1384937238493724
+    },
+    "A8": {
+     "pred_load": 47794.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.1386366489517512
+    }
+   }
+  },
+  "G_B": {
+   "status": "OK",
+   "n_tasks": 130,
+   "n_failed_tasks": 0,
+   "gt_load_shuffle_read": 7841,
+   "gt_load_stage_id": 8,
+   "gt_load_incl_input": 500000,
+   "max_task_load_incl_write": 1000000,
+   "max_task_shuffle_bytes": 2167675,
+   "max_task_input_records": 500000,
+   "max_task_shuffle_read_records": 7841,
+   "spill_bytes_max_task": 0,
+   "spill_bytes_total": 0,
+   "max_task_time_ms": 509,
+   "wall_seconds": 3.1,
+   "stage_durations": [
+    {
+     "stage_id": 7,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:220",
+     "n_tasks": 2,
+     "submission_ms": 1793966375569,
+     "completion_ms": 1793966376090,
+     "duration_ms": 521,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 8,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:220",
+     "n_tasks": 128,
+     "submission_ms": 1793966376100,
+     "completion_ms": 1793966378385,
+     "duration_ms": 2285,
+     "max_task_load_records": 7841,
+     "max_task_shuffle_read_records": 7841
+    }
+   ],
+   "gt_load": 7841,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "PASS",
+   "t_load": 10000.0,
+   "result_rows": 20000,
+   "max_group_count": 3860,
+   "local_sim": {
+    "gt_load": 3860.0,
+    "gt_verdict": "PASS"
+   },
+   "arm_predictions": {
+    "A1": {
+     "pred_load": 4300.0,
+     "pred_verdict": "PASS",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.8234883720930233
+    },
+    "A5": {
+     "pred_load": 3900.0,
+     "pred_verdict": "PASS",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 2.0105128205128207
+    },
+    "A8": {
+     "pred_load": 3860.0,
+     "pred_verdict": "PASS",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 2.031347150259067
+    }
+   }
+  },
+  "G_N": {
+   "status": "OK",
+   "n_tasks": 130,
+   "n_failed_tasks": 0,
+   "gt_load_shuffle_read": 52286,
+   "gt_load_stage_id": 10,
+   "gt_load_incl_input": 500000,
+   "max_task_load_incl_write": 1000000,
+   "max_task_shuffle_bytes": 1497507,
+   "max_task_input_records": 500000,
+   "max_task_shuffle_read_records": 52286,
+   "spill_bytes_max_task": 0,
+   "spill_bytes_total": 0,
+   "max_task_time_ms": 251,
+   "wall_seconds": 2.27,
+   "stage_durations": [
+    {
+     "stage_id": 9,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:220",
+     "n_tasks": 2,
+     "submission_ms": 1793966378607,
+     "completion_ms": 1793966378870,
+     "duration_ms": 263,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 10,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:220",
+     "n_tasks": 128,
+     "submission_ms": 1793966378876,
+     "completion_ms": 1793966380607,
+     "duration_ms": 1731,
+     "max_task_load_records": 52286,
+     "max_task_shuffle_read_records": 52286
+    }
+   ],
+   "gt_load": 52286,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 10000.0,
+   "result_rows": 19474,
+   "max_group_count": 45690,
+   "local_sim": {
+    "gt_load": 45690.0,
+    "gt_verdict": "FAIL"
+   },
+   "arm_predictions": {
+    "A1": {
+     "pred_load": 45500.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.1491428571428572
+    },
+    "A5": {
+     "pred_load": 45700.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.1441137855579868
+    },
+    "A8": {
+     "pred_load": 45690.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.144364193477785
+    }
+   }
+  },
+  "J_A": {
+   "status": "OK",
+   "n_tasks": 132,
+   "n_failed_tasks": 0,
+   "gt_load_shuffle_read": 54574,
+   "gt_load_stage_id": 13,
+   "gt_load_incl_input": 500000,
+   "max_task_load_incl_write": 1000000,
+   "max_task_shuffle_bytes": 1548131,
+   "max_task_input_records": 500000,
+   "max_task_shuffle_read_records": 54574,
+   "spill_bytes_max_task": 0,
+   "spill_bytes_total": 0,
+   "max_task_time_ms": 482,
+   "wall_seconds": 3.75,
+   "stage_durations": [
+    {
+     "stage_id": 12,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 1,
+     "submission_ms": 1793966381400,
+     "completion_ms": 1793966381668,
+     "duration_ms": 268,
+     "max_task_load_records": 20000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 11,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 2,
+     "submission_ms": 1793966381393,
+     "completion_ms": 1793966381887,
+     "duration_ms": 494,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 13,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 128,
+     "submission_ms": 1793966381896,
+     "completion_ms": 1793966384470,
+     "duration_ms": 2574,
+     "max_task_load_records": 54574,
+     "max_task_shuffle_read_records": 54574
+    },
+    {
+     "stage_id": 14,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 1,
+     "submission_ms": 1793966384479,
+     "completion_ms": 1793966384514,
+     "duration_ms": 35,
+     "max_task_load_records": 128,
+     "max_task_shuffle_read_records": 128
+    }
+   ],
+   "gt_load": 54574,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 10000.0,
+   "join_output_rows": 500000,
+   "local_sim": {
+    "gt_load": 52730.0,
+    "gt_verdict": "FAIL"
+   },
+   "arm_predictions": {
+    "A1": {
+     "pred_load": 2500.0,
+     "pred_verdict": "PASS",
+     "verdict_agrees_with_spark": false,
+     "q_error_vs_spark_gt": 21.8296
+    },
+    "A5": {
+     "pred_load": 52800.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.033598484848485
+    },
+    "A8": {
+     "pred_load": 52513.3,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.0392414873946219
+    }
+   }
+  },
+  "J_B": {
+   "status": "OK",
+   "n_tasks": 132,
+   "n_failed_tasks": 0,
+   "gt_load_shuffle_read": 7995,
+   "gt_load_stage_id": 17,
+   "gt_load_incl_input": 500000,
+   "max_task_load_incl_write": 1000000,
+   "max_task_shuffle_bytes": 2167675,
+   "max_task_input_records": 500000,
+   "max_task_shuffle_read_records": 7995,
+   "spill_bytes_max_task": 0,
+   "spill_bytes_total": 0,
+   "max_task_time_ms": 330,
+   "wall_seconds": 2.57,
+   "stage_durations": [
+    {
+     "stage_id": 15,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 1,
+     "submission_ms": 1793966384901,
+     "completion_ms": 1793966385103,
+     "duration_ms": 202,
+     "max_task_load_records": 20000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 16,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 2,
+     "submission_ms": 1793966384968,
+     "completion_ms": 1793966385326,
+     "duration_ms": 358,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 17,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 128,
+     "submission_ms": 1793966385335,
+     "completion_ms": 1793966387076,
+     "duration_ms": 1741,
+     "max_task_load_records": 7995,
+     "max_task_shuffle_read_records": 7995
+    },
+    {
+     "stage_id": 18,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 1,
+     "submission_ms": 1793966387078,
+     "completion_ms": 1793966387092,
+     "duration_ms": 14,
+     "max_task_load_records": 128,
+     "max_task_shuffle_read_records": 128
+    }
+   ],
+   "gt_load": 7995,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "PASS",
+   "t_load": 10000.0,
+   "join_output_rows": 500000,
+   "local_sim": {
+    "gt_load": 8782.0,
+    "gt_verdict": "PASS"
+   },
+   "arm_predictions": {
+    "A1": {
+     "pred_load": 1000.0,
+     "pred_verdict": "PASS",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 7.995
+    },
+    "A5": {
+     "pred_load": 7500.0,
+     "pred_verdict": "PASS",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.066
+    },
+    "A8": {
+     "pred_load": 8407.4,
+     "pred_verdict": "PASS",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.0515822388993121
+    }
+   }
+  },
+  "J_N": {
+   "status": "OK",
+   "n_tasks": 132,
+   "n_failed_tasks": 0,
+   "gt_load_shuffle_read": 52440,
+   "gt_load_stage_id": 21,
+   "gt_load_incl_input": 500000,
+   "max_task_load_incl_write": 1000000,
+   "max_task_shuffle_bytes": 1497507,
+   "max_task_input_records": 500000,
+   "max_task_shuffle_read_records": 52440,
+   "spill_bytes_max_task": 0,
+   "spill_bytes_total": 0,
+   "max_task_time_ms": 276,
+   "wall_seconds": 2.12,
+   "stage_durations": [
+    {
+     "stage_id": 20,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 1,
+     "submission_ms": 1793966387308,
+     "completion_ms": 1793966387409,
+     "duration_ms": 101,
+     "max_task_load_records": 20000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 19,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 2,
+     "submission_ms": 1793966387304,
+     "completion_ms": 1793966387589,
+     "duration_ms": 285,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 21,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 128,
+     "submission_ms": 1793966387597,
+     "completion_ms": 1793966389202,
+     "duration_ms": 1605,
+     "max_task_load_records": 52440,
+     "max_task_shuffle_read_records": 52440
+    },
+    {
+     "stage_id": 22,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 1,
+     "submission_ms": 1793966389206,
+     "completion_ms": 1793966389217,
+     "duration_ms": 11,
+     "max_task_load_records": 128,
+     "max_task_shuffle_read_records": 128
+    }
+   ],
+   "gt_load": 52440,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 10000.0,
+   "join_output_rows": 480000,
+   "local_sim": {
+    "gt_load": 50341.0,
+    "gt_verdict": "FAIL"
+   },
+   "arm_predictions": {
+    "A1": {
+     "pred_load": 1000.0,
+     "pred_verdict": "PASS",
+     "verdict_agrees_with_spark": false,
+     "q_error_vs_spark_gt": 52.44
+    },
+    "A5": {
+     "pred_load": 50200.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.0446215139442232
+    },
+    "A8": {
+     "pred_load": 50145.6,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.0457547621326697
+    }
+   }
+  },
+  "F_A": {
+   "status": "SKIPPED_NOT_MATERIALISABLE",
+   "n_tasks": 131,
+   "n_failed_tasks": 0,
+   "gt_load_shuffle_read": 345,
+   "gt_load_stage_id": 25,
+   "gt_load_incl_input": 500000,
+   "max_task_load_incl_write": 519564,
+   "max_task_shuffle_bytes": 200123,
+   "max_task_input_records": 500000,
+   "max_task_shuffle_read_records": 345,
+   "spill_bytes_max_task": 0,
+   "spill_bytes_total": 0,
+   "max_task_time_ms": 383,
+   "wall_seconds": 3.59,
+   "stage_durations": [
+    {
+     "stage_id": 23,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:237",
+     "n_tasks": 1,
+     "submission_ms": 1793966389718,
+     "completion_ms": 1793966390089,
+     "duration_ms": 371,
+     "max_task_load_records": 300000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 24,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:237",
+     "n_tasks": 2,
+     "submission_ms": 1793966389769,
+     "completion_ms": 1793966390181,
+     "duration_ms": 412,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 25,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:237",
+     "n_tasks": 128,
+     "submission_ms": 1793966390185,
+     "completion_ms": 1793966392599,
+     "duration_ms": 2414,
+     "max_task_load_records": 345,
+     "max_task_shuffle_read_records": 345
+    }
+   ],
+   "gt_load": 1360464220.0,
+   "gt_load_source": "analytic_splitmix64_from_spark_counts (F pipeline; raw join status SKIPPED_NOT_MATERIALISABLE; D4)",
+   "exact_join_output_rows": 2240500472.0,
+   "verdict": "FAIL",
+   "t_load": 10000.0,
+   "local_sim": {
+    "gt_load": 1360464220.0,
+    "gt_verdict": "FAIL"
+   },
+   "arm_predictions": {
+    "A1": {
+     "pred_load": 1271720000.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.0697828295536753
+    },
+    "A5": {
+     "pred_load": 1359540000.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.000679803462936
+    },
+    "A8": {
+     "pred_load": 1360459922.1,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.0000031591522325
+    }
+   }
+  },
+  "F_B": {
+   "status": "EXECUTED_RAW",
+   "n_tasks": 263,
+   "n_failed_tasks": 0,
+   "gt_load_shuffle_read": 12662,
+   "gt_load_stage_id": 31,
+   "gt_load_incl_input": 500000,
+   "max_task_load_incl_write": 1000000,
+   "max_task_shuffle_bytes": 2167675,
+   "max_task_input_records": 500000,
+   "max_task_shuffle_read_records": 12662,
+   "spill_bytes_max_task": 0,
+   "spill_bytes_total": 0,
+   "max_task_time_ms": 413,
+   "wall_seconds": 4.08,
+   "stage_durations": [
+    {
+     "stage_id": 27,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:237",
+     "n_tasks": 1,
+     "submission_ms": 1793966393071,
+     "completion_ms": 1793966393301,
+     "duration_ms": 230,
+     "max_task_load_records": 300000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 26,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:237",
+     "n_tasks": 2,
+     "submission_ms": 1793966393026,
+     "completion_ms": 1793966393307,
+     "duration_ms": 281,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 28,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:237",
+     "n_tasks": 128,
+     "submission_ms": 1793966393314,
+     "completion_ms": 1793966394783,
+     "duration_ms": 1469,
+     "max_task_load_records": 362,
+     "max_task_shuffle_read_records": 362
+    },
+    {
+     "stage_id": 29,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 1,
+     "submission_ms": 1793966395072,
+     "completion_ms": 1793966395310,
+     "duration_ms": 238,
+     "max_task_load_records": 300000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 30,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 2,
+     "submission_ms": 1793966395076,
+     "completion_ms": 1793966395500,
+     "duration_ms": 424,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 31,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 128,
+     "submission_ms": 1793966395505,
+     "completion_ms": 1793966396872,
+     "duration_ms": 1367,
+     "max_task_load_records": 12662,
+     "max_task_shuffle_read_records": 12662
+    },
+    {
+     "stage_id": 32,
+     "name": "count at NativeMethodAccessorImpl.java:0",
+     "n_tasks": 1,
+     "submission_ms": 1793966396873,
+     "completion_ms": 1793966396884,
+     "duration_ms": 11,
+     "max_task_load_records": 128,
+     "max_task_shuffle_read_records": 128
+    }
+   ],
+   "gt_load": 9544282.0,
+   "gt_load_source": "analytic_splitmix64_from_spark_counts (F pipeline; raw join status EXECUTED_RAW; D4)",
+   "exact_join_output_rows": 44243713.0,
+   "verdict": "FAIL",
+   "t_load": 10000.0,
+   "join_output_rows": 44243713,
+   "local_sim": {
+    "gt_load": 9544282.0,
+    "gt_verdict": "FAIL"
+   },
+   "arm_predictions": {
+    "A1": {
+     "pred_load": 12900000.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.351594598734614
+    },
+    "A5": {
+     "pred_load": 9670000.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.013172075175482
+    },
+    "A8": {
+     "pred_load": 9530851.9,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.001409118528009
+    }
+   }
+  },
+  "W_A": {
+   "status": "OK",
+   "n_tasks": 131,
+   "n_failed_tasks": 0,
+   "gt_load_shuffle_read": 54420,
+   "gt_load_stage_id": 34,
+   "gt_load_incl_input": 500000,
+   "max_task_load_incl_write": 1000000,
+   "max_task_shuffle_bytes": 4334179,
+   "max_task_input_records": 500000,
+   "max_task_shuffle_read_records": 54420,
+   "spill_bytes_max_task": 0,
+   "spill_bytes_total": 0,
+   "max_task_time_ms": 314,
+   "wall_seconds": 3.02,
+   "stage_durations": [
+    {
+     "stage_id": 33,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:261",
+     "n_tasks": 2,
+     "submission_ms": 1793966397198,
+     "completion_ms": 1793966397532,
+     "duration_ms": 334,
+     "max_task_load_records": 500000,
+     "max_task_shuffle_read_records": 0
+    },
+    {
+     "stage_id": 34,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:261",
+     "n_tasks": 128,
+     "submission_ms": 1793966397569,
+     "completion_ms": 1793966399877,
+     "duration_ms": 2308,
+     "max_task_load_records": 54420,
+     "max_task_shuffle_read_records": 54420
+    },
+    {
+     "stage_id": 35,
+     "name": "collect at /home/hatch/workspace/blind-at-scale/pod/spark_pipelines.py:261",
+     "n_tasks": 1,
+     "submission_ms": 1793966399881,
+     "completion_ms": 1793966399899,
+     "duration_ms": 18,
+     "max_task_load_records": 128,
+     "max_task_shuffle_read_records": 128
+    }
+   ],
+   "gt_load": 54420,
+   "gt_load_source": "spark_event_log_tasks_shuffle_read",
+   "verdict": "FAIL",
+   "t_load": 10000.0,
+   "max_window_partition_rows": 47794,
+   "local_sim": {
+    "gt_load": 47794.0,
+    "gt_verdict": "FAIL"
+   },
+   "arm_predictions": {
+    "A1": {
+     "pred_load": 47000.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.157872340425532
+    },
+    "A5": {
+     "pred_load": 47800.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.1384937238493724
+    },
+    "A8": {
+     "pred_load": 47794.0,
+     "pred_verdict": "FAIL",
+     "verdict_agrees_with_spark": true,
+     "q_error_vs_spark_gt": 1.1386366489517512
+    }
+   }
+  }
+ },
+ "verdict_agreement": {
+  "arms_vs_spark": {
+   "A1": {
+    "agree": 7,
+    "total": 9
+   },
+   "A5": {
+    "agree": 9,
+    "total": 9
+   },
+   "A8": {
+    "agree": 9,
+    "total": 9
+   }
+  },
+  "local_simulation_vs_spark": {
+   "agree": 9,
+   "total": 9
+  },
+  "local_pooled_arm_metrics_all_99_instances": {
+   "A1": {
+    "recall": 0.7666666666666667,
+    "precision": 1.0,
+    "spearman_rho": 0.8089948112066913,
+    "median_q_error": 1.0435069103220274
+   },
+   "A5": {
+    "recall": 1.0,
+    "precision": 1.0,
+    "spearman_rho": 0.9985649410824042,
+    "median_q_error": 1.0014650519290254
+   },
+   "A8": {
+    "recall": 1.0,
+    "precision": 1.0,
+    "spearman_rho": 0.9996196142950804,
+    "median_q_error": 1.000033002409176
+   }
+  }
+ }
+}
