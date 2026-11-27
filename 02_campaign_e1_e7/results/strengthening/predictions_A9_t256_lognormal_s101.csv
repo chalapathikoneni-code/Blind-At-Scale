@@ -1,0 +1,12 @@
+dataset,family,seed,n_fact,pipeline,gt_load,gt_verdict,arm,pred_load,pred_verdict,testbed_fact_rows,r,packet_bytes,target
+lognormal_s101,lognormal,101,10000000,G_A,186475.0,PASS,A9,186475.0,PASS,0,,17058,256
+lognormal_s101,lognormal,101,10000000,G_B,19203.0,PASS,A9,39063.0,PASS,0,,17058,256
+lognormal_s101,lognormal,101,10000000,G_C,948.0,PASS,A9,39063.0,PASS,0,,17058,256
+lognormal_s101,lognormal,101,10000000,G_N,400000.0,FAIL,A9,400000.0,FAIL,0,,17058,256
+lognormal_s101,lognormal,101,10000000,J_A,288820.0,FAIL,A9,376275.0,FAIL,0,,17058,256
+lognormal_s101,lognormal,101,10000000,J_B,108759.0,PASS,A9,273441.0,FAIL,0,,17058,256
+lognormal_s101,lognormal,101,10000000,J_N,278062.0,FAIL,A9,325222.0,FAIL,0,,17058,256
+lognormal_s101,lognormal,101,10000000,F_A,21119684325.0,FAIL,A9,21084869413.0,FAIL,0,,17058,256
+lognormal_s101,lognormal,101,10000000,F_B,292025341.0,FAIL,A9,536151450.0,FAIL,0,,17058,256
+lognormal_s101,lognormal,101,10000000,W_A,186475.0,PASS,A9,186475.0,PASS,0,,17058,256
+lognormal_s101,lognormal,101,10000000,D_A,84451.0,FAIL,A9,84506.7,FAIL,0,,17058,256

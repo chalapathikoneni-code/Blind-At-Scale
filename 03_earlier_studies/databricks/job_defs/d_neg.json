@@ -1,0 +1,46 @@
+{
+  "description": "Blind at Scale D-NEG: negative-family confirmation on real Spark. The 4 V pipelines (V1-V4) with pre-registered byte thresholds over the negfam seed-101 fact table (5M rows, WIDE payloads). NO gen task: the negfam parquet + predictions_negfam.csv + gt_negfam.json are UPLOADED to the volume by the operator BEFORE the run (see README_JOB_DEFS.md) because the negfam generator's WIDE-row construction is not reproducible from the pod gen path. The script REPORTS measured synopsis-arm agreement; it does not assert the pre-registered expectation (recall 0.000). max_retries 0: a retry would double-bill and muddy provenance.",
+  "environments": [
+    {
+      "environment_key": "Default",
+      "spec": {
+        "dependencies": [
+          "numpy==2.5.4",
+          "pyarrow"
+        ],
+        "environment_version": "2"
+      }
+    }
+  ],
+  "max_retries": 0,
+  "name": "bas-d-neg-RUN_TAG",
+  "tags": {
+    "arm": "d-neg",
+    "owner": "<AUTHOR_EMAIL>",
+    "project": "blind-at-scale"
+  },
+  "tasks": [
+    {
+      "description": "Run V1-V4 with D8 byte measurement; compare synopsis-arm predictions (A5-NF, A8-NF) against the Spark verdicts.",
+      "environment_key": "Default",
+      "max_retries": 0,
+      "spark_python_task": {
+        "parameters": [
+          "--data",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/negfam_s101",
+          "--predictions",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/negfam_s101/predictions_negfam.csv",
+          "--gt-json",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/negfam_s101/gt_negfam.json",
+          "--manifest",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/negfam_s101/negfam_manifest.json"
+        ],
+        "python_file": "/Workspace/blind-at-scale/cloud_program/databricks/negfam_dbx.py",
+        "source": "WORKSPACE"
+      },
+      "task_key": "negfam",
+      "timeout_seconds": 3600
+    }
+  ],
+  "timeout_seconds": 3600
+}

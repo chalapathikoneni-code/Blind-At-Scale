@@ -1,0 +1,58 @@
+{
+ "gate": {
+  "compared": 11,
+  "pred_mismatches": 0,
+  "verdict_mismatches": 0,
+  "gt_check_mismatches": 0,
+  "gt_check_max_diff": 0.0,
+  "pass": true
+ },
+ "per_point_vs_recorded_csv": {
+  "A8_k16": {
+   "compared": 99,
+   "pred_mismatches_at_0p1": 0,
+   "verdict_mismatches": 0
+  },
+  "A8_k64": {
+   "compared": 99,
+   "pred_mismatches_at_0p1": 0,
+   "verdict_mismatches": 0
+  },
+  "A8_k256": {
+   "compared": 99,
+   "pred_mismatches_at_0p1": 0,
+   "verdict_mismatches": 0
+  },
+  "A8_k1024": {
+   "compared": 99,
+   "pred_mismatches_at_0p1": 0,
+   "verdict_mismatches": 0
+  },
+  "A5_full": {
+   "compared": 99,
+   "pred_mismatches_at_0p1": 0,
+   "verdict_mismatches": 0
+  },
+  "A7_full": {
+   "compared": 99,
+   "pred_mismatches_at_0p1": 0,
+   "verdict_mismatches": 0
+  },
+  "A7X_full": {
+   "compared": 99,
+   "pred_mismatches_at_0p1": 0,
+   "verdict_mismatches": 0
+  },
+  "A9_t1024": {
+   "compared": 99,
+   "pred_mismatches_at_0p1": 0,
+   "verdict_mismatches": 0
+  }
+ },
+ "packet_checks": {
+  "A9_t1024_bytes_match_existing": 9,
+  "A7_packet_serialisation_identical": 9,
+  "A7X_packet_serialisation_identical": 9,
+  "A8_synopsis_default_dumps_eq_filesize": 9
+ }
+}

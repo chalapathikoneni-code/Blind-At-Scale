@@ -1,0 +1,76 @@
+{
+  "description": "Blind at Scale D-SCALE 100M leg: zipf seed 101, fact 100M / fact2 60M, 9 pipelines, T=2,000,000 (= 0.02 x 100M). ALSO exports counts.npz (gen task), a deterministic 1% sample (hash(s) % 100 == 0, pipeline task --sample-out), and the exact per-key COUNT(DISTINCT s) for kA (--distinct-out) to the volume for the LOCAL arms run on the VM (predictions do not exist yet at 100M; no comparison against predictions from a different scale). The distinct_A export is REQUIRED: arms.run_arms indexes counts['distinct_A'] (D_A GT only) and would KeyError without it \u2014 the execution phase merges it into counts.npz before the local arms run (see README_JOB_DEFS.md). Driver-memory note: the 100M numpy generation holds ~100M-row int32 columns driver-side; if the gen task OOMs, that is a recorded finding, not a cue to shrink the dataset silently. max_retries 0: a retry would double-bill and muddy provenance.",
+  "environments": [
+    {
+      "environment_key": "Default",
+      "spec": {
+        "dependencies": [
+          "numpy==2.5.4",
+          "pyarrow"
+        ],
+        "environment_version": "2"
+      }
+    }
+  ],
+  "max_retries": 0,
+  "name": "bas-d-scale-100m-RUN_TAG",
+  "tags": {
+    "arm": "d-scale-100m",
+    "owner": "<AUTHOR_EMAIL>",
+    "project": "blind-at-scale"
+  },
+  "tasks": [
+    {
+      "description": "Generate zipf seed 101 at 100M/60M on-cluster; counts.npz + counts_summary.json exported for the local arms run and the local re-derivation check.",
+      "environment_key": "Default",
+      "max_retries": 0,
+      "spark_python_task": {
+        "parameters": [
+          "--family",
+          "zipf",
+          "--seed",
+          "101",
+          "--n-fact",
+          "100000000",
+          "--n-fact2",
+          "60000000",
+          "--outdir",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_100m",
+          "--counts-out",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_100m"
+        ],
+        "python_file": "/Workspace/blind-at-scale/cloud_program/databricks/gen_on_dbx.py",
+        "source": "WORKSPACE"
+      },
+      "task_key": "gen",
+      "timeout_seconds": 3600
+    },
+    {
+      "depends_on": [
+        {
+          "task_key": "gen"
+        }
+      ],
+      "description": "Run the 9 pipelines with D8 partition-id measurement at 100M scale; also export the deterministic 1% sample and the distinct_A vector for the local arms run.",
+      "environment_key": "Default",
+      "max_retries": 0,
+      "spark_python_task": {
+        "parameters": [
+          "--data",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_100m",
+          "--manifest",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_100m/run_manifest.json",
+          "--sample-out",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_100m/sample_1pct.parquet",
+          "--distinct-out",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_100m/distinct_A.parquet"
+        ],
+        "python_file": "/Workspace/blind-at-scale/cloud_program/databricks/spark_pipelines_dbx.py",
+        "source": "WORKSPACE"
+      },
+      "task_key": "pipelines",
+      "timeout_seconds": 10800
+    }
+  ],
+  "timeout_seconds": 14400
+}

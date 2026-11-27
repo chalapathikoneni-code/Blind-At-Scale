@@ -1,0 +1,72 @@
+{
+  "description": "Blind at Scale D-SCALE 40M leg: zipf seed 101, fact 40M / fact2 24M, 9 pipelines, T=800,000 (= 0.02 x 40M). Local predictions already exist (data/zipf_s101_40m/predictions_main.csv). No pre-existing SHA anchor at 40M: the checks are exact row counts, max counts consistent with the local 40M record, and the counts.npz export for local re-derivation. max_retries 0: a retry would double-bill and muddy provenance.",
+  "environments": [
+    {
+      "environment_key": "Default",
+      "spec": {
+        "dependencies": [
+          "numpy==2.5.4",
+          "pyarrow"
+        ],
+        "environment_version": "2"
+      }
+    }
+  ],
+  "max_retries": 0,
+  "name": "bas-d-scale-40m-RUN_TAG",
+  "tags": {
+    "arm": "d-scale-40m",
+    "owner": "<AUTHOR_EMAIL>",
+    "project": "blind-at-scale"
+  },
+  "tasks": [
+    {
+      "description": "Generate zipf seed 101 at 40M/24M on-cluster; counts.npz + counts_summary.json exported for the local re-derivation check.",
+      "environment_key": "Default",
+      "max_retries": 0,
+      "spark_python_task": {
+        "parameters": [
+          "--family",
+          "zipf",
+          "--seed",
+          "101",
+          "--n-fact",
+          "40000000",
+          "--n-fact2",
+          "24000000",
+          "--outdir",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_40m",
+          "--counts-out",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_40m"
+        ],
+        "python_file": "/Workspace/blind-at-scale/cloud_program/databricks/gen_on_dbx.py",
+        "source": "WORKSPACE"
+      },
+      "task_key": "gen",
+      "timeout_seconds": 3600
+    },
+    {
+      "depends_on": [
+        {
+          "task_key": "gen"
+        }
+      ],
+      "description": "Run the 9 pipelines with D8 partition-id measurement at 40M scale.",
+      "environment_key": "Default",
+      "max_retries": 0,
+      "spark_python_task": {
+        "parameters": [
+          "--data",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_40m",
+          "--manifest",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/zipf_s101_40m/run_manifest.json"
+        ],
+        "python_file": "/Workspace/blind-at-scale/cloud_program/databricks/spark_pipelines_dbx.py",
+        "source": "WORKSPACE"
+      },
+      "task_key": "pipelines",
+      "timeout_seconds": 10800
+    }
+  ],
+  "timeout_seconds": 14400
+}

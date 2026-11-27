@@ -1,0 +1,73 @@
+{
+  "description": "Blind at Scale D-FB: feedback verification on real Spark. The 7 fixable GT-FAIL pipelines on zipf_s101 (G_A, G_N, J_A, J_N, F_A, F_B, W_A): run ORIGINAL then REWRITTEN, measuring both loads by the D8 method at T=200,000. Includes the salt-determinism check (G_A salted twice, loads must match exactly) and the ~10% subset output-equivalence spot check for G_A/J_A (--sample-outeq; best-effort, not the 48/48 outeq proof). Fresh dataset generation in this arm's own volume subdir (no dataset shared between arms). max_retries 0: a retry would double-bill and muddy provenance.",
+  "environments": [
+    {
+      "environment_key": "Default",
+      "spec": {
+        "dependencies": [
+          "numpy==2.5.4",
+          "pyarrow"
+        ],
+        "environment_version": "2"
+      }
+    }
+  ],
+  "max_retries": 0,
+  "name": "bas-d-fb-RUN_TAG",
+  "tags": {
+    "arm": "d-fb",
+    "owner": "<AUTHOR_EMAIL>",
+    "project": "blind-at-scale"
+  },
+  "tasks": [
+    {
+      "description": "Generate zipf seed 101 (10M/6M) on-cluster in this arm's own volume subdir; SHA-256 counts gate enforced.",
+      "environment_key": "Default",
+      "max_retries": 0,
+      "spark_python_task": {
+        "parameters": [
+          "--family",
+          "zipf",
+          "--seed",
+          "101",
+          "--n-fact",
+          "10000000",
+          "--n-fact2",
+          "6000000",
+          "--outdir",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/fb_zipf_s101",
+          "--counts-out",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/fb_zipf_s101"
+        ],
+        "python_file": "/Workspace/blind-at-scale/cloud_program/databricks/gen_on_dbx.py",
+        "source": "WORKSPACE"
+      },
+      "task_key": "gen",
+      "timeout_seconds": 1800
+    },
+    {
+      "depends_on": [
+        {
+          "task_key": "gen"
+        }
+      ],
+      "description": "Run original + rewritten for the 7 fixable FAIL pipelines; salt-determinism check; 10% outeq spot check.",
+      "environment_key": "Default",
+      "max_retries": 0,
+      "spark_python_task": {
+        "parameters": [
+          "--data",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/fb_zipf_s101",
+          "--manifest",
+          "/Volumes/blindatscale_dbx/bas_dbx_run/bas_vol/fb_zipf_s101/feedback_manifest.json",
+          "--sample-outeq"
+        ],
+        "python_file": "/Workspace/blind-at-scale/cloud_program/databricks/feedback_dbx.py",
+        "source": "WORKSPACE"
+      },
+      "task_key": "feedback",
+      "timeout_seconds": 5400
+    }
+  ],
+  "timeout_seconds": 7200
+}
